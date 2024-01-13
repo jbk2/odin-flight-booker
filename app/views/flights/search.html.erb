@@ -1,2 +1,54 @@
+<style>
+  .sorted {
+    background-color: #ddd;
+  }
+
+  .sorted.asc::after {
+    content: ' ▲';
+  }
+
+  .sorted.desc::after {
+    content: ' ▼';
+}
+
+</style>
+
 <h1>Flights#search</h1>
 <p>Find me in app/views/flights/search.html.erb</p>
+
+<table>
+  <caption>
+    All airports
+  </caption>
+  <thead>
+    <th>Airport ID</th>
+    <th>Airport Code</th>
+    <th>Airport Name</th>
+    <th>Country ID</th>
+    <th>Country</th>
+    <!-- <th>City</th> -->
+
+    <th>
+      <%= link_to flights_search_path(column: :city, direction: sort_direction == 'asc' ? 'desc' : 'asc') do %>
+        <div class="<%= 'sorted' if params[:column] == 'city' %> <%= params[:direction] == 'asc' ? 'asc' : 'desc' %>">
+          City
+        </div>
+      <% end %>
+    </th>
+    
+    <th>Updated at</th>
+  </thead>
+  <tbody>
+    <% @airports.each do |airport| %>
+    <tr>
+      <td><%= airport.id %></td>
+      <td><%= airport.code %></td>
+      <td><%= airport.name %></td>
+      <td><%= airport.country_id %></td>
+      <td><%= airport.country %></td>
+      <td><%= airport.city %></td>
+      <td><%= airport.updated_at %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

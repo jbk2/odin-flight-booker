@@ -384,7 +384,7 @@ CLC,America/Chicago,Metroport,CLC,US,POINT (-95.1375 29.556944),59,,,,,
 CRJ,Australia/Adelaide,Coorabie,CRJ,AU,POINT (132.2960052 -31.8943996),32,,"",,,
 CWS,America/Los_Angeles,Center Island,CWS,US,POINT (-122.83139 47.485),311,,"78WA",,,
 DMO,America/Chicago,Sedalia,DMO,US,POINT (-93.1753328280421 38.709028450000005),885,http://ci.sedalia.mo.us/content/198/224/default.aspx,KDMO,Sedalia,Pettis County,Missouri
-DRS,Europe/Berlin,Dresden International Airport,DRS,DE,POINT (13.769480779988587 51.134299299999995),748,http://www.dresden-airport.de/en/index.html,EDDC,,,
+DRS,Europe/Berlin,Dresden International Airport,DRS,DE,POINT (13.769480779988587 51.134299299999995),748,http://www.dresden-airport.de/en/index.html,EDDC,Dresden,,
 IXW,Asia/Kolkata,Sonari,IXW,IN,POINT (86.1693038372328 22.8136029),469,,VEJS,Jamshedpur,Purba Singhbhum,Jharkhand
 IXY,Asia/Kolkata,Kandla,IXY,IN,POINT (70.10308342930023 23.1135071),82,http://aai.aero/allAirports/kandla_generalinfo.jsp,VAKE,Gandhidham,Kachchh,Gujarat
 IXZ,Asia/Kolkata,Port Blair Airport,IXZ,IN,POINT (92.73036550632911 11.640875),39,,VOPB,Port Blair,South Andaman,Andaman and Nicobar Islands
@@ -436,7 +436,7 @@ LWK,Europe/London,Lerwick/Tingwall,SDZ,GB,POINT (-1.15 60.15),0,,EGET,,,
 LDY,Europe/London,City of Derry Airport,LDY,GB,POINT (-7.155902754752817 55.039795749999996),22,http://www.cityofderryairport.com/,EGAE,Eglinton,,Northern Ireland
 BAU,America/Sao_Paulo,Bauru Airport,BRI,BR,POINT (-49.05328145802982 -22.3450535),2047,,,Bauru,,Sao Paulo
 DGK,Africa/Maputo,Dugong,DGK,MZ,POINT (35.443611 -22.134167),0,,,,,
-LEJ,Europe/Berlin,Leipzig/Halle Airport,LEJ,DE,POINT (12.229585904866344 51.421190100000004),465,http://www.leipzig-halle-airport.de/en/index.html,EDDP,,,
+LEJ,Europe/Berlin,Leipzig/Halle Airport,LEJ,DE,POINT (12.229585904866344 51.421190100000004),465,http://www.leipzig-halle-airport.de/en/index.html,EDDP,Leipzig,,
 COL,Europe/London,Isle Of Coll,COL,GB,POINT (-6.616667 56.61667),39,,EGEL,,,
 CUK,America/Belize,Caye Caulker,CUK,BZ,POINT (-88.0322953740101 17.7351537),16,,MZCK,,,
 LPW,America/Sitka,Little Port Walter,LPW,US,POINT (-134.83333 56.38333),1784,,,,,
@@ -455,7 +455,7 @@ DOK,Europe/Kiev,Donetsk International Airport,DOK,UA,POINT (37.74079599426868 48
 DUS,Europe/Berlin,Dusseldorf International Airport,DUS,DE,POINT (6.761736665024513 51.2869035),108,http://www.dus.com/dus_en/,EDDL,,,
 FIE,Europe/London,Fair Isle,FIE,GB,POINT (-1.6284978260484486 59.5347796),259,http://www.fairisle.org.uk/egef/index.htm,EGEF,,,
 HDA,America/Sitka,Hidden Falls,HDA,US,POINT (-134.85 57.2),0,,,,,
-NQT,Europe/London,Nottingham Airport,NQT,GB,POINT (-1.166667 52.966667),111,http://www.nottinghamairport.co.uk/,EGBN,,,
+NQT,Europe/London,Nottingham Airport,NQT,GB,POINT (-1.166667 52.966667),111,http://www.nottinghamairport.co.uk/,EGBN,Nottingham,,
 OHE,Asia/Shanghai,Mohe Airport,OHE,CN,POINT (122.42525985187558 52.9156841),1804,,ZYMH,Xilinji,,Heilongjiang Sheng
 OHH,Asia/Srednekolymsk,Novostroyka Airport,OHH,RU,POINT (142.87331907232237 53.51637295),95,,UHSH,Okha,,Sakhalin
 NWS,America/New_York,Pier 11/Wall St. SPB,NYC,US,POINT (-74.01056 40.703056),36,,,,,
@@ -580,7 +580,7 @@ LYP,Asia/Karachi,Faisalabad Airport,LYP,PK,POINT (72.99318848355324 31.36552865)
 SZF,Europe/Istanbul,Samsun-Carsamba Airport,SZF,TR,POINT (36.5547365620795 41.2562275),18,http://www.carsamba.dhmi.gov.tr/havaalanlari/default.aspx?hv=32,LTFH,Dikbiyik,,Samsun
 SZN,America/Los_Angeles,Santa Cruz Island,SBA,US,POINT (-119.9151998 34.0589776),50,,KSZN,Isla Vista,Santa Barbara County,California
 SZX,Asia/Shanghai,Shenzhen Bao'an International Airport,SZX,CN,POINT (113.80607686281571 22.6376434),13,http://eng.szairport.com/,ZGSZ,Fuyong,,Guangdong
-LYS,Europe/Paris,Lyon Saint-Exupery International Airport,LYS,FR,POINT (5.086500755554235 45.7245365),790,https://www.lyonaeroports.com/,LFLL,Pusignan,Departement du Rhone,Rhone-Alpes
+LYS,Europe/Paris,Lyon Saint-Exupery International Airport,LYS,FR,POINT (5.086500755554235 45.7245365),790,https://www.lyonaeroports.com/,LFLL,Lyon,Departement du Rhone,Rhone-Alpes
 AJN,Indian/Comoro,Ouani,AJN,KM,POINT (44.42886316841893 -12.12890235),101,,FMCV,Ouani,,Anjouan
 AKM,Africa/Ndjamena,Zakouma,AKM,TD,POINT (19.8153005 10.8875904),1354,,"",,,
 AXD,Europe/Athens,Demokritos Airport,AXD,GR,POINT (25.955340604501963 40.85631045),13,,LGAL,Alexandroupoli,Nomos Evrou,East Macedonia and Thrace
@@ -686,7 +686,7 @@ MFE,America/Chicago,McAllen International Airport,MFE,US,POINT (-98.239605482885
 LYK,Asia/Makassar,Lunyuk,LYK,ID,POINT (117.26667 -9),429,,WADU,Lunyuk Ode,,West Nusa Tenggara
 LYR,Arctic/Longyearbyen,Svalbard Airport,LYR,SJ,POINT (15.8 78.208885),0,https://avinor.no/en/airport/svalbard-airport/,ENSB,Longyearbyen,Spitsbergen,Svalbard
 LYU,America/Chicago,Ely,LYU,US,POINT (-91.82917 47.82389),1443,http://www.ely.mn.us/index.asp?Type=B_BASIC&SEC=%7B936B252D-C48B-42BD-B996-37F320A6CFF7%7D,KELO,Ely,Saint Louis County,Minnesota
-LYX,Europe/London,London Ashford International (Ferryfield),LYX,GB,POINT (0.933333 50.95),49,http://www.lydd-airport.co.uk/,EGMD,Lydd,Kent,England
+LYX,Europe/London,London Ashford International (Ferryfield),LYX,GB,POINT (0.933333 50.95),49,http://www.lydd-airport.co.uk/,EGMD,Ashford,Kent,England
 LZA,Africa/Lubumbashi,Luiza,LZA,CD,POINT (22.5 -7.666667),2900,,FZUG,Mwene-Ditu,,Kasai-Oriental
 ORT,America/Anchorage,Northway,ORT,US,POINT (-141.9310183218222 62.961308),1673,,PAOR,,,
 OTZ,America/Nome,Ralph Wien Memorial Airport,OTZ,US,POINT (-162.61074661016386 66.8836843),29,,PAOT,,,
@@ -1197,7 +1197,7 @@ PLS,America/Grand_Turk,Providenciales International Airport,PLS,TC,POINT (-72.26
 PLW,Asia/Makassar,Mutiara Airport,PLW,ID,POINT (119.90866988348841 -0.9177448),305,,WAML,Palu,,Central Sulawesi
 PLZ,Africa/Johannesburg,Port Elizabeth International Airport,PLZ,ZA,POINT (25.61250857777766 -33.9897894),196,http://www.acsa.co.za/home.asp?pid=236,FAPE,Port Elizabeth,Nelson Mandela Bay Metropolitan Municipality,Eastern Cape
 PMC,America/Santiago,El Tepual Airport,PMC,CL,POINT (-73.09450467694802 -41.443561700000004),305,,SCTE,Puerto Montt,Provincia de Llanquihue,Los Lagos
-PMI,Europe/Madrid,Palma de Mallorca Airport,PMI,ES,POINT (2.729030991511172 39.553224549999996),19,http://www.aena.es/csee/Satellite?cid=1046276292735&pagename=subHome&Language=EN_GB&SiteName=PMI&c=Page,LEPA,s'Arenal,Illes Balears,Balearic Islands
+PMI,Europe/Madrid,Palma de Mallorca Airport,PMI,ES,POINT (2.729030991511172 39.553224549999996),19,http://www.aena.es/csee/Satellite?cid=1046276292735&pagename=subHome&Language=EN_GB&SiteName=PMI&c=Page,LEPA,Palma,Illes Balears,Balearic Islands
 PNH,Asia/Phnom_Penh,Phnom Penh International Airport,PNH,KH,POINT (104.84811156075017 11.5470571),39,http://www.cambodia-airports.com/phnompenh/en/,VDPP,Phnom Penh,,Phnom Penh
 PNI,Pacific/Pohnpei,Pohnpei Airport,PNI,FM,POINT (158.20381948562675 6.9836798),59,,PTPN,Kolonia Town,Kolonia Municipality,Pohnpei
 BSQ,America/Phoenix,Bisbee Municipal Airport,BSQ,US,POINT (-109.883128 31.3639903),4737,http://www.discoverbisbee.com/about_air.htm,P04,Naco,Cochise County,Arizona
@@ -1431,7 +1431,7 @@ ALQ,America/Sao_Paulo,Federal,ALQ,BR,POINT (-55.763332 -29.799723),334,,SSLT,Ale
 AMD,Asia/Kolkata,Ahmedabad Airport,AMD,IN,POINT (72.6305442 23.0855562),209,,VAAH,Naroda,Ahmadabad,Gujarat
 AMJ,America/Sao_Paulo,Almenara,AMJ,BR,POINT (-40.683334 -16.183332),593,,SNAR,Almenara,Almenara,Minas Gerais
 AML,America/Panama,Puerto Armuellas,AML,PA,POINT (-82.86667 8.266667),55,,"",Puerto Armuelles,,Chiriqui
-AMS,Europe/Amsterdam,Amsterdam Airport Schiphol,AMS,NL,POINT (4.741505200022974 52.32697895),36,http://www.schiphol.nl/,EHAM,Aalsmeer,Gemeente Aalsmeer,North Holland
+AMS,Europe/Amsterdam,Amsterdam Airport Schiphol,AMS,NL,POINT (4.741505200022974 52.32697895),36,http://www.schiphol.nl/,EHAM,Amsterdam,Gemeente Aalsmeer,North Holland
 AOS,America/Anchorage,Amook,AOS,US,POINT (-153.8166725 57.4705133),9,,AK81,,,
 JAV,America/Godthab,Ilulissat Airport,JAV,GL,POINT (-51.056119024204875 69.24366964999999),49,,BGJN,,,
 MSZ,Africa/Luanda,Yuri Gagarin Airport,MSZ,AO,POINT (12.160833 -15.208611),101,,FNMO,Namibe,,Namibe
@@ -1781,7 +1781,7 @@ CPA,Africa/Monrovia,A. Tubman,CPA,LR,POINT (-7.695556 4.376667),19,,GLCP,Harper 
 CPC,America/Argentina/Salta,Chapelco Airport,CPC,AR,POINT (-71.13333 -40.066666),2500,,SAZY,Junin de los Andes,,Neuquen
 CPE,America/Merida,Campeche International Airport,CPE,MX,POINT (-90.509445 19.835),42,,MMCP,Campeche,Campeche,Campeche
 CPF,Asia/Jakarta,Cepu,CPF,ID,POINT (111.583336 -7.15),88,,WARC,Cepu,,Central Java
-CPH,Europe/Copenhagen,Copenhagen Airport,CPH,DK,POINT (12.650982248393536 55.6091282),26,http://www.cph.dk/en/,EKCH,Dragor,Dragor Kommune,Capital Region
+CPH,Europe/Copenhagen,Copenhagen Airport,CPH,DK,POINT (12.650982248393536 55.6091282),26,http://www.cph.dk/en/,EKCH,Copenhagen,Dragor Kommune,Capital Region
 CPL,America/Bogota,Chaparral,CPL,CO,POINT (-75.46667 3.716667),2634,,SKHA,Chaparral,,Tolima
 CPM,America/Los_Angeles,Compton,CPM,US,POINT (-118.24778 33.894444),82,,KCPM,West Rancho Dominguez,Los Angeles County,California
 CPO,America/Santiago,Chamonate Airport,CPO,CL,POINT (-70.414406 -27.29892),994,,SCAT,Copiapo,Provincia de Copiapo,Atacama
@@ -1873,7 +1873,7 @@ MWX,Asia/Seoul,Muan International Airport,MWX,KR,POINT (126.38414054753376 34.99
 MWZ,Africa/Dar_es_Salaam,Mwanza Airport,MWZ,TZ,POINT (32.93340863939895 -2.44583425),3756,,HTMW,Mwanza,,Mwanza
 MXL,America/Tijuana,Mexicali Airport,MXL,MX,POINT (-115.24489535400568 32.63000155),62,http://aeropuertosgap.com.mx/aeropuertos/mexicali?lang=eng,MMML,Islas Agrarias Grupo A,Mexicali,Baja California
 MXN,Europe/Paris,Morlaix,MXN,FR,POINT (-3.8133578921682174 48.602909249999996),249,,LFRU,Saint-Martin-des-Champs,Departement du Finistere,Brittany
-MXP,Europe/Rome,Milano Malpensa Airport,MIL,IT,POINT (8.723547468967393 45.629627299999996),672,http://www.sea-aeroportimilano.it/en/malpensa/index.phtml,LIMC,Vizzola Ticino,Provincia di Varese,Lombardy
+MXP,Europe/Rome,Milano Malpensa Airport,MIL,IT,POINT (8.723547468967393 45.629627299999996),672,http://www.sea-aeroportimilano.it/en/malpensa/index.phtml,LIMC,Milan,Provincia di Varese,Lombardy
 BFK,America/Denver,Buffalo Municipal Airport,DEN,US,POINT (-104.86667 39.733334),5390,,KBKF,Aurora,Adams County,Colorado
 BFR,America/Indiana/Indianapolis,Virgil I Grissom Municipalcipal,BFR,US,POINT (-86.48333 38.86667),669,,KBFR,Bedford,Lawrence County,Indiana
 BFT,America/New_York,County,BFT,US,POINT (-80.635 32.41083),32,,KARW,Beaufort,Beaufort County,South Carolina
@@ -1988,7 +1988,7 @@ TRC,America/Monterrey,Francisco Sarabia International Airport,TRC,MX,POINT (-103
 TRD,Europe/Oslo,Trondheim Airport Vaernes,TRD,NO,POINT (10.925133336071024 63.4547661),56,https://avinor.no/en/airport/trondheim-airport/,ENVA,Stjordal,Stjordal,Nord-Trondelag
 TRI,America/New_York,Tri-Cities Regional Airport,TRI,US,POINT (-82.40843268699096 36.47344765),1519,,KTRI,Spurgeon,Washington County,Tennessee
 TRJ,Pacific/Port_Moresby,Tarakbits,TRJ,PG,POINT (141.04277651555867 -5.61427505),281,,AYTT,Mindiptana,,Papua
-TRN,Europe/Rome,Turin Airport,TRN,IT,POINT (7.648975075273562 45.20096875),989,http://www.aeroportoditorino.it/,LIMF,Caselle Torinese,Provincia di Torino,Piedmont
+TRN,Europe/Rome,Turin Airport,TRN,IT,POINT (7.648975075273562 45.20096875),989,http://www.aeroportoditorino.it/,LIMF,Turin,Provincia di Torino,Piedmont
 TRO,Australia/Sydney,Taree Airport,TRO,AU,POINT (152.51309188792249 -31.8877679),38,,YTRE,Cundletown,Greater Taree,New South Wales
 TRR,Asia/Colombo,China Bay,TRR,LK,POINT (81.182420993587 8.5387065),6,,VCCT,Trincomalee,,Eastern Province
 BLM,America/New_York,Monmouth Executive Airport,BLM,US,POINT (-74.01667 40.183334),16,,KBLM,Belmar,Monmouth County,New Jersey
@@ -2079,7 +2079,7 @@ BNG,America/Los_Angeles,Banning,BNG,US,POINT (-116.85052999055571 33.9231279),21
 NWA,Indian/Comoro,Moheli,NWA,KM,POINT (43.76644801260554 -12.2981305),45,,FMCI,Djoyezi,,Moheli
 REZ,America/Sao_Paulo,Resende,REZ,BR,POINT (-44.47716871796958 -22.47720015),1315,,SDRS,Resende,Resende,Rio de Janeiro
 BNW,America/Chicago,Boone,BNW,US,POINT (-93.88333 42.066666),1158,,KBNW,Boone,Boone County,Iowa
-BOD,Europe/Paris,Bordeaux Airport,BOD,FR,POINT (-0.70217 44.83102),226,https://www.bordeaux.aeroport.fr/,LFBD,Le Haillan,Departement de la Gironde,Aquitaine
+BOD,Europe/Paris,Bordeaux Airport,BOD,FR,POINT (-0.70217 44.83102),226,https://www.bordeaux.aeroport.fr/,LFBD,Bordeaux,Departement de la Gironde,Aquitaine
 NAW,Asia/Bangkok,Narathiwat Airport,NAW,TH,POINT (101.7408213492347 6.513813799999999),26,,VTSC,Bacho,,Narathiwat
 PIW,America/Winnipeg,Pikwitonei,PIW,CA,POINT (-97.333336 55.7),708,,CZMN,,,
 TTS,Indian/Antananarivo,Tsaratanana,TTS,MG,POINT (47.6170006 -16.75),1073,,FMNT,,,
@@ -2116,7 +2116,7 @@ ARA,America/Chicago,Acadiana Regional,ARA,US,POINT (-91.88190742881199 30.033018
 TWY,Pacific/Port_Moresby,Tawa,TWY,PG,POINT (146.06667 -7.266667),5020,,AYTW,,,
 ARH,Europe/Moscow,Talagi Airport,ARH,RU,POINT (40.71860470831429 64.599209),32,,ULAA,Arkhangel'sk,,Arkhangelskaya
 ARM,Australia/Sydney,Armidale Airport,ARM,AU,POINT (151.6156495208327 -30.528625599999998),3533,,YARM,Armidale,Armidale Dumaresq,New South Wales
-ARN,Europe/Stockholm,Stockholm Arlanda Airport,STO,SE,POINT (17.937044334194475 59.6467921),88,http://www.swedavia.se/arlanda/,ESSA,Marsta,Sigtuna Kommun,Stockholm
+ARN,Europe/Stockholm,Stockholm Arlanda Airport,STO,SE,POINT (17.937044334194475 59.6467921),88,http://www.swedavia.se/arlanda/,ESSA,Stockholm,Sigtuna Kommun,Stockholm
 ARS,America/Sao_Paulo,Aragarcas,ARS,BR,POINT (-52.2411003 -15.8993998),1033,,SJVO,Aragarcas,Aragarcas,Goias
 ARU,America/Sao_Paulo,Aracatuba Airport,ARU,BR,POINT (-50.425139094792286 -21.140815),1341,http://www.daesp.sp.gov.br/aeroporto-estadual-de-aracatuba-dario-guarita/,SBAU,Aracatuba,Aracatuba,Sao Paulo
 ARY,Australia/Melbourne,Ararat,ARY,AU,POINT (142.9942951850989 -37.31213875),1010,,YARA,Ararat,Ararat,Victoria
@@ -2236,7 +2236,7 @@ ABP,Pacific/Port_Moresby,Atkamba,ABP,PG,POINT (141.09521515526734 -6.06470215000
 PUP,Africa/Ouagadougou,Po,PUP,BF,POINT (-1.166667 11.183333),1076,,DFCP,,,
 BBI,Asia/Kolkata,Biju Patnaik International Airport,BBI,IN,POINT (85.81348472447162 20.25229545),121,http://aai.aero/allAirports/bhubaneshwar_generalinfo.jsp,VEBS,Bhubaneshwar,Khordha,Odisha
 BCK,Australia/Brisbane,Bolwarra,BCK,AU,POINT (144.1690063 -17.3882999),984,,YBWR,Atherton,Tablelands,Queensland
-BCN,Europe/Madrid,Barcelona-El Prat Airport,BCN,ES,POINT (2.0790473629813215 41.29694395),22,http://www.aena.es/en/barcelona-airport/index.html,LEBL,El Prat de Llobregat,Provincia de Barcelona,Catalonia
+BCN,Europe/Madrid,Barcelona-El Prat Airport,BCN,ES,POINT (2.0790473629813215 41.29694395),22,http://www.aena.es/en/barcelona-airport/index.html,LEBL,Barcelona,Provincia de Barcelona,Catalonia
 BDB,Australia/Brisbane,Bundaberg Airport,BDB,AU,POINT (152.31965241484968 -24.90353975),82,http://bundaberg.qld.gov.au/services/airport,YBUD,Thabeban,Bundaberg,Queensland
 BDH,Asia/Tehran,Bandar Lengeh,BDH,IR,POINT (54.82975543497214 26.53298565),78,,OIBL,Bandar-e Lengeh,,Hormozgan
 BTW,Asia/Makassar,Batu Licin,BTW,ID,POINT (116 -3),16,,WAOC,Sungaikupang,,South Kalimantan
@@ -2339,7 +2339,7 @@ BGY,Europe/Rome,Orio al Serio International Airport,MIL,IT,POINT (9.698763471354
 MKH,Africa/Maseru,Mokhotlong,MKH,LS,POINT (29.166668 -29.166668),9379,,FXMK,,,
 BNY,Pacific/Guadalcanal,Bellona,BNY,SB,POINT (159.7991242561202 -11.302540149999999),42,,AGGB,,,
 KVG,Pacific/Port_Moresby,Kavieng Airport,KVG,PG,POINT (150.8052784188705 -2.57738425),7,,AYKV,,,
-NYO,Europe/Stockholm,Stockholm Skavsta Airport,STO,SE,POINT (16.9104983 58.7871654),104,,ESKN,Svalsta,Nykopings Kommun,Soedermanland
+NYO,Europe/Stockholm,Stockholm Skavsta Airport,STO,SE,POINT (16.9104983 58.7871654),104,,ESKN,Stockholm,Nykopings Kommun,Soedermanland
 NYR,Asia/Yakutsk,Nyurba Airport,NYR,RU,POINT (118.352362862571 63.297716699999995),380,,UENN,Nyurba,,Sakha
 NYS,America/New_York,New York Skyports Seaplane Base,NYS,US,POINT (-73.9729007 40.7351534),0,,,Long Island City,Queens County,New York
 BRH,Pacific/Port_Moresby,Brahman,BRH,PG,POINT (145.36667 -5.7),396,,,,,
@@ -2383,7 +2383,7 @@ BNB,Africa/Kinshasa,Boende,BNB,CD,POINT (20.87 -0.233056),1095,,FZGN,Boende,,Equ
 AMB,Indian/Antananarivo,Ambilobe,AMB,MG,POINT (48.9876126 -13.1865961),68,,FMNE,Ambilobe,,Diana
 ANM,Indian/Antananarivo,Antsirabato,ANM,MG,POINT (50.3182525 -14.9990678),26,,FMNH,Antalaha,,Sava
 BOE,Africa/Brazzaville,Boundji,BOE,CG,POINT (15.383333 -1.033333),1148,,FCOB,,,
-ANR,Europe/Brussels,Antwerp International Airport,ANR,BE,POINT (4.463473861141249 51.1881429),29,http://www.antwerp-airport.be/,EBAW,Mortsel,Provincie Antwerpen,Flanders
+ANR,Europe/Brussels,Antwerp International Airport,ANR,BE,POINT (4.463473861141249 51.1881429),29,http://www.antwerp-airport.be/,EBAW,Antwerp,Provincie Antwerpen,Flanders
 BIK,Asia/Jayapura,Mokmer Airport,BIK,ID,POINT (136.10667153231608 -1.1884679500000002),49,,WABB,Biak,,Papua
 BIL,America/Denver,Billings Logan International Airport,BIL,US,POINT (-108.54767517885944 45.809234849999996),3569,,KBIL,Billings,Yellowstone County,Montana
 BIN,Asia/Kabul,Bamiyan,BIN,AF,POINT (67.81759460556913 34.809365400000004),8471,,OABN,Bamyan,,Bamian
@@ -2521,7 +2521,7 @@ NKG,Asia/Shanghai,Nanjing Lukou International Airport,NKG,CN,POINT (118.87229098
 NKM,Asia/Tokyo,Nagoya Airport,NGO,JP,POINT (136.92475081806316 35.24606875),95,,RJNA,Komaki,,Aichi
 NKP,Asia/Bangkok,Nakhon Phanom Airport,NKP,TH,POINT (104.6446664 17.3886974),557,,NTKU,Nakhon Phanom,,Nakhon Phanom
 NLD,America/Matamoros,Quetzalcoatl International Airport,NLD,MX,POINT (-99.56786380287167 27.443653849999997),482,,MMNL,Nuevo Laredo,,Tamaulipas
-BRS,Europe/London,Bristol Airport,BRS,GB,POINT (-2.7186237715618864 51.38296995),580,http://www.bristolairport.co.uk/,EGGD,Butcombe,North Somerset,England
+BRS,Europe/London,Bristol Airport,BRS,GB,POINT (-2.7186237715618864 51.38296995),580,http://www.bristolairport.co.uk/,EGGD,Bristol,North Somerset,England
 NLE,America/Detroit,Jerry Tyler Memorial,NLE,US,POINT (-86.225970125 41.8354002),744,http://www.ci.niles.mi.us/deptsandservices/dpw/JerryTylerMemorialAirport.htm,"3TR",Niles,Berrien County,Michigan
 UNT,Europe/London,Baltasound,UNT,GB,POINT (-0.8532495 60.7475983),0,,EGPW,,,
 NLH,Asia/Shanghai,Ninglang Luguhu Airport,NLH,CN,POINT (100.75959614928159 27.540641450000003),10672,,ZPNL,Daxing,,Yunnan
@@ -2532,7 +2532,7 @@ BRE,Europe/Berlin,Bremen Airport,BRE,DE,POINT (8.789641688895548 53.0453419),49,
 BRM,America/Caracas,Barquisimeto Airport,BRM,VE,POINT (-69.3561637968819 10.04359305),2043,,SVBM,Barquisimeto,Municipio Iribarren,Lara
 NLK,Pacific/Norfolk,Norfolk Island Airport,NLK,NF,POINT (167.93946074308155 -29.04165755),314,http://www.airport.gov.nf/,YSNF,Kingston,,
 BRN,Europe/Zurich,Bern Airport,BRN,CH,POINT (7.498597416883485 46.912213449999996),1627,http://www.flughafenbern.ch/,LSZB,Belp,Bern-Mittelland District,Bern
-BRU,Europe/Brussels,Brussels Airport,BRU,BE,POINT (4.478626970832147 50.9010343),108,http://www.brusselsairport.be/en/,EBBR,Zaventem,Provincie Vlaams-Brabant,Flanders
+BRU,Europe/Brussels,Brussels Airport,BRU,BE,POINT (4.478626970832147 50.9010343),108,http://www.brusselsairport.be/en/,EBBR,Brussels,Provincie Vlaams-Brabant,Flanders
 NLN,America/Los_Angeles,Kneeland,NLN,US,POINT (-123.92745898365271 40.71893525),2716,,O19,Blue Lake,Humboldt County,California
 BSD,Asia/Shanghai,Baoshan Airport,BSD,CN,POINT (99.16459538074838 25.05160185),5456,,ZPBS,Dianyang,,Yunnan
 BSN,Africa/Bangui,Bossangoa,BSN,CF,POINT (17.5 6.583333),1712,,FEFS,Bossangoa,,Ouham
@@ -2566,7 +2566,7 @@ NSH,Asia/Tehran,Now Shahr Airport,NSH,IR,POINT (51.5 36.666668),-91,,OINN,Nowsha
 NSV,Australia/Brisbane,Noosaville,NSV,AU,POINT (153.06349594526466 -26.422261),16,,YNSH,Tewantin,Sunshine Coast,Queensland
 NSN,Pacific/Auckland,Nelson Airport,NSN,NZ,POINT (173.22498 -41.299976),19,http://www.nelsonairport.co.nz/,NZNS,Richmond,Tasman District,Tasman
 NTX,Asia/Jakarta,Natuna Ranai,NTX,ID,POINT (108.38800525322566 3.91012595),170,,WIDO,Pemangkat,,West Kalimantan
-BUD,Europe/Budapest,Budapest Ferenc Liszt International Airport,BUD,HU,POINT (19.2535105675693 47.43527295),469,http://www.bud.hu/english,LHBP,Vecses,,Pest
+BUD,Europe/Budapest,Budapest Ferenc Liszt International Airport,BUD,HU,POINT (19.2535105675693 47.43527295),469,http://www.bud.hu/english,LHBP,Budapest,,Pest
 NUA,Asia/Colombo,Gregory's Lake,NUA,LK,POINT (80.7795237 6.9560731),6151,,,Nuwara Eliya,Nuwara Eliya District,Central
 NSY,Europe/Rome,NAS Sigonella,NSY,IT,POINT (14.933333 37.4),36,,LICZ,Motta Sant'Anastasia,Catania,Sicily
 BUF,America/New_York,Buffalo Niagara International Airport,BUF,US,POINT (-78.73075229745353 42.9402016),698,http://www.buffaloairport.com,KBUF,Williamsville,Erie County,New York
@@ -2627,7 +2627,7 @@ NYK,Africa/Nairobi,Nanyuki,NYK,KE,POINT (37.066666 0.016667),6299,,HKNL,Nanyuki,
 CBO,Asia/Manila,Awang Airport,CBO,PH,POINT (124.21221000578096 7.164494899999999),150,,RPMC,Awang,Province of Maguindanao,Autonomous Region in Muslim Mindanao
 SGJ,Pacific/Port_Moresby,Sagarai,SGJ,PG,POINT (150.15 -10.466667),95,,,,,
 GMT,America/Anchorage,Granite Mountain,GMT,US,POINT (-161.2775 65.405556),1272,,PAGZ,,,
-VNO,Europe/Vilnius,Vilnius International Airport,VNO,LT,POINT (25.290314330439507 54.63483615),590,http://www.vilnius-airport.lt/en/,EYVI,Naujamiestis,,Vilnius County
+VNO,Europe/Vilnius,Vilnius International Airport,VNO,LT,POINT (25.290314330439507 54.63483615),590,http://www.vilnius-airport.lt/en/,EYVI,Vilnius,,Vilnius County
 GRH,Pacific/Port_Moresby,Garuahi,GRH,PG,POINT (150.55 -10.225),314,,"",,,
 MPN,Atlantic/Stanley,Mount Pleasant,MPN,FK,POINT (-58.4564927 -51.8208456),177,,EGYP,,,
 MYO,Australia/Perth,Myroodah,MYO,AU,POINT (124.27436559911261 -18.12435455),141,,"",,,
@@ -2660,7 +2660,7 @@ CBE,America/New_York,Greater Cumberland Regional,CBE,US,POINT (-78.7622148193605
 CBJ,America/Santo_Domingo,Cabo Rojo,CBJ,DO,POINT (-71.64183982629034 17.928795700000002),26,,MDCR,Pedernales,,Pedernales
 CBV,America/Guatemala,Coban,CBV,GT,POINT (-90.40646467327997 15.469022500000001),4337,,MGCB,Coban,,Alta Verapaz
 CGM,Asia/Manila,Mambajao,CGM,PH,POINT (121.916664 18.9),1085,,RPMH,San Vicente,Province of Cagayan,Cagayan Valley
-CGN,Europe/Berlin,Cologne Bonn Airport,CGN,DE,POINT (7.138887378368084 50.86780115),200,http://www.koeln-bonn-airport.de/en/,EDDK,Wahn-Heide,Regierungsbezirk Koln,North Rhine-Westphalia
+CGN,Europe/Berlin,Cologne Bonn Airport,CGN,DE,POINT (7.138887378368084 50.86780115),200,http://www.koeln-bonn-airport.de/en/,EDDK,Cologne,Regierungsbezirk Koln,North Rhine-Westphalia
 OGB,America/New_York,Municipal,OGB,US,POINT (-80.86667 33.5),249,http://www.orangeburg.sc.us/index.php?option=com_content&view=article&id=18&Itemid=69,KOGB,Orangeburg,Orangeburg County,South Carolina
 OGD,America/Denver,Municipal,OGD,US,POINT (-112.01083 41.19639),4461,http://flyogden.com/,KOGD,Riverdale,Weber County,Utah
 OGO,Africa/Abidjan,Abengourou,OGO,CI,POINT (-3.4705374 6.7181611),675,,DIAU,Abengourou,,Moyen-Comoe
@@ -2937,7 +2937,7 @@ WVL,America/New_York,Robert Lafleur,WVL,US,POINT (-69.67663290752361 44.53318824
 PLT,America/Bogota,Plato,PLT,CO,POINT (-74.78333 9.783333),39,,SKPL,Plato,,Magdalena
 PLU,America/Sao_Paulo,Belo Horizonte Airport,BHZ,BR,POINT (-43.75 -19.75),2545,http://www.infraero.gov.br/usa/aero_prev_home.php?ai=204,SBBH,Santa Luzia,Santa Luzia,Minas Gerais
 PLV,Europe/Kiev,Poltava,PLV,UA,POINT (34.533333 49.583332),498,,UKHP,Poltava,,Poltava
-CRL,Europe/Brussels,Charleroi Brussels South Airport,BRU,BE,POINT (4.466173283859401 50.463637250000005),567,http://www.charleroi-airport.com/doc.php?nd=o29&tid=29&lg=2&docid=1&site=1,EBCI,Charleroi,Province du Hainaut,Wallonia
+CRL,Europe/Brussels,Charleroi Brussels South Airport,BRU,BE,POINT (4.466173283859401 50.463637250000005),567,http://www.charleroi-airport.com/doc.php?nd=o29&tid=29&lg=2&docid=1&site=1,EBCI,Brussels,Province du Hainaut,Wallonia
 ASK,Africa/Abidjan,Yamoussoukro,ASK,CI,POINT (-5.283333 6.816667),656,,DIYO,Yamoussoukro,,Lacs
 BVC,Atlantic/Cape_Verde,Rabil Airport,BVC,CV,POINT (-22.833332 16.083332),111,,GVBA,Vila de Sal Rei,,Boa Vista
 PLY,America/Indiana/Indianapolis,Plymouth,PLY,US,POINT (-86.30167 41.365276),770,http://www.plymouthin.com/index.php/departments/airport/,C65,Plymouth,Marshall County,Indiana
@@ -3119,7 +3119,7 @@ CZB,America/Sao_Paulo,Carlos Ruhl,CZB,BR,POINT (-53.558334 -28.641666),1312,,SSA
 CZE,America/Caracas,Coro,CZE,VE,POINT (-69.681946 11.415833),45,,SVCR,Coro,,Falcon
 SGY,America/Anchorage,Skagway Municipal,SGY,US,POINT (-135.3261633 59.4501954),0,,PAGY,Haines,Haines Borough,Alaska
 SGZ,Asia/Bangkok,Songkhla,SGZ,TH,POINT (100.60684192163788 7.18638335),26,,VTSH,Songkhla,,Songkhla
-SKG,Europe/Athens,Thessaloniki International Airport,SKG,GR,POINT (22.974086812428308 40.51980185),16,,LGTS,Neo Rysi,Nomos Thessalonikis,Central Macedonia
+SKG,Europe/Athens,Thessaloniki International Airport,SKG,GR,POINT (22.974086812428308 40.51980185),16,,LGTS,Thessaloniki,Nomos Thessalonikis,Central Macedonia
 SKN,Europe/Oslo,Stokmarknes Skagen Airport,SKN,NO,POINT (15.031124497422255 68.5799011),0,https://avinor.no/en/airport/stokmarknes-airport/,ENSK,Stokmarknes,Hadsel,Nordland
 SLU,America/St_Lucia,George F. L. Charles Airport,SLU,LC,POINT (-60.9943995169477 14.0198739),26,http://www.slaspa.com/contentPages/view/george-f-l-charles-airport,TLPC,Bisee,,Castries Quarter
 SLY,Asia/Yekaterinburg,Salekhard Airport,SLY,RU,POINT (66.59242800431481 66.59208125),209,,USDD,Salekhard,,Yamalo-Nenetskiy Avtonomnyy Okrug
@@ -3315,7 +3315,7 @@ DJB,Asia/Jakarta,Sultan Thaha Airport,DJB,ID,POINT (103.6461509755231 -1.6392544
 DKK,America/New_York,Dunkirk,DKK,US,POINT (-79.333336 42.483334),590,,KDKK,Dunkirk,Chautauqua County,New York
 DKS,Asia/Krasnoyarsk,Dikson,DKS,RU,POINT (80.37453517180555 73.51668275),121,,UODD,Dikson,,Krasnoyarskiy
 DMB,Asia/Almaty,Jambyl Airport,DMB,KZ,POINT (71.36667 42.9),2047,,UADD,Taraz,,Zhambyl
-DME,Europe/Moscow,Moscow Domodedovo Airport,MOW,RU,POINT (37.904166212415895 55.40912105),534,http://www.domodedovo.ru/en/,UUDD,Yakovlevskoye,,Moskovskaya
+DME,Europe/Moscow,Moscow Domodedovo Airport,MOW,RU,POINT (37.904166212415895 55.40912105),534,http://www.domodedovo.ru/en/,UUDD,Moscow,,Moskovskaya
 DMK,Asia/Bangkok,Don Mueang International Airport,BKK,TH,POINT (100.60353142390704 13.9122207),39,http://www2.airportthai.co.th/airportnew/bangkok/index.asp?lang=en,VTBD,Don Mueang,,Bangkok
 ZFD,America/Regina,Fond-du-Lac Airport,ZFD,CA,POINT (-107.1819992 59.3344002),814,,CZFD,Fond du Lac,,Saskatchewan
 ZEL,America/Vancouver,Bella Bella Airport,ZEL,CA,POINT (-128.05676936881662 52.1365217),141,,CBBC,,,
@@ -3328,7 +3328,7 @@ BOZ,Africa/Bangui,Bozoum,BOZ,CF,POINT (16.583332 6.416667),2171,,FEGZ,Bozoum,,Ou
 SEA,America/Los_Angeles,Seattle-Tacoma International Airport,SEA,US,POINT (-122.3080158569515 47.4475673),206,http://www.portseattle.org/seatac/,KSEA,SeaTac,King County,Washington
 YZX,America/Halifax,Greenwood,YZX,CA,POINT (-118.666664 49.166668),92,,CYZX,,,
 SEK,Asia/Srednekolymsk,Srednekolymsk Airport,SEK,RU,POINT (153.72998522576762 67.4746917),42,,UESK,Srednekolymsk,,Sakha
-SEN,Europe/London,London Southend Airport,LON,GB,POINT (0.6966132970490921 51.570227599999996),42,http://www.southendairport.com/,EGMC,Rochford,Essex,England
+SEN,Europe/London,London Southend Airport,LON,GB,POINT (0.6966132970490921 51.570227599999996),42,http://www.southendairport.com/,EGMC,Southend,Essex,England
 SEV,Europe/Kiev,Severodoneck,SEV,UA,POINT (38.54204574366283 48.90159785),193,,UKCS,Syevyerodonets'k,,Luhansk
 SIU,America/Managua,Siuna,SIU,NI,POINT (-84.77740075001209 13.728828799999999),590,,MNSI,Siuna,,Atlantico Norte (RAAN)
 SJY,Europe/Helsinki,Ilmajoki,SJY,FI,POINT (22.83332097896403 62.69110655),252,,EFSI,Seinaejoki,Seinaejoki,Southern Ostrobothnia
@@ -3482,7 +3482,7 @@ DRT,America/Chicago,Del Rio International Airport,DRT,US,POINT (-100.97833 29.33
 DRU,America/Denver,Drummond,DRU,US,POINT (-113.15 46.666668),3930,,KDRU,Philipsburg,Granite County,Montana
 DRV,Indian/Maldives,Dharavandhoo AIrport,DRV,MV,POINT (73.129714802335 5.1563788),49,,VRMD,Open Stage,,
 DRW,Australia/Darwin,Darwin International Airport,DRW,AU,POINT (130.88362011674445 -12.41190185),62,http://www.darwin-airport.com.au/,YPDN,Ludmilla,Darwin,Northern Territory
-DSA,Europe/London,Doncaster Sheffield Airport,DSA,GB,POINT (-1.0061206459207377 53.47641295),62,http://www.robinhoodairport.com/,EGCN,Finningley,Doncaster,England
+DSA,Europe/London,Doncaster Sheffield Airport,DSA,GB,POINT (-1.0061206459207377 53.47641295),62,http://www.robinhoodairport.com/,EGCN,Doncaster,Doncaster,England
 DSD,America/Guadeloupe,La Desirade,DSD,GP,POINT (-61.016666 16.333332),0,,TFFA,Grande Anse,,
 DSE,Africa/Addis_Ababa,Combolcha,DSE,ET,POINT (39.72660294465 11.106068350000001),6059,,HADC,Kombolcha,,Amhara
 DSG,Asia/Manila,Dilasag,DSG,PH,POINT (120 14),0,,"",Cabra,Province of Mindoro Occidental,Mimaropa
@@ -3558,7 +3558,7 @@ RDZ,Europe/Paris,Marcillac Airport,RDZ,FR,POINT (2.483866 44.410595),1873,,LFCR,
 KEW,America/Winnipeg,Keewaywin,KEW,CA,POINT (-92.83464187322227 52.99062345),988,,CPV8,,,
 DTW,America/Detroit,Detroit Metropolitan Wayne County Airport,DTT,US,POINT (-83.35297537621658 42.205699100000004),636,http://www.metroairport.com/,KDTW,Romulus,Wayne County,Michigan
 DUA,America/Chicago,Eaker,DUA,US,POINT (-96.416664 33.983334),682,,KDUA,Durant,Bryan County,Oklahoma
-DUB,Europe/Dublin,Dublin Airport,DUB,IE,POINT (-6.247592522077657 53.4288026),246,http://www.dublinairport.com/,EIDW,Beaumont,,Leinster
+DUB,Europe/Dublin,Dublin Airport,DUB,IE,POINT (-6.247592522077657 53.4288026),246,http://www.dublinairport.com/,EIDW,Dublin,,Leinster
 DUC,America/Chicago,Halliburton Field,DUC,US,POINT (-97.960035 34.4720262),1099,,KDUC,Duncan,Stephens County,Oklahoma
 DUD,Pacific/Auckland,Dunedin International Airport,DUD,NZ,POINT (170.20045427891455 -45.9277448),32,http://www.dnairport.co.nz/,NZDN,Milton,Clutha District,Otago
 DUG,America/Phoenix,Bisbee-Douglas International,DUG,US,POINT (-109.6048261340828 31.46388645),4091,http://www.azdot.gov/mpd/airport_development/airports/airports_list.asp?FAA=DUG,KDUG,Pirtleville,Cochise County,Arizona
@@ -3961,7 +3961,7 @@ EST,America/Chicago,Municipal,EST,US,POINT (-94.833336 43.4),1325,,KEST,Esthervi
 ESU,Africa/Casablanca,Essaouira Airport,ESU,MA,POINT (-9.682784663461774 31.399283599999997),272,,GMMI,Essaouira,Essaouira,Marrakech-Tensift-Al Haouz
 EUF,America/Chicago,Weedon Field,EUF,US,POINT (-85.15 31.9),242,,KEUF,Eufaula,Barbour County,Alabama
 EUG,America/Los_Angeles,Eugene Airport,EUG,US,POINT (-123.21390830141057 44.123068149999995),387,,KEUG,Junction City,Lane County,Oregon
-FRA,Europe/Berlin,Frankfurt Airport,FRA,DE,POINT (8.524938151916214 50.0229437),213,http://www.frankfurt-airport.de/,EDDF,Kelsterbach,,Hesse
+FRA,Europe/Berlin,Frankfurt Airport,FRA,DE,POINT (8.524938151916214 50.0229437),213,http://www.frankfurt-airport.de/,EDDF,Frankfurt,,Hesse
 FRB,Australia/Sydney,Forbes,FRB,AU,POINT (148.05 -33.4),754,,YFBS,Forbes,Forbes,New South Wales
 FRC,America/Sao_Paulo,Franca,FRC,BR,POINT (-47.4375 -20.551945),3303,http://www.daesp.sp.gov.br/aeroporto-detalhe/?id=859,SIMK,Franca,Franca,Sao Paulo
 FRE,Pacific/Guadalcanal,Fera Island Airport,FRE,SB,POINT (159.58333 -8.1),36,,AGGF,,,
@@ -4252,7 +4252,7 @@ RIN,Pacific/Guadalcanal,Ringi Cove,RIN,SB,POINT (157.03334 -8.2),252,,AGRC,,,
 STS,America/Los_Angeles,Sonoma County Airport,STS,US,POINT (-122.7842318 38.5100124),131,http://www.sonomacountyairport.org/,KSTS,Windsor,Sonoma County,California
 XTL,America/Winnipeg,Tadoule Lake,XTL,CA,POINT (-98.51213499738532 58.706157149999996),902,,CYBQ,,,
 STQ,America/New_York,St Marys,STQ,US,POINT (-78.566666 41.433334),1725,http://stmarysmunicipalairport.com/,KOYM,Saint Marys,Elk County,Pennsylvania
-STR,Europe/Berlin,Stuttgart Airport,STR,DE,POINT (9.193624 48.69073),1312,http://www.flughafen-stuttgart.de/,EDDS,Leinfelden-Echterdingen,Regierungsbezirk Stuttgart,Baden-Wuerttemberg
+STR,Europe/Berlin,Stuttgart Airport,STR,DE,POINT (9.193624 48.69073),1312,http://www.flughafen-stuttgart.de/,EDDS,Stuttgart,Regierungsbezirk Stuttgart,Baden-Wuerttemberg
 SUA,America/New_York,Witham Field,SUA,US,POINT (-80.22488623222156 27.1831531),16,"http://ap3server.martin.fl.us/portal/page?_pageid=413,234422&_dad=portal&_schema=PORTAL",KSUA,Stuart,Martin County,Florida
 STU,America/Belize,Santa Cruz,STU,BZ,POINT (-88.45 18.266666),16,,,Corozal,,Corozal
 SUC,America/Denver,Schloredt,SUC,US,POINT (-104.4113572 44.3922301),4914,,,Sundance,Crook County,Wyoming
@@ -4591,7 +4591,7 @@ VIN,Europe/Kiev,Havryshivka Vinnytsia International Airport,VIN,UA,POINT (28.483
 VIT,Europe/Madrid,Vitoria Airport,VIT,ES,POINT (-2.5 42.833332),1902,,LEVT,Salvatierra,Provincia de Alava,Basque Country
 VDR,America/Argentina/Cordoba,Villa Dolores,VDR,AR,POINT (-65.1479642056974 -31.9438459),1801,,SAOD,Villa Dolores,,Cordoba
 VEE,America/Anchorage,Venetie,VEE,US,POINT (-146.3659973 67.0086975),636,,PAVE,Eielson Air Force Base,Fairbanks North Star Borough,Alaska
-VIE,Europe/Vienna,Vienna International Airport,VIE,AT,POINT (16.5848987032657 48.10499675),561,http://www.viennaairport.com/en/,LOWW,Fischamend Dorf,Politischer Bezirk Wien-Umgebung,Lower Austria
+VIE,Europe/Vienna,Vienna International Airport,VIE,AT,POINT (16.5848987032657 48.10499675),561,http://www.viennaairport.com/en/,LOWW,Vienna,Politischer Bezirk Wien-Umgebung,Lower Austria
 VIG,America/Caracas,El Vigia,VIG,VE,POINT (-71.67132508302207 8.62391785),216,,SVVG,El Vigia,Municipio Alberto Adriani,Merida
 VIU,Pacific/Guadalcanal,Viru Harbour Airstrip,VIU,SB,POINT (157.6868504 -8.5064514),82,,AGVH,Gizo,,Western Province
 VNT,Europe/Riga,Ventspils,VNT,LV,POINT (87.2 27.3),830,http://www.airport.ventspils.lv/,EVVA,Khandbari,,Eastern Region
@@ -4711,7 +4711,7 @@ YCD,America/Vancouver,Nanaimo Airport,YCD,CA,POINT (-123.87077170725448 49.05294
 WMH,America/Chicago,Mountain Home,WMH,US,POINT (-92.38333 36.333332),787,http://www.flytheozarks.com/,KBPK,Mountain Home,Baxter County,Arkansas
 WMB,Australia/Melbourne,Warrnambool,WMB,AU,POINT (142.44886030231498 -38.29311165),213,,YWBL,Warrnambool,Warrnambool,Victoria
 CZN,America/Anchorage,Chisana Field,CZN,US,POINT (-142.05 62.07083),3261,,CZN,,,
-WMI,Europe/Warsaw,Warsaw-Modlin Airport,WAW,PL,POINT (20.648988117621318 52.450885650000004),328,http://modlinairport.pl/,EPMO,Zakroczym,Powiat nowodworski,Masovian Voivodeship
+WMI,Europe/Warsaw,Warsaw-Modlin Airport,WAW,PL,POINT (20.648988117621318 52.450885650000004),328,http://modlinairport.pl/,EPMO,Warsaw,Powiat nowodworski,Masovian Voivodeship
 GHF,Europe/Berlin,Giebelstadt,GHF,DE,POINT (9.979900076875726 49.654131),951,http://www.edqg.de/,EDQG,Giebelstadt,Regierungsbezirk Unterfranken,Bavaria
 WMP,Indian/Antananarivo,Mampikony,WMP,MG,POINT (47.59722 -16.075),134,,FMNP,Tsaratanana,,Betsiboka
 GHM,America/Chicago,Municipal,GHM,US,POINT (-87.46667 35.783333),551,,KGHM,Centerville,Hickman County,Tennessee
@@ -4721,7 +4721,7 @@ WMO,America/Anchorage,White Mountain Airport,WMO,US,POINT (-163.4102675 64.68868
 WMR,Indian/Antananarivo,Mananara,WMR,MG,POINT (49.7737999 -16.1637981),22,,FMNC,Mananara,,Analanjirofo
 WNE,Africa/Libreville,Wora Na Ye,WNE,GA,POINT (9.333333 -1.35),16,,,Omboue,,Ogooue-Maritime
 GHN,Asia/Shanghai,Guanghan,GHN,CN,POINT (106.65 30.466667),790,,ZUGH,Guang'an,,Sichuan
-LCY,Europe/London,London City Airport,LON,GB,POINT (0.0549024013303768 51.5042655),19,http://www.londoncityairport.com/,EGLC,,,
+LCY,Europe/London,London City Airport,LON,GB,POINT (0.0549024013303768 51.5042655),19,http://www.londoncityairport.com/,EGLC,London,,
 WNH,Asia/Shanghai,Wenshan Puzhehei Airport,WNH,CN,POINT (104.24256 23.374907),4179,,ZPWS,Wenshan City,Wenshan Zhuangzu Miaozu Zizhizhou,Yunnan
 WMX,Asia/Jayapura,Wamena Airport,WMX,ID,POINT (138.95220458580468 -4.09665775),5403,,WAJW,Wurigelebur,,Papua
 WOW,America/Anchorage,Willow,WOW,US,POINT (-150.16667 61.833332),108,,PAUO,Willow,Matanuska-Susitna Borough,Alaska
@@ -4948,12 +4948,12 @@ GJR,Atlantic/Reykjavik,Gjogur,GJR,IS,POINT (-21.32550892668984 65.99647665),49,,
 GNT,America/Denver,Milan,GNT,US,POINT (-107.86667 35.15),6453,,KGNT,Grants,Cibola County,New Mexico
 GNV,America/New_York,Gainesville Regional Airport,GNV,US,POINT (-82.27670959706018 29.6865213),104,,KGNV,Gainesville,Alachua County,Florida
 GNZ,Africa/Gaborone,Ghanzi,GNZ,BW,POINT (21.65829447260062 -21.6924038),3684,,FBGZ,Ghanzi,,Ghanzi
-GOA,Europe/Rome,Genoa Cristoforo Colombo Airport,GOA,IT,POINT (8.843503285615387 44.4127072),16,http://www.aeroportodigenova.com/en/home/index.php,LIMJ,San Teodoro,Provincia di Genova,Liguria
+GOA,Europe/Rome,Genoa Cristoforo Colombo Airport,GOA,IT,POINT (8.843503285615387 44.4127072),16,http://www.aeroportodigenova.com/en/home/index.php,LIMJ,Genoa,Provincia di Genova,Liguria
 GOB,Africa/Addis_Ababa,Goba,GOB,ET,POINT (39.980556 7.013889),8832,,HAGB,,,
 GOG,Africa/Windhoek,Gobabis,GOG,NA,POINT (18.97155062506426 -22.5053774),4681,,FYGB,,,
 GOH,America/Godthab,Nuuk Airport,GOH,GL,POINT (-51.67788040878934 64.1927724),203,,BGGH,Nuuk,,Sermersooq
 GOI,Asia/Kolkata,Dabolim Airport,GOI,IN,POINT (73.8317012646639 15.380501500000001),141,,VOGO,Chicalim,South Goa,Goa
-GOJ,Europe/Moscow,Nizhny Novgorod International Airport,GOJ,RU,POINT (43.789764 56.218613),239,http://www.airportnn.ru/en/,UWGG,Gorbatovka,,Nizjnij Novgorod
+GOJ,Europe/Moscow,Nizhny Novgorod International Airport,GOJ,RU,POINT (43.789764 56.218613),239,http://www.airportnn.ru/en/,UWGG,Novgorod,,Nizjnij Novgorod
 GOK,America/Chicago,Guthrie,GOK,US,POINT (-97.4172535481175 35.85228895),1076,http://www.guthrieedmondregionalairport.com/,KGOK,Guthrie,Logan County,Oklahoma
 GOL,America/Los_Angeles,State,GOL,US,POINT (-124.416664 42.416668),160,http://www.portofgoldbeach.com/Airport.htm,K4S1,Gold Beach,Curry County,Oregon
 GOM,Africa/Lubumbashi,Goma Airport,GOM,CD,POINT (29.238111563658414 -1.66486355),5009,,FZNA,Goma,,Nord Kivu
@@ -4981,7 +4981,7 @@ KOF,Africa/Johannesburg,Komatipoort,KOF,ZA,POINT (31.9300219 -25.4405985),541,,F
 GYI,Africa/Kigali,Gisenyi,GYI,RW,POINT (29.259052480220763 -1.6788652499999999),5026,,HRYG,Gisenyi,,Western Province
 HHI,Pacific/Honolulu,Wheeler AFB,HHI,US,POINT (-158.03334 21.5),869,,PHHI,Wahiawa,Honolulu County,Hawaii
 KFA,Africa/Nouakchott,Kiffa,KFA,MR,POINT (-11.41207796210941 16.58686265),430,,GQNF,,,
-HHN,Europe/Berlin,Frankfurt - Hahn Airport,FRA,DE,POINT (7.261210336785306 49.944633350000004),1692,,EDFH,Lautzenhausen,,Rheinland-Pfalz
+HHN,Europe/Berlin,Frankfurt - Hahn Airport,FRA,DE,POINT (7.261210336785306 49.944633350000004),1692,,EDFH,Frankfurt,,Rheinland-Pfalz
 AWE,Africa/Libreville,Alowe,AWE,GA,POINT (9.45 -0.75),360,,FOGW,,,
 GRA,America/Bogota,Gamarra,GRA,CO,POINT (-73.7 8.333333),216,,,Gamarra,,Cesar
 GRB,America/Chicago,Austin Straubel International Airport,GRB,US,POINT (-88.14362007159838 44.47848805),679,,KGRB,Ashwaubenon,Brown County,Wisconsin
@@ -5133,8 +5133,8 @@ GXG,Africa/Luanda,Negage,GXG,AO,POINT (15.45 -7.783333),4160,,FNNG,Camabatela,,C
 HAI,America/Detroit,Dr Haines,HAI,US,POINT (-85.63333 41.95),856,,KHAI,Three Rivers,Saint Joseph County,Michigan
 YNM,America/Montreal,Matagami,YNM,CA,POINT (-77.7987925166334 49.76001035),918,,CYNM,,,
 HTV,America/Chicago,Huntsville,HTV,US,POINT (-95.55 30.716667),459,,KUTS,Huntsville,Walker County,Texas
-HAJ,Europe/Berlin,Hannover Airport,HAJ,DE,POINT (9.687236575826585 52.46144075),131,,EDDV,Langenhagen,,Lower Saxony
-HAM,Europe/Berlin,Hamburg Airport,HAM,DE,POINT (9.994550134684175 53.63636215),36,https://www.hamburg-airport.de/en/,EDDH,Fuhlsbuettel,,Hamburg
+HAJ,Europe/Berlin,Hannover Airport,HAJ,DE,POINT (9.687236575826585 52.46144075),131,,EDDV,Hannover,,Lower Saxony
+HAM,Europe/Berlin,Hamburg Airport,HAM,DE,POINT (9.994550134684175 53.63636215),36,https://www.hamburg-airport.de/en/,EDDH,Hamburg,,Hamburg
 HAN,Asia/Ho_Chi_Minh,Noi Bai International Airport,HAN,VN,POINT (105.8044969796485 21.2190339),32,,VVNB,Soc Son,,Ha Noi
 DST,Asia/Dubai,Dubai Seaplane Terminal,DST,AE,POINT (55.27162933 25.25971985),0,,,,,
 GCT,America/Phoenix,Grand Canyon Bar 10 Airport,GCT,US,POINT (-113.2311 36.258),3933,,"",,,
@@ -5241,8 +5241,8 @@ GHS,Asia/Makassar,Melak Airport,GHS,ID,POINT (115.76 -0.2036),282,,,,,
 GSM,Asia/Tehran,Dayrestan Airport,GSM,IR,POINT (55.89917705614705 26.753171950000002),39,,OIKQ,Bandar-e Khamir,,Hormozgan
 AMK,America/Denver,Animas Airpark,DRO,US,POINT (-107.75 37.15),6637,http://www.websmart66.net/cgi-bin/p/w66p-airportinfo.cgi?d=greggs-flying-service,"",,,
 BDX,America/Denver,Broadus,BDX,US,POINT (-105.36667 45.466667),3077,,"00F",Broadus,Powder River County,Montana
-BER,Europe/Berlin,Berlin Brandenburg Airport,BER,DE,POINT (13.5367764 52.3976851),239,https://ber.berlin-airport.de/,EDDB,,,
-BHX,Europe/London,Birmingham International Airport,BHX,GB,POINT (-1.733256 52.45252),331,http://www.bhx.co.uk/,EGBB,Bickenhill,Solihull,England
+BER,Europe/Berlin,Berlin Brandenburg Airport,BER,DE,POINT (13.5367764 52.3976851),239,https://ber.berlin-airport.de/,EDDB,Berlin,,
+BHX,Europe/London,Birmingham International Airport,BHX,GB,POINT (-1.733256 52.45252),331,http://www.bhx.co.uk/,EGBB,Birmingham,Solihull,England
 CQW,America/New_York,CHERAW MUNI/LYNCH BELLINGER FLD AIRPORT,CQW,US,POINT (-79.957 34.7129),209,,,,,
 GYB,Australia/Perth,Wodgina Airport,GYB,AU,POINT (118.6933762 -21.1397729),465,,,Wodgina,,Western Australia
 HCQ,Australia/Perth,Halls Creek,HCQ,AU,POINT (127.66458487725606 -18.23649795),1315,,YHLC,,,
@@ -5529,7 +5529,7 @@ IDK,Australia/Adelaide,Indulkana,IDK,AU,POINT (133.325 -26.966667),1269,,YIDK,,,
 IDN,Pacific/Port_Moresby,Indagen,IDN,PG,POINT (147.24335835561104 -6.2266791),5715,,AYID,,,
 IDY,Europe/Paris,Ile d'Yeu,IDY,FR,POINT (-2.3908226881728325 46.7170388),45,,LFEY,Notre-Dame-de-Monts,Departement de la Vendee,Pays de la Loire
 IEG,Europe/Warsaw,Zielona Gora-Babimost Airport,IEG,PL,POINT (15.516667 51.933334),574,http://www.lotnisko.zielonagora.pl/,EPZG,Zielona Gora,Zielona Gora,Lubusz
-IEV,Europe/Kiev,Kyiv International Airport,IEV,UA,POINT (30.450832 50.401943),554,https://iev.aero/,UKKK,Chabany,,Kiev
+IEV,Europe/Kiev,Kyiv International Airport,IEV,UA,POINT (30.450832 50.401943),554,https://iev.aero/,UKKK,Kyiv,,Kiev
 IFA,America/Chicago,Iowa Falls,IFA,US,POINT (-93.26667 42.516666),1112,http://www.cityofiowafalls.com/airport.asp,KIFA,Iowa Falls,Hardin County,Iowa
 IFF,Australia/Brisbane,Iffley,IFF,AU,POINT (141.2150007 -18.8773769),101,,YIFY,,,
 IFH,Asia/Tehran,Hesa,IFH,IR,POINT (51.56215824869354 32.9223228),5291,,OIFE,Shahin Shahr,,Isfahan
@@ -5873,7 +5873,7 @@ ISO,America/New_York,Stallings Field,ISO,US,POINT (-77.6077152 35.3290496),75,ht
 ISP,America/New_York,Long Island MacArthur Airport,ISP,US,POINT (-73.09920017603784 40.79578465),72,,KISP,Bohemia,Suffolk County,New York
 ISQ,America/Detroit,Schoolcraft County,ISQ,US,POINT (-86.25 45.95),580,,KISQ,Manistique,Schoolcraft County,Michigan
 ISS,America/New_York,Wiscasset,ISS,US,POINT (-69.666664 44),22,http://www.wiscasset.org/departments/airport/,KIWI,Wiscasset,Lincoln County,Maine
-IST,Europe/Istanbul,Istanbul New Airport,IST,TR,POINT (28.8298952 40.9912282),82,http://www.igairport.com/en,LTFM,Bahcelievler,,Istanbul
+IST,Europe/Istanbul,Istanbul New Airport,IST,TR,POINT (28.8298952 40.9912282),82,http://www.igairport.com/en,LTFM,Istanbul,,Istanbul
 ISU,Asia/Baghdad,Sulaimaniyah International Airport,ISU,IQ,POINT (45.31510843970692 35.5626087),2388,,ORSU,As Sulaymaniyah,,As Sulaymaniyah
 KMN,Africa/Lubumbashi,Kamina,KMN,CD,POINT (25.25 -8.641111),3543,,FZSA,Kamina,,Katanga
 KMP,Africa/Windhoek,J.G.H. Van Der Wath,KMP,NA,POINT (18.1 -26.533611),3506,,FYKT,Keetmanshoop,,Karas
@@ -6046,7 +6046,7 @@ JDN,America/Denver,Jordan,JDN,US,POINT (-106.88333 47.316666),2624,,KJDN,Jordan,
 KUN,Europe/Vilnius,Kaunas Airport,KUN,LT,POINT (23.916668 54.9),256,http://www.kaunasair.lt/index.php?lang=2&m=2&p=210,EYKA,Kaunas,Kaunas,Kauno apskritis
 JDO,America/Fortaleza,Orlando Bezerra de Menezes Airport,JDO,BR,POINT (-39.316666 -7.2),1243,,SBJU,Juazeiro do Norte,Juazeiro Do Norte,Ceara
 KUR,Asia/Kabul,Kuran-O-Munjan,KUR,AF,POINT (71.11667 38.4),0,,,Maymay,,Badakhshan
-JDP,Europe/Paris,Heliport De Paris,PAR,FR,POINT (2.283333 48.816666),255,,,Issy-les-Moulineaux,Departement des Hauts-de-Seine,Ile-de-France
+JDP,Europe/Paris,Heliport De Paris,PAR,FR,POINT (2.283333 48.816666),255,,,Paris,Departement des Hauts-de-Seine,Ile-de-France
 KUT,Asia/Tbilisi,Kutaisi International Airport,KUT,GE,POINT (42.7 42.25),223,,UGKO,Kutaisi,,Imereti
 KUU,Asia/Kolkata,Bhuntar Airport,KUU,IN,POINT (77.1 31.983334),3573,,VIBR,Kulu,Kulu,Himachal Pradesh
 KUV,Asia/Seoul,Gunsan Airport,KUV,KR,POINT (126.75 35.983334),29,,RKJK,Kunsan,,Jeollabuk-do
@@ -6149,7 +6149,7 @@ LBJ,Asia/Makassar,Komodo Airport,LBJ,ID,POINT (119.88841166087786 -8.4825947),66
 JIK,Europe/Athens,Ikaria Airport,JIK,GR,POINT (26.346215400974874 37.6829412),65,,LGIK,Agios Kirykos,Nomos Samou,North Aegean
 JIM,Africa/Addis_Ababa,Jimma Airport,JIM,ET,POINT (36.82030042171516 7.6614832),5583,,HAJM,Jima,,Oromiya
 JIN,Africa/Kampala,Jinja,JIN,UG,POINT (33.192223 0.456389),3802,,HUJI,Jinja,Jinja District,Eastern Region
-LBA,Europe/London,Leeds Bradford International Airport,LBA,GB,POINT (-1.659985 53.86934),681,http://www.lbia.co.uk/,EGNM,Yeadon,City and Borough of Leeds,England
+LBA,Europe/London,Leeds Bradford International Airport,LBA,GB,POINT (-1.659985 53.86934),681,http://www.lbia.co.uk/,EGNM,Leeds,City and Borough of Leeds,England
 JIO,America/Los_Angeles,International Heliport,ONT,US,POINT (-117.65 34.066666),994,,"",Ontario,San Bernardino County,California
 JIP,America/Guayaquil,Jipijapa,JIP,EC,POINT (-80.666664 -1),239,,SEJI,Montecristi,,Manabi
 LAF,America/Indiana/Indianapolis,Purdue University,LAF,US,POINT (-86.9392955985291 40.4122378),606,,KLAF,West Lafayette,Tippecanoe County,Indiana
@@ -6282,15 +6282,15 @@ LGS,America/Argentina/Mendoza,Malargue,LGS,AR,POINT (-69.57298722844945 -35.4931
 LIY,America/New_York,Wright AAF,LIY,US,POINT (-81.6 31.85),45,,KLHW,Hinesville,Liberty County,Georgia
 LGW,Europe/London,London Gatwick Airport,LON,GB,POINT (-0.1823116499127204 51.1541082),202,http://www.gatwickairport.com/,EGKK,Horley,Surrey,England
 LHE,Asia/Karachi,Allama Iqbal International Airport,LHE,PK,POINT (74.40099966094238 31.51939965),712,,OPLA,Lahore,,Punjab
-LHR,Europe/London,London Heathrow Airport,LON,GB,POINT (-0.4587800741571181 51.46773895),83,http://www.heathrowairport.com/,EGLL,West Drayton,Greater London,England
+LHR,Europe/London,London Heathrow Airport,LON,GB,POINT (-0.4587800741571181 51.46773895),83,http://www.heathrowairport.com/,EGLL,London,Greater London,England
 LIE,Africa/Kinshasa,Libenge,LIE,CD,POINT (18.6389325 3.6236844),1125,,FZFA,Libenge,,Equateur
 LIH,Pacific/Honolulu,Lihue Airport,LIH,US,POINT (-159.33671538390365 21.97206585),153,,PHLI,Hanama'ulu,Kauai County,Hawaii
 LIK,Pacific/Majuro,Likiep Island,LIK,MH,POINT (169.30807220544634 9.82326265),0,,"",Likiep,,Likiep Atoll
-LIL,Europe/Paris,Lille Airport,LIL,FR,POINT (3.105251611858831 50.5681339),157,,LFQQ,Lesquin,Departement du Nord,Nord-Pas-de-Calais
+LIL,Europe/Paris,Lille Airport,LIL,FR,POINT (3.105251611858831 50.5681339),157,,LFQQ,Lille,Departement du Nord,Nord-Pas-de-Calais
 LIM,America/Lima,Jorge Chavez International Airport,LIM,PE,POINT (-77.11123822674789 -12.02178305),113,http://www.lap.com.pe/,SPJC,Callao,Callao,Callao
 LIO,America/Costa_Rica,Limon International Airport,LIO,CR,POINT (-83.02066457707782 9.95635245),7,,MRLM,Limon,,Limon
 LIR,America/Costa_Rica,Liberia Airport,LIR,CR,POINT (-85.53862961331669 10.595176200000001),270,,MRLB,Liberia,,Guanacaste
-LIS,Europe/Lisbon,Lisbon Portela Airport,LIS,PT,POINT (-9.131900592219496 38.7809542),374,http://www.ana.pt/en-US/Aeroportos/lisboa/Lisboa/Pages/HomeLisboa.aspx,LPPT,Moscavide,Loures,Lisbon
+LIS,Europe/Lisbon,Lisbon Portela Airport,LIS,PT,POINT (-9.131900592219496 38.7809542),374,http://www.ana.pt/en-US/Aeroportos/lisboa/Lisboa/Pages/HomeLisboa.aspx,LPPT,Lisbon,Loures,Lisbon
 LIW,Asia/Rangoon,Loikaw Airport,LIW,MM,POINT (97.21571752982794 19.694852150000003),2940,,VYLK,Loikaw,,Kayah
 LIZ,America/New_York,Loring AFB,LIZ,US,POINT (-78.63333 42.033333),746,,ME16,Foster Brook,McKean County,Pennsylvania
 LJA,Africa/Lubumbashi,Lodja,LJA,CD,POINT (23.444445 -3.397222),1647,,FZVA,Lodja,,Kasai-Oriental
@@ -6428,14 +6428,14 @@ MAI,Africa/Blantyre,Mangochi,MAI,MW,POINT (35.25 -14.5),1571,,FWMG,Mangochi,Mang
 MAJ,Pacific/Majuro,Amata Kabua International Airport,MAJ,MH,POINT (171.27149916297407 7.0649864),32,,PKMJ,Majuro,,Majuro Atoll
 MAK,Africa/Juba,Malakal,MAK,SS,POINT (31.644444 9.555556),1259,,HSSM,Malakal,,Upper Nile
 MAM,America/Matamoros,Matamoros Airport,MAM,MX,POINT (-97.52118771072375 25.76121775),55,,MMMA,Heroica Matamoros,Matamoros,Tamaulipas
-MAN,Europe/London,Manchester Airport,MAN,GB,POINT (-2.273354 53.362907),249,http://www.manchesterairport.co.uk/,EGCC,Ringway,Manchester,England
+MAN,Europe/London,Manchester Airport,MAN,GB,POINT (-2.273354 53.362907),249,http://www.manchesterairport.co.uk/,EGCC,Manchester,Manchester,England
 MAQ,Asia/Bangkok,Mae Sot Airport,MAQ,TH,POINT (98.583336 16.666668),721,,VTPM,Mae Sot,,Tak
 MAR,America/Caracas,La Chinita Airport,MAR,VE,POINT (-71.7254962784662 10.557807100000002),187,,SVMC,San Francisco,Municipio San Francisco,Zulia
 MAS,Pacific/Port_Moresby,Momote Airport,MAS,PG,POINT (147.42442232289721 -2.0629359000000003),68,,AYMO,Lorengau,,Manus
 MAT,Africa/Kinshasa,Matadi,MAT,CD,POINT (13.441667 -5.798333),1118,,FZAM,Matadi,,Bas-Congo
 MAU,Pacific/Tahiti,Maupiti,MAU,PF,POINT (-152.241621 -16.4268907),19,,NTTP,Vaitape,,Iles Sous-le-Vent
 MAV,Pacific/Majuro,Maloelap Island,MAV,MH,POINT (171.1 8.75),0,,"",Taroa,,Maloelap Atoll
-MAD,Europe/Madrid,Adolfo Suarez Madrid-Barajas Airport,MAD,ES,POINT (-3.5740806206811313 40.4948384),1955,http://www.aena.es/en/passengers/passengers.html,LEMD,Barajas de Madrid,Provincia de Madrid,Madrid
+MAD,Europe/Madrid,Adolfo Suarez Madrid-Barajas Airport,MAD,ES,POINT (-3.5740806206811313 40.4948384),1955,http://www.aena.es/en/passengers/passengers.html,LEMD,Madrid,Provincia de Madrid,Madrid
 MBE,Asia/Tokyo,Monbetsu Airport,MBE,JP,POINT (143.40591414398716 44.30254515),29,,RJEB,Mombetsu,,Hokkaido
 MAZ,America/Puerto_Rico,Eugenio M. De Hostos Airport,MAZ,PR,POINT (-67.14889 18.257778),42,,TJMZ,Anasco,,Anasco
 MBG,America/Chicago,Mobridge,MBG,US,POINT (-100.4039521679061 45.546469200000004),1689,,KMBG,Mobridge,Walworth County,South Dakota
@@ -6592,7 +6592,7 @@ SCH,America/New_York,Schenectady County,SCH,US,POINT (-73.92842766947919 42.8554
 SDM,America/Los_Angeles,Brown Field Municipalcipal,SAN,US,POINT (-116.98 32.572224),505,http://www.sandiego.gov/airports/brown/,KSDM,,,
 SFF,America/Los_Angeles,Felts Field,GEG,US,POINT (-117.4 47.666668),1906,http://feltsfield.spokaneairports.net/,KSFF,,,
 SKF,America/Chicago,Kelly AFB,SAT,US,POINT (-98.5 29.416668),646,,KSKF,,,
-SVQ,Europe/Madrid,Seville Airport,SVQ,ES,POINT (-5.900136 37.423477),144,,LEZL,,,
+SVQ,Europe/Madrid,Seville Airport,SVQ,ES,POINT (-5.900136 37.423477),144,,LEZL,Seville,,
 KSG,Pacific/Port_Moresby,Kisengan,KSG,PG,POINT (146.71666 -6.35),3700,,"",,,
 KTB,America/Anchorage,Thorne Bay,KTB,US,POINT (-132.5366667 55.6877778),0,,KTB,,,
 RUI,America/Denver,Ruidoso Sierra Blanca Regional Airport,RUI,US,POINT (-105.6625 33.360832),6909,,KSRR,,,
@@ -6617,12 +6617,12 @@ KZB,America/Anchorage,Zachar Bay SPB,KZB,US,POINT (-153.75 57.55),0,,"",,,
 KZF,Pacific/Port_Moresby,Kaintiba,KZF,PG,POINT (146 -7.466667),2050,,AYKT,,,
 LAC,Asia/Kuching,Layang-Layang Airstrip,LAC,MY,POINT (113.85 7.4),7,,"",,,
 LBM,Africa/Maputo,Luabo,LBM,MZ,POINT (36.166668 -18.5),36,,"",,,
-VLC,Europe/Madrid,Valencia Airport,VLC,ES,POINT (-0.481209186098332 39.4878647),180,,LEVC,,,
+VLC,Europe/Madrid,Valencia Airport,VLC,ES,POINT (-0.481209186098332 39.4878647),180,,LEVC,Valencia,,
 XRY,Europe/Madrid,Jerez Airport,XRY,ES,POINT (-6.064049514261415 36.74377795),93,,LEJR,,,
 LDW,Australia/Perth,Lansdowne,LDW,AU,POINT (126.65 -17.883333),1190,,"",,,
 ABC,Europe/Madrid,Los Llanos,ABC,ES,POINT (-1.863333 38.948334),2276,http://www.aena.es/csee/Satellite?cid=1046767815090&pagename=subHome&Language=EN_GB&SiteName=LEAB&c=Page,LEAB,,,
 AGP,Europe/Madrid,Malaga Airport,AGP,ES,POINT (-4.499980126161259 36.67876135),52,,LEMG,,,
-ALC,Europe/Madrid,Alicante-Elche Airport,ALC,ES,POINT (-0.5542897 38.2888263),72,http://www.aena.es/csee/Satellite?cid=1049437849176&pagename=subHome&Language=EN_GB&SiteName=ALC&c=Page,LEAL,,,
+ALC,Europe/Madrid,Alicante-Elche Airport,ALC,ES,POINT (-0.5542897 38.2888263),72,http://www.aena.es/csee/Satellite?cid=1049437849176&pagename=subHome&Language=EN_GB&SiteName=ALC&c=Page,LEAL,Alicante,,
 CQM,Europe/Madrid,Ciudad Real Central,CQM,ES,POINT (-3.916667 38.983334),2093,http://www.aeropuertocentralcr.com/,LERL,,,
 ANE,Europe/Paris,Angers-Marce Airport,ANE,FR,POINT (-0.55 47.466667),144,,LFJR,,,
 LTT,Europe/Paris,La Mole,LTT,FR,POINT (6.633333 43.283333),0,,LFTZ,,,
@@ -6665,7 +6665,7 @@ NOP,Europe/Istanbul,Sinop Airport - Turkey,NOP,TR,POINT (35.06889 42.0175),52,,L
 ADB,Europe/Istanbul,Izmir Adnan Menderes Airport,IZM,TR,POINT (27.15881973653169 38.289593249999996),337,http://www.adnanmenderesairport.com,LTBJ,,,
 AOE,Europe/Istanbul,Anadolu University,ESK,TR,POINT (30.519444 39.81),2595,,LTBY,,,
 GNY,Europe/Istanbul,Sanliurfa GAP Airport,GNY,TR,POINT (38.846943 37.094166),1450,http://gap.dhmi.gov.tr/havaalanlari/home.aspx?hv=36,LTCS,,,
-ISL,Europe/Istanbul,Istanbul Ataturk Airport,IST,TR,POINT (28.81089438997946 40.98179415),114,http://www.ataturkairport.com/eng/,LTBA,,,
+ISL,Europe/Istanbul,Istanbul Ataturk Airport,IST,TR,POINT (28.81089438997946 40.98179415),114,http://www.ataturkairport.com/eng/,LTBA,Istanbul,,
 MDR,America/Anchorage,Medfra,MDR,US,POINT (-154.7166666 63.1068643),518,,"",,,
 MAP,Pacific/Port_Moresby,Mamai,MAP,PG,POINT (149.5 -10.333333),351,,"",,,
 MDS,America/Grand_Turk,Middle Caicos,MDS,TC,POINT (-71.71667 21.783333),13,,MBMC,,,
@@ -7822,7 +7822,7 @@ MIO,America/Chicago,Miami,MIO,US,POINT (-94.9 36.88333),807,,,Miami,Ottawa Count
 MJS,Africa/Maputo,Maganja Da Costa,MJS,MZ,POINT (32.22 -25.35),272,,"",Ressano Garcia,,Maputo
 MJT,Europe/Athens,Mytilene International Airport,MJT,GR,POINT (26.599060222770895 39.057918),26,,LGMT,Vareia,Nomos Lesvou,North Aegean
 MJU,Asia/Makassar,Tampa Padang Airport,MJU,ID,POINT (118.833336 -2.5),0,,WAWJ,Mamuju,,Sulawesi Barat
-MJV,Europe/Madrid,Murcia-San Javier Airport,MJV,ES,POINT (-0.817794776107736 37.77661405),32,,LELC,San Javier,Murcia,Murcia
+MJV,Europe/Madrid,Murcia-San Javier Airport,MJV,ES,POINT (-0.817794776107736 37.77661405),32,,LELC,Murcia,Murcia,Murcia
 MJW,Africa/Harare,Mahenye,MJW,ZW,POINT (32.3334757 -21.2302956),875,,FVMH,Chiredzi,,Masvingo
 MJX,America/New_York,Robert J. Miller,MJX,US,POINT (-74.2 39.966667),49,http://www.planning.co.ocean.nj.us/rjmiller/index.htm,KMJX,Toms River,Ocean County,New Jersey
 MJY,Asia/Jakarta,Mangunjaya,MJY,ID,POINT (103.5670013 -2.73333),75,,,Babat,,South Sumatra
@@ -7842,9 +7842,9 @@ MKT,America/Chicago,Municipal,MKT,US,POINT (-93.918335 44.22361),918,,,Eagle Lak
 MLB,America/New_York,Orlando Melbourne International Airport,MLB,US,POINT (-80.64815801235798 28.1027201),49,,KMLB,Melbourne,Brevard County,Florida
 MLD,America/Boise,Malad City,MLD,US,POINT (-112.45 42.2),7244,,,Malad City,Oneida County,Idaho
 MLT,America/New_York,Millinocket,MLT,US,POINT (-68.69098380008309 45.6478685),370,,,Millinocket,Penobscot County,Maine
-MLW,Africa/Monrovia,Sprigg Payne,MLW,LR,POINT (-10.758333 6.289444),39,,GLMR,Monrovia,,Montserrado
+MLW,Africa/Monrovia,Sprigg Payne,MLW,LR,POINT (-10.758333 6.289444),39,,GL fMR,Monrovia,,Montserrado
 MLX,Europe/Istanbul,Malatya Airport,MLX,TR,POINT (38.253613 38.354443),3008,,LTAT,Yesilyurt,,Malatya
-MMA,Europe/Stockholm,Malmö Bulltofta Airport,MMA,DK,POINT (13.059722 55.605),16,,,Arloev,Burlovs Kommun,Skane
+MMA,Europe/Stockholm,Malmö Bulltofta Airport,MMA,DK,POINT (13.059722 55.605),16,,,Malmo,Burlovs Kommun,Skane
 MMC,America/Monterrey,Ciudad Mante,MMC,MX,POINT (-99 22.833332),206,,MMDM,Ciudad Mante,,Tamaulipas
 MLZ,America/Montevideo,Cerro Largo,MLZ,UY,POINT (-54.21795722761725 -32.33858835),311,,SUMO,Melo,,Cerro Largo
 MMB,Asia/Tokyo,Memanbetsu Airport,MMB,JP,POINT (144.16144903777698 43.88265885),75,,RJCM,Bihoro,,Hokkaido
@@ -7890,7 +7890,7 @@ MQN,Europe/Oslo,Mo i Rana Airport,MQN,NO,POINT (14.301861576067283 66.3640810999
 MQP,Africa/Johannesburg,Kruger Mpumalanga International Airport,NLP,ZA,POINT (31.106954598075028 -25.38178745),2775,,FAKN,White River,Ehlanzeni District,Mpumalanga
 MQD,America/Argentina/Salta,Maquinchao,MQD,AR,POINT (-68.7072439 -41.2413728),2880,,SAVQ,Maquinchao,,Rio Negro
 MQR,America/Bogota,Mosquera,MQR,CO,POINT (-78.416664 2.5),104,,"",Mosquera,,Narino
-MRS,Europe/Paris,Marseille Provence Airport,MRS,FR,POINT (5.222137 43.44178),55,http://www.marseille.aeroport.fr,LFML,Saint-Victoret,Departement des Bouches-du-Rhone,Provence-Alpes-Cote d'Azur
+MRS,Europe/Paris,Marseille Provence Airport,MRS,FR,POINT (5.222137 43.44178),55,http://www.marseille.aeroport.fr,LFML,Marseille,Departement des Bouches-du-Rhone,Provence-Alpes-Cote d'Azur
 MRU,Indian/Mauritius,Sir Seewoosagur Ramgoolam International Airport,MRU,MU,POINT (57.684949281775644 -20.4325615),104,http://aml.mru.aero/,FIMP,Plaine Magnien,,Grand Port
 MRV,Europe/Moscow,Mineralnye Vody Airport,MRV,RU,POINT (43.081651070827434 44.22621995),1059,,URMM,Andzhiyevskiy,,Stavropol'skiy
 MRW,Europe/Copenhagen,Maribo,MRW,DK,POINT (11.435 54.685833),32,http://www.lollandfalsterairport.dk/,EKMB,Holeby,Lolland Kommune,Zealand
@@ -8145,7 +8145,7 @@ ORO,America/Tegucigalpa,Yoro,ORO,HN,POINT (-87.13389 15.125278),2158,,MHYR,Yoro,
 ORP,Africa/Gaborone,Orapa,ORP,BW,POINT (24.5 -21),2975,,FBOR,Rakops,,Central
 ORQ,America/New_York,Heliport,ORQ,US,POINT (-73.36667 41.11667),68,,,Westport,Fairfield County,Connecticut
 ORW,Asia/Karachi,Ormara,ORW,PK,POINT (64.59265873771524 25.279114200000002),22,,OPOR,Ormara,,Balochistan
-ORY,Europe/Paris,Paris Orly Airport,PAR,FR,POINT (2.35572229362018 48.748477050000005),301,http://www.adp.fr,LFPO,Paray-Vieille-Poste,Departement de l'Essonne,Ile-de-France
+ORY,Europe/Paris,Paris Orly Airport,PAR,FR,POINT (2.35572229362018 48.748477050000005),301,http://www.adp.fr,LFPO,Paris,Departement de l'Essonne,Ile-de-France
 ORX,America/Santarem,Oriximina,ORX,BR,POINT (-55.86667 -1.75),141,,SNOX,Oriximina,Oriximina,Para
 ORZ,America/Belize,Orange Walk,ORZ,BZ,POINT (-88.75 17.166668),485,,"",Belmopan,,Cayo
 OSC,America/Detroit,Wurtsmith AFB,OSC,US,POINT (-83.333336 44.433334),590,,KOSC,Au Sable,Iosco County,Michigan
@@ -8163,7 +8163,7 @@ OTK,America/Los_Angeles,Tillamook,OTK,US,POINT (-123.81568010572308 45.4182929),
 OTL,Africa/Nouakchott,Boutilimit,OTL,MR,POINT (-14.666667 17.75),183,,GQNB,Aleg,,Brakna
 OTM,America/Chicago,Industrial,OTM,US,POINT (-92.449165 41.106388),833,,KOTM,Ottumwa,Wapello County,Iowa
 OTO,America/Denver,Vor,OTO,US,POINT (-105.933334 35.066666),6276,,,Moriarty,Torrance County,New Mexico
-OTP,Europe/Bucharest,Bucharest Henri Coanda International Airport,BUH,RO,POINT (26.077063 44.571156),318,http://www.bucharestairports.ro/en/,LROP,Otopeni,Comuna Otopeni,Ilfov
+OTP,Europe/Bucharest,Bucharest Henri Coanda International Airport,BUH,RO,POINT (26.077063 44.571156),318,http://www.bucharestairports.ro/en/,LROP,Bucharest,Comuna Otopeni,Ilfov
 OTR,America/Costa_Rica,Coto 47,OTR,CR,POINT (-82.933334 8.566667),42,,MRCC,Corredor,,Puntarenas
 OTS,America/Los_Angeles,Anacortes,OTS,US,POINT (-122.66173193624057 48.4974928),219,,"",Anacortes,Skagit County,Washington
 OWE,Africa/Libreville,Owendo,OWE,GA,POINT (9.483333 0.35),26,,,Libreville,,Estuaire
@@ -8282,7 +8282,7 @@ POT,America/Jamaica,Ken Jones,POT,JM,POINT (-76.53555 18.198334),32,,MKKJ,Hope B
 POU,America/New_York,Dutchess County,POU,US,POINT (-73.882774 41.628056),121,,KPOU,Myers Corner,Dutchess County,New York
 POV,Europe/Bratislava,Presov,POV,SK,POINT (21.25 49),908,,LZPW,Presov,Okres Presov,Presovsky
 POW,Europe/Ljubljana,Portoroz,POW,SI,POINT (13.583333 45.516666),154,http://www.portoroz-airport.si/,LJPZ,Portoroz,,Piran-Pirano
-POX,Europe/Paris,Paris Cergy Pontoise,PAR,FR,POINT (2.1 49.05),160,,LFPT,Pontoise,Departement du Val-d'Oise,Ile-de-France
+POX,Europe/Paris,Paris Cergy Pontoise,PAR,FR,POINT (2.1 49.05),160,,LFPT,Paris,Departement du Val-d'Oise,Ile-de-France
 POY,America/Denver,Powell,POY,US,POINT (-108.76667 44.75),4416,http://www.cityofpowell.com/assets/pages/city/airport.aspx,KPOY,Powell,Park County,Wyoming
 PPA,America/Chicago,Perry Lefors Field,PPA,US,POINT (-100.96667 35.533333),3244,,KPPA,Pampa,Gray County,Texas
 PPB,America/Sao_Paulo,A. De Barros Airport,PPB,BR,POINT (-51.45 -22.1),1332,http://www.daesp.sp.gov.br/aeroporto-detalhe/?id=879,SBDN,Alvares Machado,Alvares Machado,Sao Paulo
@@ -8291,7 +8291,7 @@ PPE,America/Hermosillo,Puerto Penasco,PPE,MX,POINT (-113.5 31.383333),65,,MMPE,P
 PRA,America/Argentina/Cordoba,General Justo Jose de Urquiza Airport,PRA,AR,POINT (-60.4829340773004 -31.7975709),242,,SAAP,San Benito,,Entre Rios
 PRB,America/Los_Angeles,Paso Robles,PRB,US,POINT (-120.63062553873178 35.6756407),741,http://www.prcity.com/government/departments/publicworks/airport/,KPRB,Paso Robles,San Luis Obispo County,California
 PRC,America/Phoenix,Prescott Airport,PRC,US,POINT (-112.424164 34.65),5022,,KPRC,Chino Valley,Yavapai County,Arizona
-PRG,Europe/Prague,Vaclav Havel Airport Prague,PRG,CZ,POINT (14.27056489323675 50.1020451),1181,http://www.prg.aero,LKPR,Hostivice,,Central Bohemia
+PRG,Europe/Prague,Vaclav Havel Airport Prague,PRG,CZ,POINT (14.27056489323675 50.1020451),1181,http://www.prg.aero,LKPR,Prague,,Central Bohemia
 PRI,Indian/Mahe,Praslin Island Airport,PRI,SC,POINT (55.691294938853574 -4.3186006500000005),55,,FSPP,Victoria,,English River
 PRJ,Europe/Rome,Capri,PRJ,IT,POINT (14.233333 40.55),652,,,Capri,Provincia di Napoli,Campania
 PRK,Africa/Johannesburg,Prieska,PRK,ZA,POINT (22.7 -29.666668),3238,,FAPK,Prieska,Pixley ka Seme District Municipality,Northern Cape
@@ -8842,7 +8842,7 @@ TKH,Asia/Bangkok,Nakhon Sawan,TKH,TH,POINT (100.35 15.25),107,,VTPI,Takhli,,Nakh
 TLD,Africa/Gaborone,Limpopo Valley,TLD,BW,POINT (29.132088297657788 -22.192227449999997),1772,,FBLV,Mathathane,,Central
 TKN,Asia/Tokyo,Tokunoshima,TKN,JP,POINT (128.88333 27.833332),17,,RJKN,Naze,,Kagoshima
 TLL,Europe/Tallinn,Tallinn Airport,TLL,EE,POINT (24.836840478778107 59.414388),131,http://www.tallinn-airport.ee/eng,EETN,Tallinn,Tallinna linn,Harju
-TLS,Europe/Paris,Toulouse-Blagnac Airport,TLS,FR,POINT (1.3580811802322725 43.64332175),499,http://www.toulouse.aeroport.fr/,LFBO,Blagnac,Departement de la Haute-Garonne,Midi-Pyrenees
+TLS,Europe/Paris,Toulouse-Blagnac Airport,TLS,FR,POINT (1.3580811802322725 43.64332175),499,http://www.toulouse.aeroport.fr/,LFBO,Toulouse,Departement de la Haute-Garonne,Midi-Pyrenees
 TKT,Asia/Bangkok,Tak,TKT,TH,POINT (99.15222 16.878332),478,,VTPT,Tak,,Tak
 TKZ,Pacific/Auckland,Tokoroa,TKZ,NZ,POINT (175.83333 -38.216667),1220,,NZTO,Tokoroa,South Waikato District,Waikato
 TLB,Asia/Karachi,Tarbela,TLB,PK,POINT (72.816666 34.13333),1114,,OPTA,Khalabat,,Khyber Pakhtunkhwa
@@ -9342,7 +9342,7 @@ WYS,America/Denver,Yellowstone Airport,WYS,US,POINT (-111.11688394311122 44.6889
 WZA,Africa/Accra,Wa Airport,WZA,GH,POINT (-2.5078313317209595 10.08289355),1003,,,Wa,,Upper West
 XAI,Asia/Shanghai,Xinyang Minggang Airport,XAI,CN,POINT (114.07562648032489 32.5401692),285,,ZHXY,Minggang,,Henan Sheng
 XES,America/Chicago,Lake Geneva Aire Estates Airport,XES,US,POINT (-88.428055 42.627777),1003,,"",Lake Geneva,Walworth County,Wisconsin
-XFW,Europe/Berlin,Hamburg Finkenwerder Airport,HAM,DE,POINT (9.836945 52.535835),23,,EDHI,Isernhagen Farster Bauerschaft,,Lower Saxony
+XFW,Europe/Berlin,Hamburg Finkenwerder Airport,HAM,DE,POINT (9.836945 52.535835),23,,EDHI,Hamburg,,Lower Saxony
 XEX,Europe/Paris,Aerogare,PAR,FR,POINT (2.65 48.833332),324,,,Torcy,Departement de Seine-et-Marne,Ile-de-France
 XFZ,America/Montreal,Charny,YQB,CA,POINT (-71.25 46.716667),229,,,Breakeyville,Chaudiere-Appalaches,Quebec
 XGA,Africa/Ouagadougou,Gaoua,XGA,BF,POINT (-3.183333 10.333333),1026,,DFOG,Gaoua,Province du Poni,Southwest
@@ -9656,7 +9656,7 @@ YZV,America/Montreal,Sept-Iles Airport,YZV,CA,POINT (-66.2656021 50.2233009),180
 YZG,America/Montreal,Salluit,YSW,CA,POINT (-75.66740714445996 62.1792874),743,,CYZG,Iqaluit,,Nunavut
 ZAA,America/Vancouver,Alice Arm,ZAA,CA,POINT (-129.4817122 55.4596468),0,,CAC3,Terrace,,British Columbia
 ZAT,Asia/Shanghai,Zhaotong Airport,ZAT,CN,POINT (103.75572039170027 27.32755695),0,,ZPZT,Zhaotong,,Yunnan
-ZAZ,Europe/Madrid,Zaragoza Airport,ZAZ,ES,POINT (-1.0437423279666378 41.6676807),863,,LEZG,Utebo,Provincia de Zaragoza,Aragon
+ZAZ,Europe/Madrid,Zaragoza Airport,ZAZ,ES,POINT (-1.0437423279666378 41.6676807),863,,LEZG,Zaragoza,Provincia de Zaragoza,Aragon
 ZBY,Asia/Vientiane,Sayaboury,ZBY,LA,POINT (101.70990990145297 19.242310850000003),962,,VLSB,Sainyabuli,,Xiagnabouli
 ZCL,America/Mexico_City,La Calera Airport,ZCL,MX,POINT (-102.55 22.8),7141,http://www.oma.aero/es/aeropuertos/zacatecas/,MMZC,Zacatecas,,Zacatecas
 ZEC,Africa/Johannesburg,Secunda,ZEC,ZA,POINT (28 -27),5250,,FASC,Deneysville,Fezile Dabi District Municipality,Orange Free State
@@ -9729,7 +9729,7 @@ ZTR,Europe/Kiev,Zhitomir Airport,ZTR,UA,POINT (28.65 50.25),0,,UKKV,Zhytomyr,,Zh
 ZTU,Asia/Baku,Zaqatala,ZTU,AZ,POINT (46.664787 41.56166),1279,,UBBY,Zaqatala,,Zaqatala
 ZUC,America/Winnipeg,Ignace,ZUC,CA,POINT (-91.833336 49.5),1435,,CZUC,Atikokan,Rainy River District,Ontario
 ZUD,America/Santiago,Ancud,ZUD,CL,POINT (-73.833336 -42),315,,SCAC,Ancud,Provincia de Chiloe,Los Lagos
-ZRH,Europe/Zurich,Zurich Airport,ZRH,CH,POINT (8.553204683227131 47.4635489),1416,http://www.zurich-airport.com/,LSZH,Glattbrugg / Rohr/Platten-Balsberg,Bezirk Buelach,Zurich
+ZRH,Europe/Zurich,Zurich Airport,ZRH,CH,POINT (8.553204683227131 47.4635489),1416,http://www.zurich-airport.com/,LSZH,Zurich,Bezirk Buelach,Zurich
 ZSA,America/Nassau,San Salvador Airport,ZSA,BS,POINT (-74.53177411551994 24.06595985),24,,MYSM,Cockburn Town,,San Salvador
 ZSS,Africa/Abidjan,Sassandra,ZSS,CI,POINT (-6.1304294 4.9303139),203,,DISS,Sassandra,,Bas-Sassandra
 ZTM,America/Winnipeg,Shamattawa Airport,ZTM,CA,POINT (-92.0808371169133 55.8647665),289,,CZTM,Red Lake,,Ontario
@@ -9739,7 +9739,7 @@ ZUH,Asia/Shanghai,Zhuhai Jinwan Airport,ZUH,CN,POINT (113.37242495504282 22.0084
 ZVG,Australia/Perth,Springvale,ZVG,AU,POINT (127.583336 -17.866667),0,,"",Halls Creek,Halls Creek,Western Australia
 ZWR,Asia/Kuching,Kota Kinabalu Port,ZWR,MY,POINT (116.115777 5.976474),0,,,Kota Kinabalu,,Sabah
 ZXT,Asia/Baku,Heydar Aliyev,BAK,AZ,POINT (49.983612 40.485),36,,UBTT,Zabrat,,Baki
-ZYD,Europe/Lisbon,Lisbon TP,LIS,PT,POINT (124.28081 40.032368),0,,,Langtou,,Liaoning
+ZYD,Europe/Lisbon,Lisbon TP,LIS,PT,POINT (124.28081 40.032368),0,,,Lisbon,,Liaoning
 ZYF,Europe/Lisbon,Faro TP,FAO,PT,POINT (-7.935113 37.0153597),0,,,Faro,Faro,Faro
 ZYI,Asia/Shanghai,Zunyi Xinzhou Airport,ZYI,CN,POINT (106.833336 27.666668),2920,,ZUZY,Zunyi,,Guizhou Sheng
 ZYL,Asia/Dhaka,Civil Airport,ZYL,BD,POINT (91.870476 24.957598),50,,VGSY,Sylhet,,Sylhet
