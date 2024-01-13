@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+.sorted {
+  background-color: #ddd;
+}
+
+th.sorted span.asc {
+  transform: rotate(180deg);
+  display: inline-block;
+}
+
+th:not(.sorted) span.arrow {
+  visibility: hidden;
+}

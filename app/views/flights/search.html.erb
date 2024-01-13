@@ -1,53 +1,30 @@
-<style>
-  .sorted {
-    background-color: #ddd;
-  }
-
-  .sorted.asc::after {
-    content: ' ▲';
-  }
-
-  .sorted.desc::after {
-    content: ' ▼';
-}
-
-</style>
-
-<h1>Flights#search</h1>
-<p>Find me in app/views/flights/search.html.erb</p>
-
 <table>
-  <caption>
+  <caption class="text-2xl font-bold underline decoration-double">
     All airports
   </caption>
   <thead>
-    <th>Airport ID</th>
-    <th>Airport Code</th>
-    <th>Airport Name</th>
-    <th>Country ID</th>
-    <th>Country</th>
-    <!-- <th>City</th> -->
 
-    <th>
-      <%= link_to flights_search_path(column: :city, direction: sort_direction == 'asc' ? 'desc' : 'asc') do %>
-        <div class="<%= 'sorted' if params[:column] == 'city' %> <%= params[:direction] == 'asc' ? 'asc' : 'desc' %>">
-          City
-        </div>
-      <% end %>
-    </th>
+    <% @airports.column_names.each do |column_name| %>
+      <th class="p-2 <%= 'sorted' if params[:column] == column_name %>">
+        <%= link_to flights_search_path(column: column_name, direction: sort_direction == 'asc' ? 'desc' : 'asc') do %>
+        <span class="title"><%= column_name.capitalize.sub('_', ' ') %></span>
+        <span class=" arrow <%= params[:direction] == 'asc' ? 'desc' : 'asc' %>">⬆</span>
+        <% end %>
+      </th>
+    <% end %>
     
-    <th>Updated at</th>
   </thead>
   <tbody>
     <% @airports.each do |airport| %>
     <tr>
-      <td><%= airport.id %></td>
-      <td><%= airport.code %></td>
-      <td><%= airport.name %></td>
-      <td><%= airport.country_id %></td>
-      <td><%= airport.country %></td>
-      <td><%= airport.city %></td>
-      <td><%= airport.updated_at %></td>
+      <td class="p-2"><%= airport.id %></td>
+      <td class="p-2"><%= airport.name %></td>
+      <td class="p-2"><%= airport.code %></td>
+      <td class="p-2"><%= airport.country_id %></td>
+      <td class="p-2"><%= airport.created_at %></td>
+      <td class="p-2"><%= airport.updated_at %></td>
+      <td class="p-2"><%= airport.country %></td>
+      <td class="p-2"><%= airport.city %></td>
     </tr>
     <% end %>
   </tbody>

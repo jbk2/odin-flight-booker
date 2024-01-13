@@ -3956,7 +3956,7 @@ ESO,America/Denver,Espanola,ESO,US,POINT (-106.03333 36.1),5803,,E14,Ohkay Owing
 TEH,America/Anchorage,Tetlin,TEH,US,POINT (-142.5213126 63.1255324),0,,,,,
 ESP,America/New_York,Birchwood-Pocono,ESP,US,POINT (-75.2 40.983334),403,,KN53,Stroudsburg,Monroe County,Pennsylvania
 ESR,America/Santiago,El Salvador,ESR,CL,POINT (-69.76528 -26.315277),5127,,SCES,Diego de Almagro,Provincia de Chanaral,Atacama
-ESS,Europe/Berlin,Essen,ESS,DE,POINT (6.941667 51.40389),423,,EDLE,Muelheim (Ruhr),Regierungsbezirk Dusseldorf,North Rhine-Westphalia
+ESS,Europe/Berlin,Essen,ESS,DE,POINT (6.941667 51.40389),423,,EDLE,Essen,Regierungsbezirk Dusseldorf,North Rhine-Westphalia
 EST,America/Chicago,Municipal,EST,US,POINT (-94.833336 43.4),1325,,KEST,Estherville,Emmet County,Iowa
 ESU,Africa/Casablanca,Essaouira Airport,ESU,MA,POINT (-9.682784663461774 31.399283599999997),272,,GMMI,Essaouira,Essaouira,Marrakech-Tensift-Al Haouz
 EUF,America/Chicago,Weedon Field,EUF,US,POINT (-85.15 31.9),242,,KEUF,Eufaula,Barbour County,Alabama
@@ -6261,7 +6261,7 @@ JNI,America/Argentina/Buenos_Aires,Junin,JNI,AR,POINT (-60.966667 -34.583332),27
 LGO,Europe/Berlin,Langeoog,LGO,DE,POINT (7.533333 53.766666),7,,EDWL,Langeoog,,Lower Saxony
 LGQ,America/Guayaquil,Lago Agrio Airport,LGQ,EC,POINT (-76.87013302295729 0.0919515),980,,SENL,Nueva Loja,,Sucumbios
 LGR,America/Santiago,Cochrane,LGR,CL,POINT (-72 -47.166668),643,,SCHR,Cochrane,Provincia Capitan Prat,Aisen
-LIN,Europe/Rome,Milano Linate Airport,MIL,IT,POINT (9.277832922158506 45.44420495),353,http://www.sea-aeroportimilano.it/en/,LIML,Novegro-Tregarezzo-San Felice,Citta metropolitana di Milano,Lombardy
+LIN,Europe/Rome,Milano Linate Airport,MIL,IT,POINT (9.277832922158506 45.44420495),353,http://www.sea-aeroportimilano.it/en/,LIML,Milan,Citta metropolitana di Milano,Lombardy
 LGT,America/Bogota,Las Gaviotas,LGT,CO,POINT (-74.5 9.166667),0,,SKGA,San Zenon,,Bolivar
 LGU,America/Denver,Cache,LGU,US,POINT (-111.855 41.7875),4457,http://logan-cacheairport.org/,KLGU,Hyde Park,Cache County,Utah
 LIP,America/Sao_Paulo,Lins,LIP,BR,POINT (-49.73213046125255 -21.66259085),1559,,SWXQ,Lins,Lins,Sao Paulo
