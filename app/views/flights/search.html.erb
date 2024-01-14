@@ -5,14 +5,17 @@
   <thead>
 
     <% @airports.column_names.each do |column_name| %>
-      <th class="p-2 <%= 'sorted' if params[:column] == column_name %>">
-        <%= link_to flights_search_path(column: column_name, direction: sort_direction == 'asc' ? 'desc' : 'asc') do %>
-        <span class="title"><%= column_name.capitalize.sub('_', ' ') %></span>
-        <span class=" arrow <%= params[:direction] == 'asc' ? 'desc' : 'asc' %>">⬆</span>
-        <% end %>
-      </th>
+      <% unless column_name == 'created_at' || column_name == 'updated_at' %>
+        <th class="px-2 <%= 'sorted' if params[:column] == column_name %>">
+          <%= link_to flights_search_path(column: column_name, direction: sort_direction == 'asc' ? 'desc' : 'asc') do %>
+          <div class="inline-block">
+            <span class="title"><%= column_name.capitalize.sub('_', ' ') %></span>
+            <span class=" arrow <%= params[:direction] == 'asc' ? 'desc' : 'asc' %>">⬆</span>
+          </div>
+          <% end %>
+        </th>
+      <% end %>
     <% end %>
-    
   </thead>
   <tbody>
     <% @airports.each do |airport| %>
@@ -21,8 +24,8 @@
       <td class="p-2"><%= airport.name %></td>
       <td class="p-2"><%= airport.code %></td>
       <td class="p-2"><%= airport.country_id %></td>
-      <td class="p-2"><%= airport.created_at %></td>
-      <td class="p-2"><%= airport.updated_at %></td>
+      <!-- <td class="p-2"><%= airport.created_at %></td>
+      <td class="p-2"><%= airport.updated_at %></td> -->
       <td class="p-2"><%= airport.country %></td>
       <td class="p-2"><%= airport.city %></td>
     </tr>
