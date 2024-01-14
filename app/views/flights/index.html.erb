@@ -7,7 +7,7 @@
     <% @airports.column_names.each do |column_name| %>
       <% unless column_name == 'created_at' || column_name == 'updated_at' %>
         <th class="px-2 <%= 'sorted' if params[:column] == column_name %>">
-          <%= link_to flights_search_path(column: column_name, direction: sort_direction == 'asc' ? 'desc' : 'asc') do %>
+          <%= link_to flights_path(column: column_name, direction: sort_direction == 'asc' ? 'desc' : 'asc') do %>
           <div class="inline-block">
             <span class="title"><%= column_name.capitalize.sub('_', ' ') %></span>
             <span class=" arrow <%= params[:direction] == 'asc' ? 'desc' : 'asc' %>">⬆</span>

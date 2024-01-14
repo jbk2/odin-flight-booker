@@ -1,7 +1,7 @@
 class FlightsController < ApplicationController
   helper_method :sort_column, :sort_direction
 
-  def search
+  def index
     # provides a view with a flight search and select for booking form
     @airports = Airport.order("#{sort_column}" + " " + "#{sort_direction}")
   end
