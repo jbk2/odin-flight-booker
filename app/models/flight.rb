@@ -9,6 +9,7 @@
 #  arrival_time         :datetime
 #  created_at           :datetime         not null
 #  updated_at           :datetime         not null
+#  flight_duration_secs :integer
 #
 class Flight < ApplicationRecord
   belongs_to :departure_airport, class_name: 'Airport'#, foreign_key: 'departure_airport_id'
@@ -16,4 +17,10 @@ class Flight < ApplicationRecord
 
   validates_presence_of :departure_airport
   validates_presence_of :arrival_airport
+
+  after_create :populate_flight_duration
+
+  def populate_flight_duration
+    self.update(flight_duration_secs: (self.arrival_time - self.departure_time))
+  end
 end

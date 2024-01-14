@@ -19,4 +19,18 @@ def seed_airports(airports)
   end
 end
 
+def seed_flights
+  50.times do
+    ids = (1..Airport.count).to_a.shuffle.take(2)
+    departure_time = DateTime.now + rand(1..10).days
+    Flight.create(
+      departure_airport_id: ids[0],
+      arrival_airport_id:ids[1],
+      departure_time: departure_time,
+      arrival_time: departure_time + rand(2..8).hours 
+    )
+  end
+end
+
 seed_airports(AirportSeeder.collate_european_airports)
+seed_flights

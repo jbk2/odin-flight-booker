@@ -9,6 +9,7 @@
 #  arrival_time         :datetime
 #  created_at           :datetime         not null
 #  updated_at           :datetime         not null
+#  flight_duration_secs :integer
 #
 
 one:
