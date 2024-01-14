@@ -27,7 +27,7 @@ def seed_flights
       departure_airport_id: ids[0],
       arrival_airport_id:ids[1],
       departure_time: departure_time,
-      arrival_time: departure_time + rand(2..8).hours 
+      arrival_time: departure_time + rand(7200..28800).seconds
     )
   end
 end
