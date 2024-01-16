@@ -1,17 +1,61 @@
+require 'byebug'
+
 class FlightsController < ApplicationController
-  helper_method :sort_column, :sort_direction
 
   def index
-    # provides a view with a flight search and select for booking form
-    @airports = Airport.order("#{sort_column}" + " " + "#{sort_direction}")
+    @countries = Airport.distinct.order(:country).pluck(:country)
+    @airports = Airport.order(:city)
+    @flights = Flight.includes(:departure_airport).all
+    @flight_search_results = Flight.where(
+      departure_airport_id: params[:departure_airport_id],
+      arrival_airport_id: params[:arrival_airport_id]).where(
+        'DATE(departure_time) = ?', params[:departure_date]
+        )
   end
 
-  private
-  def sort_column
-    Airport.column_names.include?(params[:column]) ? params[:column].to_sym : :country
+
+  def update_airports
+    @airports = Airport.where(country: params[:departure_country]).order(:city)
+    Rails.logger.debug "Filtered and sorted airports:"
+    @airports.each do |airport|
+      Rails.logger.debug "Airport ID: #{airport.id}, City: #{airport.city}, Country: #{airport.country}"
+    end
+    respond_to do |format|
+      format.turbo_stream
+    end
+  end
+
+  def flight_params
+    params.require(:flight).permit(:departure_country, :departure_airport_id, :arrival_country, :arrival_airport_id, :departure_date)
   end
   
-  def sort_direction
-    ['asc', 'desc'].include?(params[:direction]) ? params[:direction] : 'asc'
-  end
 end
+
+# *********** Test Code
+
+    # if params[:country].present?
+    #   @departure_airports = Airport.where(country: params[:country])
+    #   render turbo_stream: turbo_stream.update('departure_airport_id', partial: 'flight_search_form')
+    # else
+    #   @departure_airports = Airport.all
+    # end
+
+    # @selected_country = params[:country] if params[:country].present?
+    # @departure_airports = Airport.where(country: @selected_country) if @selected_country
+
+    # if @selected_country.present?
+    #   render turbo_stream: turbo_stream.update('departure_airport_id', partial: 'flight_search_form')
+    # else
+    #   render turbo_stream: turbo_stream.replace('departure_airport_id', partial: 'flight_search_form')
+    # end
+
+    # <div class="m-2">
+    #   <%= turbo_stream_from 'departure_airport_id', target: 'departure_airport_selector', current_country: params[:country] do %>
+    #     <% @departure_airports.each do |departure_airports| %>
+    #       <div class="flex flex-col">
+    #         <label for="departure_airport_id">Departure Airport</label>
+    #         <%= form.collection_select :departure_airport_id, departure_airports, :id, :city, { prompt: 'Select Departure Airport' }, { required: true, data: { turbo_stream: 'departure_airport_id' } } %>
+    #       </div>
+    #     <% end %>
+    #   <% end %>
+    # </div>

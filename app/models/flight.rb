@@ -12,11 +12,10 @@
 #  flight_duration_secs :integer
 #
 class Flight < ApplicationRecord
-  belongs_to :departure_airport, class_name: 'Airport'#, foreign_key: 'departure_airport_id'
-  belongs_to :arrival_airport, class_name: 'Airport'#, foreign_key: 'arrival_airport_id'
+  belongs_to :departure_airport, class_name: 'Airport'
+  belongs_to :arrival_airport, class_name: 'Airport'
 
-  validates_presence_of :departure_airport
-  validates_presence_of :arrival_airport
+  delegate :country, :code, :city, to: :departure_airport, prefix: true
 
   after_create :populate_flight_duration
 

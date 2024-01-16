@@ -1,0 +1,2 @@
+<% Rails.logger.debug "Rendering _airport_options.html.erb with airports: #{@airports}" %>
+<%= select_tag :departure_airport_id, options_from_collection_for_select(@airports, 'id', 'name'), prompt: 'Select Departure Airport', required: true, class: "streaming" %>
