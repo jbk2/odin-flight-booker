@@ -10,6 +10,11 @@ export default class extends Controller {
   updateAirports(event) {
     const departure_country = event.target.value;
     const url = `/flights/update_airports?departure_country=${departure_country}`;
+    console.log("********** - The Stimulus controller has obtained the departure country;", departure_country);
+    console.log("Event Type:", event.type); // Log the event type (e.g., "change")
+    console.log("Target Value:", departure_country); // Log the value of the target element
+    console.log("Event Object:", event); // Log the entire event object (for more detailed inspection)
+
 
     fetch(url, {
       headers: {

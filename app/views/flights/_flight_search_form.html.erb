@@ -3,15 +3,15 @@
   <fieldset>
     <legend class="text-lg font-bold underline">Search Flights</legend>
     
-    <div class="m-2" data-controller="airport-select">
+    <div class="m-2" data-controller="departure-country-select">
       <%= form.label :departure_country, 'Select Departure Country' %>
       <%= form.select :departure_country, @countries, { prompt: 'Select Departure Country' }, required: true %>
     </div>    
 
     <div class="m-2">
       <div class="flex flex-col">
-        <%= turbo_frame_tag "departure_airport", data: { "turbo-frame" => "departure_airport" } do %>
-          <%= render 'flights/airport_options', form: form, airports: @airports %>
+        <%= turbo_frame_tag "departure_airport" do %>
+          <%= render 'flights/departure_airport_options', airports: @airports %>
         <% end %>
       </div>
     </div>

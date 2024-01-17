@@ -1,0 +1,3 @@
+<% Rails.logger.debug "Rendering _departure_airport_options.html.erb with airports: #{@airports}" %>
+<%= label_tag :departure_airport_id, "Departure airport" %>
+<%= select_tag :departure_airport_id, options_from_collection_for_select(@airports, 'id', 'name'), prompt: 'Select Departure Airport', required: true %>
