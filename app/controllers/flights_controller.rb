@@ -5,6 +5,8 @@ class FlightsController < ApplicationController
   def index
     @countries = Airport.distinct.order(:country).pluck(:country)
     @airports = Airport.order(:city)
+    @departure_airports = Airport.order(:city)
+    @arrival_airports = Airport.order(:city)
     @flights = Flight.includes(:departure_airport).all
     @flight_search_results = Flight.where(
       departure_airport_id: params[:departure_airport_id],
@@ -14,14 +16,17 @@ class FlightsController < ApplicationController
   end
 
 
-  def update_airports
-    @airports = Airport.where(country: params[:departure_country]).order(:city)
-    Rails.logger.debug "Filtered and sorted airports:"
-    @airports.each do |airport|
-      Rails.logger.debug "Airport ID: #{airport.id}, City: #{airport.city}, Country: #{airport.country}"
-    end
+  def update_departure_airports
+    @departure_airports = Airport.where(country: params[:departure_country]).order(:city)
     respond_to do |format|
-      format.turbo_stream
+      format.turbo_stream { render 'update_departure_airports'}
+    end
+  end
+  
+  def update_arrival_airports
+    @arrival_airports = Airport.where(country: params[:arrival_country]).order(:city)
+    respond_to do |format|
+      format.turbo_stream { render 'update_arrival_airports'}
     end
   end
 

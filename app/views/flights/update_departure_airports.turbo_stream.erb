@@ -1,0 +1,3 @@
+<%= turbo_stream.update "departure_airport" do %>
+  <%= render 'flights/departure_airport_options', locals: { departure_airports: @departure_airports } %>
+<% end %>

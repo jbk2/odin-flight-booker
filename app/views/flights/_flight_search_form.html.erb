@@ -2,28 +2,32 @@
 <%= form_with(url: flights_path, method: :get, class: "flex flex-col p-2") do |form| %>
   <fieldset>
     <legend class="text-lg font-bold underline">Search Flights</legend>
-    
-    <div class="m-2" data-controller="departure-country-select">
-      <%= form.label :departure_country, 'Select Departure Country' %>
-      <%= form.select :departure_country, @countries, { prompt: 'Select Departure Country' }, required: true %>
-    </div>    
+    <div data-controller="country-select">
+      <div class="m-2">
+        <%= form.label :departure_country, 'Select Departure Country' %>
+        <%= form.select :departure_country, @countries, { prompt: 'Select Departure Country' }, { required: true, data: { country_select_target: "departure" } } %>
+      </div>    
 
-    <div class="m-2">
-      <div class="flex flex-col">
-        <%= turbo_frame_tag "departure_airport" do %>
-          <%= render 'flights/departure_airport_options', airports: @airports %>
-        <% end %>
+      <div class="m-2">
+        <div class="flex flex-col">
+          <%= turbo_frame_tag "departure_airport" do %>
+            <%= render 'flights/departure_airport_options', departure_airports: @departure_airports %>
+          <% end %>
+        </div>
       </div>
-    </div>
-      
-    <div class="m-2">
-      <%= form.label :arrival_country, 'Select Arrival Country' %>
-      <%= form.select :arrival_country, @countries, { prompt: 'Select Arrival Country' }, required: true %>
-    </div>   
+        
+      <div class="m-2">
+        <%= form.label :arrival_country, 'Select Arrival Country' %>
+        <%= form.select :arrival_country, @countries, { prompt: 'Select Arrival Country' }, { required: true, data: { country_select_target: "arrival" } } %>
+      </div>   
 
-    <div class="m-2">
-      <%= form.label :arrival_airport_id, 'Arrival Airport' %>
-      <%= form.collection_select :arrival_airport_id, @airports, :id, :city, { prompt: 'Select Arrival Airport' }, { required: true } %>
+      <div class="m-2">
+        <div class="flex flex-col">
+          <%= turbo_frame_tag "arrival_airport" do %>
+            <%= render 'flights/arrival_airport_options', arrival_airports: @arrival_airports %>
+          <% end %>
+        </div>
+      </div>
     </div>
 
     <div class="m-2 flex flex-row">
