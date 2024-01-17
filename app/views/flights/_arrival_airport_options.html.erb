@@ -1,3 +1,12 @@
 <% Rails.logger.debug "Rendering _arrival_airport_options.html.erb with airports: #{@airports}" %>
 <%= label_tag :arrival_airport_id, "Arrival airport" %>
-<%= select_tag :arrival_airport_id, options_from_collection_for_select(@arrival_airports, 'id', 'city'), prompt: 'Select Arrival Airport', required: true %>
+<%= select_tag :arrival_airport_id, options_from_collection_for_select(@arrival_airports, 'id', lambda do |airport|
+  if airport.name.include?(airport.city)
+    airport_label = airport.name
+  else
+    airport_label = airport.city + ' - ' + airport.name
+  end
+  "#{airport_label}"
+end), prompt: 'Select Arrival Airport', required: true %>
+
+

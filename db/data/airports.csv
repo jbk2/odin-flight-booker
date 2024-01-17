@@ -2058,7 +2058,7 @@ DOO,Pacific/Port_Moresby,Dorobisoro,DOO,PG,POINT (147.55 -9.266667),2247,,AYDR,,
 EKT,Europe/Stockholm,Eskilstuna,EKT,SE,POINT (16.533333 59.36667),39,,ESSU,,,
 NAJ,Asia/Baku,Nakhichevan Airport,NAJ,AZ,POINT (45.456902448435805 39.1868399),2814,,UBBN,Tazakend,,Nakhichevan
 NCG,America/Chihuahua,Nueva Casas Grandes,NCG,MX,POINT (-107.916664 30.416668),4763,,MMCG,Nuevo Casas Grandes,Nuevo Casas Grandes,Chihuahua
-NAP,Europe/Rome,Naples International Airport,NAP,IT,POINT (14.284479528610618 40.8839923),252,http://www.portal.gesac.it/,LIRN,Casavatore,Provincia di Napoli,Campania
+NAP,Europe/Rome,Naples International Airport,NAP,IT,POINT (14.284479528610618 40.8839923),252,http://www.portal.gesac.it/,LIRN,Naples,Provincia di Napoli,Campania
 AOT,Europe/Rome,Corrado Gex,AOT,IT,POINT (7.368228953356795 45.738779),1774,http://www.avda-aosta.it/,LIMW,Chef-Lieu,Valle d'Aosta,Aosta Valley
 YYQ,America/Winnipeg,Churchill Airport,YYQ,CA,POINT (-94.075267 58.7483682),94,,CYYQ,,,
 TSF,Europe/Rome,Treviso Airport,VCE,IT,POINT (12.196684766859011 45.6490897),59,http://www.trevisoairport.it/tsf/index.jsp?_requestid=677517&language=en,LIPH,Treviso,Provincia di Treviso,Veneto
@@ -6280,7 +6280,7 @@ LIT,America/Chicago,Bill and Hillary Clinton National Airport,LIT,US,POINT (-92.
 LGP,Asia/Manila,Legaspi Airport,LGP,PH,POINT (123.73422647609632 13.157237550000001),66,,RPLP,Sagpon,Province of Albay,Bicol
 LGS,America/Argentina/Mendoza,Malargue,LGS,AR,POINT (-69.57298722844945 -35.493180800000005),4685,,SAMM,Malargue,,Mendoza
 LIY,America/New_York,Wright AAF,LIY,US,POINT (-81.6 31.85),45,,KLHW,Hinesville,Liberty County,Georgia
-LGW,Europe/London,London Gatwick Airport,LON,GB,POINT (-0.1823116499127204 51.1541082),202,http://www.gatwickairport.com/,EGKK,Horley,Surrey,England
+LGW,Europe/London,London Gatwick Airport,LON,GB,POINT (-0.1823116499127204 51.1541082),202,http://www.gatwickairport.com/,EGKK,London,Surrey,England
 LHE,Asia/Karachi,Allama Iqbal International Airport,LHE,PK,POINT (74.40099966094238 31.51939965),712,,OPLA,Lahore,,Punjab
 LHR,Europe/London,London Heathrow Airport,LON,GB,POINT (-0.4587800741571181 51.46773895),83,http://www.heathrowairport.com/,EGLL,London,Greater London,England
 LIE,Africa/Kinshasa,Libenge,LIE,CD,POINT (18.6389325 3.6236844),1125,,FZFA,Libenge,,Equateur
