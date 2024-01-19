@@ -29,12 +29,14 @@ class FlightsController < ApplicationController
       format.turbo_stream { render 'update_arrival_airports'}
     end
   end
-
+  
   def flight_params
     params.require(:flight).permit(:departure_country, :departure_airport_id, :arrival_country, :arrival_airport_id, :departure_date)
   end
   
 end
+
+
 
 # *********** Test Code
 

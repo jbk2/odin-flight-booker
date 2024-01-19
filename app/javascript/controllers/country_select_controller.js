@@ -6,14 +6,14 @@ export default class extends Controller {
   
   connect() {
     // this.element.addEventListener('change', this.updateAirports.bind(this));
+    console.log("**********Country Select Controller connected**********");
     this.departureTarget.addEventListener('change', (event) => this.updateAirports(event, 'departure'));
     this.arrivalTarget.addEventListener('change', (event) => this.updateAirports(event, 'arrival'));
-    console.log("**********Country Select Controller connected**********");
   }
 
 
   updateAirports(event, type) {
-    const selectedCountry = event.target.value;  // Correct variable name
+    const selectedCountry = event.target.value;
   
     const url = type === 'departure' 
       ? `/flights/update_departure_airports?departure_country=${selectedCountry}`
