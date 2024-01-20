@@ -1,18 +1,16 @@
-require 'byebug'
+# require 'pry-byebug'
 
 class FlightsController < ApplicationController
 
   def index
     @countries = Airport.distinct.order(:country).pluck(:country)
-    @airports = Airport.order(:city)
     @departure_airports = Airport.order(:city)
     @arrival_airports = Airport.order(:city)
-    @flights = Flight.includes(:departure_airport).all
     @flight_search_results = Flight.where(
       departure_airport_id: params[:departure_airport_id],
       arrival_airport_id: params[:arrival_airport_id]).where(
         'DATE(departure_time) = ?', params[:departure_date]
-        )
+      )
   end
 
 
@@ -31,7 +29,7 @@ class FlightsController < ApplicationController
   end
   
   def flight_params
-    params.require(:flight).permit(:departure_country, :departure_airport_id, :arrival_country, :arrival_airport_id, :departure_date)
+    params.require(:flight).permit(:departure_country, :departure_airport_id, :arrival_country, :arrival_airport_id, :departure_date, :no_of_passengers)
   end
   
 end

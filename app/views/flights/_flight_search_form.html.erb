@@ -1,43 +1,49 @@
 
-<%= form_with(url: flights_path, method: :get, class: "flex flex-col p-2") do |form| %>
+<%= form_with(url: flights_path, method: :get, class: "max-w-lg min-w-80 mt-4 mb-4") do |form| %>
   <fieldset>
-    <legend class="text-lg font-bold underline">Search Flights</legend>
+    <legend class="text-lg font-bold underline text-center">Search Flights</legend>
     <div data-controller="country-select">
-      <div class="m-2">
-        <%= form.label :departure_country, 'Select Departure Country' %>
-        <%= form.select :departure_country, @countries, { prompt: 'Select Departure Country' }, { required: true, data: { country_select_target: "departure" } } %>
+      <div class="m-2 grid grid-cols-2 items-center" >
+        <%= form.label :departure_country, 'Select Departure Country', class: "col-start-1 col-end-2" %>
+        <%= form.select :departure_country, @countries, { prompt: 'Select Departure Country' },
+          { required: true, data: { country_select_target: "departure" }, class: "col-start-2 col-end-3 rounded" } %>
       </div>    
 
-      <div class="m-2">
-        <div class="flex flex-col">
-          <%= turbo_frame_tag "departure_airport" do %>
-            <%= render 'flights/departure_airport_options', departure_airports: @departure_airports %>
-          <% end %>
-        </div>
+      <div class="m-2 grid">
+        <%= turbo_frame_tag "departure_airport", class: "grid grid-cols-2 items-center" do %>
+          <%= render 'flights/departure_airport_options', departure_airports: @departure_airports %>
+        <% end %>
       </div>
         
-      <div class="m-2">
-        <%= form.label :arrival_country, 'Select Arrival Country' %>
-        <%= form.select :arrival_country, @countries, { prompt: 'Select Arrival Country' }, { required: true, data: { country_select_target: "arrival" } } %>
+      <div class="m-2 grid grid-cols-2 items-center">
+        <%= form.label :arrival_country, 'Select Arrival Country', class: "col-start-1 col-end-2" %>
+        <%= form.select :arrival_country, @countries, { prompt: 'Select Arrival Country' },
+          { required: true, data: { country_select_target: "arrival" },
+          class: "col-start-2 col-end-3 rounded" } %>
       </div>   
 
-      <div class="m-2">
-        <div class="flex flex-col">
-          <%= turbo_frame_tag "arrival_airport" do %>
-            <%= render 'flights/arrival_airport_options', arrival_airports: @arrival_airports %>
-          <% end %>
-        </div>
+      <div class="m-2 grid">
+        <%= turbo_frame_tag "arrival_airport", class: "grid grid-cols-2 items-center" do %>
+          <%= render 'flights/arrival_airport_options', arrival_airports: @arrival_airports %>
+        <% end %>
       </div>
     </div>
 
-    <div class="m-2 flex flex-row">
-      <%= form.label :departure_date, 'Departure Date' %>
-      <%= form.date_select :departure_date, required: true %>
+    <div class="m-2 flex items-center justify-between">
+      <div class="flex items-center justify-start">
+        <%= form.label :departure_date, 'Departure Date', class: "mr-2" %>
+        <%= form.date_field :departure_date, required: true,  class: "max-w-36 rounded" %>  
+      </div>
+      <div class="flex items-center justify-end">
+        <%= form.label :no_of_passengers, 'No of Passengers', class: "" %>
+        <%= form.number_field :no_of_passengers, required: true,  class: "max-w-16 ml-2 rounded" %>
+      </div>
     </div>
-    <div class="flex justify-center m-2 h-10 w-32 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
-      <%= form.submit 'Search Flights' %>
+    <div class="flex justify-center ">
+      <%= form.submit 'Search Flights', class: "m-2 h-10 w-32 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" %>
     </div>
+
   </fieldset>
 <% end %>
-  
 
+<%= @flight_search_results %>

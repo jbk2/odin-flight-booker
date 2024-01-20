@@ -15,7 +15,8 @@ class Flight < ApplicationRecord
   belongs_to :departure_airport, class_name: 'Airport'
   belongs_to :arrival_airport, class_name: 'Airport'
 
-  delegate :country, :code, :city, to: :departure_airport, prefix: true
+  delegate :country, :code, :city, :name, to: :departure_airport, prefix: true
+  delegate :country, :code, :city, :name, to: :arrival_airport, prefix: true
 
   after_create :populate_flight_duration
 

@@ -1,0 +1,32 @@
+<%= @flight_search_results.inspect %>
+<%#= form_with model: Booking.new do |f| %>
+    <table>
+      <caption class="text-xl font-bold underline">Flight results</caption>
+      <thead>
+        <tr>
+          <th>Departure Airport Name</th>
+          <th>Arrival Airport Name</th>
+          <th>Departure Time</th>
+          <th>Arrival Time</th>
+          <th>Flight Duration</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= @flight_search_results.each do |flight| %>
+          <tr>
+            <td><%= flight.departure_airport_name %></td>
+            <td><%= flight.arrival_airport_name %></td>
+            <td><%= flight.departure_time %></td>
+            <td><%= flight.arrival_time %></td>
+            <td><%= flight.flight_duration_secs %></td>
+          </tr>
+        <% end %>  
+      </tbody>
+    </table>
+    <%#= f. %>
+    <%#= f. %>
+    <%#= f. %>
+    <%#= f. %>
+    <%#= f.submit %>
+<%# end %>
+  

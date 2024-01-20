@@ -1,1 +1,6 @@
 <%= render partial: 'flight_search_form' %>
+<% if @flight_search_results.any? %>
+  <%= render partial: 'flight_search_results' %>
+<% end %>
+  
+  

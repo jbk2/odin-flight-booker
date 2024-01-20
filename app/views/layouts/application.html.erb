@@ -11,9 +11,13 @@
   </head>
 
   <body>
-    <main class="container mx-auto mt-28 px-5 flex">
-      <%= debug params %>
-      <%= yield %>
+    <main class="container mx-auto mt-28 px-5 flex flex-col">
+      <div class="block">
+        <%= debug params %>
+      </div>
+      <div>
+        <%= yield %>
+      </div>
     </main>
   </body>
 </html>
