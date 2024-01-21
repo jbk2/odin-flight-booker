@@ -2,7 +2,7 @@ require 'csv'
 
 class AirportSeeder
   ALL_AIRPORTS = Rails.root.join('db', 'data', 'airports.csv')
-  TOP100_EU_CITIES = YAML.load_file(Rails.root.join('db', 'data', 'top100_european_cities.yml'))
+  TOP50_EU_CITIES = YAML.load_file(Rails.root.join('db', 'data', 'top50_european_cities.yml'))
   COUNTRY_CODES = YAML.load_file(Rails.root.join('db', 'data', 'country_codes.yml'))
 
   def self.collate_european_airports
@@ -10,7 +10,7 @@ class AirportSeeder
 
     european_airports = all_airports.select do |airport|
       airport["time_zone_id"] =~ /^Europe/ &&
-        TOP100_EU_CITIES['name'].any? { |city| airport["name"].include?(city) }
+        TOP50_EU_CITIES['name'].any? { |city| airport["name"].include?(city) }
     end.map do |airport|
       country = COUNTRY_CODES.find { |country| country['Code'].downcase == airport["country_id"].downcase }
       {
@@ -20,7 +20,6 @@ class AirportSeeder
         city: airport["city"] ? airport["city"] : 'unknown',
         country: country ? country['Name'] : nil
       }
-      # binding.irb
     end
     european_airports.sort_by { |airport| airport[:airport_name] }
   end

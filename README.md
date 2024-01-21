@@ -20,4 +20,4 @@
 ### ToDos:
 
 - Introduce logic to calculate real distance between airport locations then calculate travel time therefore departure time
-- 
+- Only populate flight search date field where there are flights on that date.

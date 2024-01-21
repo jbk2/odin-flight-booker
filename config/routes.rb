@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     collection do
       get :update_departure_airports
       get :update_arrival_airports
+      get :update_departure_dates
     end
   end
 

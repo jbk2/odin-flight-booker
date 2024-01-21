@@ -1,5 +1,5 @@
 import { Application } from "@hotwired/stimulus"
-import CountrySelectController from "./country_select_controller"
+import FlightSearchFormController from "./flight_search_form_controller"
 
 const application = Application.start()
 
@@ -7,6 +7,6 @@ const application = Application.start()
 application.debug = false
 window.Stimulus   = application
 
-application.register("country-select", CountrySelectController)
+application.register("flight-search-form", FlightSearchFormController)
 
 export { application }

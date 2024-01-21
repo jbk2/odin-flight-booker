@@ -1,0 +1,3 @@
+<%= turbo_stream.update "departure_dates" do %>
+  <%= render 'flights/departure_dates', locals: { departure_dates: @departure_dates } %>
+<% end %>
