@@ -6,8 +6,7 @@
       <div class="m-2 grid grid-cols-2 items-center" >
         <%= form.label :departure_country, 'Select Departure Country', class: "col-start-1 col-end-2" %>
         <%= form.select :departure_country, @countries, { prompt: 'Select Departure Country' },
-          { required: true, data: { flight_search_form_target: "departure_country" },
-          class: "col-start-2 col-end-3 rounded" } %>
+          { required: true, data: { flight_search_form_target: "departure_country", action: "change->flight-search-form#updateAirports" }, class: "col-start-2 col-end-3 rounded" } %>
       </div>    
 
       <div class="m-2 grid">
@@ -19,8 +18,7 @@
       <div class="m-2 grid grid-cols-2 items-center">
         <%= form.label :arrival_country, 'Select Arrival Country', class: "col-start-1 col-end-2" %>
         <%= form.select :arrival_country, @countries, { prompt: 'Select Arrival Country' },
-          { required: true, data: { flight_search_form_target: "arrival_country" },
-          class: "col-start-2 col-end-3 rounded" } %>
+          { required: true, data: { flight_search_form_target: "arrival_country", action: "change->flight-search-form#updateAirports" }, class: "col-start-2 col-end-3 rounded" } %>
       </div>   
 
       <div class="m-2 grid">
@@ -30,9 +28,12 @@
       </div>
 
       <div class="m-2 flex items-center justify-between">
-        <%= turbo_frame_tag "departure_dates", class: "grid grid-cols-2 items-center" do %>
+        <%= turbo_frame_tag "departure_dates", class: "" do %>
           <%#= render 'flights/departure_dates', departure_dates: @departure_dates %>
-          <%= form.date_field :departure_date, required: true, class: "max-w-36 rounded" %>
+          <div class="flex items-center justify-start">
+            <%= form.label :departure_date, 'Departure Date', class: "mr-2" %>
+            <%= form.date_field :departure_date, required: true, class: "max-w-36 rounded" %>
+          </div>
         <% end %>
         <div class="flex items-center justify-end">
           <%= form.label :no_of_passengers, 'No of Passengers', class: "" %>
@@ -42,7 +43,8 @@
       </div>
     </div>
     <div class="flex justify-center ">
-      <%= form.submit 'Search Flights', class: "m-2 h-10 w-32 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" %>
+      <%= form.submit 'Search Flights', class: "m-2 h-10 w-32 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800",
+      id: "my-button" %>
     </div>
 
   </fieldset>

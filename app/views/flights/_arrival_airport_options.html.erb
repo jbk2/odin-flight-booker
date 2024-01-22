@@ -1,5 +1,5 @@
 <% Rails.logger.debug "Rendering _arrival_airport_options.html.erb with airports: #{@airports}" %>
-<%= label_tag :arrival_airport_id, "Arrival airport",class: "col-start-1 col-end-2" %>
+<%= label_tag :arrival_airport_id, "Arrival Airport", class: "col-start-1 col-end-2" %>
 <%= select_tag :arrival_airport_id, options_from_collection_for_select(@arrival_airports, 'id', lambda do |airport|
     if airport.name.include?(airport.city)
       airport_label = airport.name
