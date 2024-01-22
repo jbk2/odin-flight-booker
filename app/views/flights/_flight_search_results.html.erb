@@ -24,6 +24,8 @@
             <td class="border border-slate-300 pl-2 pr-6"><%= flight.arrival_time.strftime('%R%P') %></td>
             <td class="border border-slate-300 pl-2 pr-6"><%= Time.at(flight.flight_duration_secs).utc.strftime("%Hhrs %Mmins")  %></td>
             <td class="border border-slate-300 pl-2 pr-6">
+            <!-- wants to be a form submitting to bookings#new with an enter passenger info and payment details -->
+            <!-- prepopulating the form with the flight details -->
               <%= check_box_tag (:flight_id) %>
             </td>
           </tr>
