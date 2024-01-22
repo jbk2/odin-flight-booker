@@ -1,24 +1,31 @@
-<%= @flight_search_results.inspect %>
 <%#= form_with model: Booking.new do |f| %>
-    <table>
+    <table class="table-auto border-separate border-2 border-black rounded-md">
       <caption class="text-xl font-bold underline">Flight results</caption>
-      <thead>
+      <thead class="bg-slate-200">
         <tr>
-          <th>Departure Airport Name</th>
-          <th>Arrival Airport Name</th>
-          <th>Departure Time</th>
-          <th>Arrival Time</th>
-          <th>Flight Duration</th>
+          <th class="border border-slate-300 pr-4">Departure Airport Name</th>
+          <th class="border border-slate-300 pr-4">Arrival Airport Name</th>
+          <th class="border border-slate-300 pr-4">Departure Date</th>
+          <th class="border border-slate-300 pr-4">Departure Time</th>
+          <th class="border border-slate-300 pr-4">Arrival Date</th>
+          <th class="border border-slate-300 pr-4">Arrival Time</th>
+          <th class="border border-slate-300 pr-4">Flight Duration</th>
+          <th class="border border-slate-300 pr-4">Select</th>
         </tr>
       </thead>
       <tbody>
-        <%= @flight_search_results.each do |flight| %>
-          <tr>
-            <td><%= flight.departure_airport_name %></td>
-            <td><%= flight.arrival_airport_name %></td>
-            <td><%= flight.departure_time %></td>
-            <td><%= flight.arrival_time %></td>
-            <td><%= flight.flight_duration_secs %></td>
+        <% @flight_search_results.each do |flight| %>
+          <tr class="hover:bg-gray-50">
+            <td class="border border-slate-300 pl-2 pr-6"><%= flight.arrival_airport_name %></td>
+            <td class="border border-slate-300 pl-2 pr-6"><%= flight.departure_airport_name %></td>
+            <td class="border border-slate-300 pl-2 pr-6"><%= flight.departure_time.strftime('%a %dth %b %Y') %></td>
+            <td class="border border-slate-300 pl-2 pr-6"><%= flight.departure_time.strftime('%R%P') %></td>
+            <td class="border border-slate-300 pl-2 pr-6"><%= flight.arrival_time.strftime('%a %dth %b %Y') %></td>
+            <td class="border border-slate-300 pl-2 pr-6"><%= flight.arrival_time.strftime('%R%P') %></td>
+            <td class="border border-slate-300 pl-2 pr-6"><%= Time.at(flight.flight_duration_secs).utc.strftime("%Hhrs %Mmins")  %></td>
+            <td class="border border-slate-300 pl-2 pr-6">
+              <%= check_box_tag (:flight_id) %>
+            </td>
           </tr>
         <% end %>  
       </tbody>
