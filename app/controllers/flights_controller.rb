@@ -2,20 +2,21 @@ require 'pry-byebug'
 
 class FlightsController < ApplicationController
 
+  helper_method :search_submitted?
+
   def index
     @countries = Airport.distinct.order(:country).pluck(:country)
     @departure_airports = Airport.order(:city)
     @arrival_airports = Airport.order(:city)
     @flight_search_results = nil
 
-    if params[:departure_airport_id] && params[:departure_airport_id] && params[:departure_date] 
+    if search_submitted?
       @flight_search_results = Flight.where(
         departure_airport_id: params[:departure_airport_id],
         arrival_airport_id: params[:arrival_airport_id])
         .where("DATE(departure_time) BETWEEN ? AND ?", params[:departure_date].to_date - 5, params[:departure_date].to_date + 5).order(:departure_time)
     end
   end
-
 
   def update_departure_airports
     @departure_airports = Airport.where(country: params[:departure_country]).order(:city)
@@ -39,6 +40,9 @@ class FlightsController < ApplicationController
     end
   end
 
+  def search_submitted?
+    params[:departure_airport_id] && params[:departure_airport_id] && params[:departure_date]
+  end
   
   def flight_params
     params.require(:flight).permit(:departure_country, :departure_airport_id, :arrival_country, :arrival_airport_id, :departure_date, :no_of_passengers)
