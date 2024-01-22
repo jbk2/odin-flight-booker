@@ -1,4 +1,4 @@
-# require 'pry-byebug'
+require 'pry-byebug'
 
 class FlightsController < ApplicationController
 
@@ -33,7 +33,7 @@ class FlightsController < ApplicationController
 
   def update_departure_dates
     @departure_dates = Flight.where(departure_airport_id: params[:departure_airport_id],
-      arrival_airport_id: params[:arrival_airport_id]).map { |f| f.departure_time }
+      arrival_airport_id: params[:arrival_airport_id]).map { |f| f.departure_time.strftime('%Y-%m-%d') }
     respond_to do |format|
       format.turbo_stream { render 'update_departure_dates' }
     end

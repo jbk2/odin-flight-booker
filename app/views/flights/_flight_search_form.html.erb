@@ -6,7 +6,8 @@
       <div class="m-2 grid grid-cols-2 items-center" >
         <%= form.label :departure_country, 'Select Departure Country', class: "col-start-1 col-end-2" %>
         <%= form.select :departure_country, @countries, { prompt: 'Select Departure Country' },
-          { required: true, data: { flight_search_form_target: "departure_country" },
+          { required: true, data: { flight_search_form_target: "departure_country",
+          action: "change->flight-search-form#updateAirports" },
           class: "col-start-2 col-end-3 rounded" } %>
       </div>    
 
@@ -19,7 +20,8 @@
       <div class="m-2 grid grid-cols-2 items-center">
         <%= form.label :arrival_country, 'Select Arrival Country', class: "col-start-1 col-end-2" %>
         <%= form.select :arrival_country, @countries, { prompt: 'Select Arrival Country' },
-          { required: true, data: { flight_search_form_target: "arrival_country" },
+          { required: true, data: { flight_search_form_target: "arrival_country",
+          action: "change->flight-search-form#updateAirports" },
           class: "col-start-2 col-end-3 rounded" } %>
       </div>   
 
@@ -30,9 +32,11 @@
       </div>
 
       <div class="m-2 flex items-center justify-between">
-        <%= turbo_frame_tag "departure_dates", class: "grid grid-cols-2 items-center" do %>
-          <%#= render 'flights/departure_dates', departure_dates: @departure_dates %>
-          <%= form.date_field :departure_date, required: true, class: "max-w-36 rounded" %>
+        <%= turbo_frame_tag "departure_dates", class: "" do %>
+          <div class="flex items-center justify-start">
+            <%= form.label :departure_date, 'Departure Date', class: "mr-2" %>
+            <%= form.date_field :departure_date, required: true, class: "max-w-36 rounded" %>
+          </div>
         <% end %>
         <div class="flex items-center justify-end">
           <%= form.label :no_of_passengers, 'No of Passengers', class: "" %>
