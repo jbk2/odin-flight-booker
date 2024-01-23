@@ -26,11 +26,11 @@
             <td class="border border-slate-300 pl-2 pr-6 py-2">
             <!-- wants to be a form submitting to bookings#new with an enter passenger info and payment details -->
             <!-- prepopulating the form with the flight details -->
-              <%= form_with url: "/bookings", method: :get do |f| %>
-              <%= f.hidden_field :flight_id, value: flight.id  %>
-              <%= f.hidden_field :booking_passenger_id, value: current_user&.id  %>
-              <%= f.hidden_field :no_of_passengers, value: params[:no_of_passengers]  %>
-                  <%= f.submit "Buy Flight", class: "btn-primary-sm" %>
+              <%= form_with url: new_booking_path, method: :get do |f| %>
+                <%= f.hidden_field :flight_id, value: flight.id  %>
+                <%#= f.hidden_field :booking_passenger_id, value: current_user&.id  %>
+                <%= f.hidden_field :no_of_passengers, value: params[:no_of_passengers]  %>
+                <%= f.submit "Book Flight", class: "btn-primary-sm" %>
               <% end %>
             </td>
           </tr>

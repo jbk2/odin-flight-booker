@@ -1,4 +1,40 @@
-<div>
-  <h1 class="font-bold text-4xl">Bookings#new</h1>
-  <p>Find me in app/views/bookings/new.html.erb</p>
-</div>
+  <table class="table-auto border-separate border-2 border-black rounded-md">
+  <caption class="text-xl font-bold underline">Booking form</caption>
+    <thead class="bg-slate-200">
+      <tr>
+        <th class="border border-slate-300 pl-2 py-2 pr-4">Flight ID</th>
+        <th class="border border-slate-300 pl-2 py-2 pr-4">Departure Date</th>
+        <th class="border border-slate-300 pl-2 py-2 pr-4">Departure Time</th>
+        <th class="border border-slate-300 pl-2 py-2 pr-4">Departure Airport</th>
+        <th class="border border-slate-300 pl-2 py-2 pr-4">Arrival Aiport</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="border border-slate-300 pl-2 pr-6 py-2"><%= @flight.id %></td>
+        <td class="border border-slate-300 pl-2 pr-6 py-2"><%= @flight.departure_time.to_date %></td>
+        <td class="border border-slate-300 pl-2 pr-6 py-2"><%= @flight.departure_time.strftime('%H:%M%p') %></td>
+        <td class="border border-slate-300 pl-2 pr-6 py-2"><%= @flight.departure_airport_name %></td>
+        <td class="border border-slate-300 pl-2 pr-6 py-2"><%= @flight.arrival_airport_name %></td>
+      </tr>
+    </tbody>
+  </table>
+    
+<%= form_with model: @booking, class: "mt-8" do |f| %>
+  <%= f.hidden_field :flight_id, value: @flight_id %>
+  <%= f.hidden_field :no_of_passengers, value: @no_of_passengers %>
+
+  <ol>
+    <%= f.fields_for :passengers do |p| %>
+      <li class="my-2">
+        <span>Passenger no.<%= p.index + 1 %> - </span>
+        <%= p.label :name %>
+        <%= p.text_field :name %>
+        <%= p.label :email %>
+        <%= p.text_field :email %>
+      </li>
+    <% end %>
+  </ol>
+
+  <%= f.submit class: "btn-primary-md" %>
+<% end %>
