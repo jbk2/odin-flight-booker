@@ -3,30 +3,35 @@
       <caption class="text-xl font-bold underline">Flight results</caption>
       <thead class="bg-slate-200">
         <tr>
-          <th class="border border-slate-300 pr-4">Departure Airport Name</th>
-          <th class="border border-slate-300 pr-4">Arrival Airport Name</th>
-          <th class="border border-slate-300 pr-4">Departure Date</th>
-          <th class="border border-slate-300 pr-4">Departure Time</th>
-          <th class="border border-slate-300 pr-4">Arrival Date</th>
-          <th class="border border-slate-300 pr-4">Arrival Time</th>
-          <th class="border border-slate-300 pr-4">Flight Duration</th>
-          <th class="border border-slate-300 pr-4">Select</th>
+          <th class="border border-slate-300 py-2 pr-4">Departure Airport Name</th>
+          <th class="border border-slate-300 py-2 pr-4">Arrival Airport Name</th>
+          <th class="border border-slate-300 py-2 pr-4">Departure Date</th>
+          <th class="border border-slate-300 py-2 pr-4">Departure Time</th>
+          <th class="border border-slate-300 py-2 pr-4">Arrival Date</th>
+          <th class="border border-slate-300 py-2 pr-4">Arrival Time</th>
+          <th class="border border-slate-300 py-2 pr-4">Flight Duration</th>
+          <th class="border border-slate-300 py-2 pr-4">Select</th>
         </tr>
       </thead>
       <tbody>
         <% @flight_search_results.each do |flight| %>
           <tr class="hover:bg-gray-50">
-            <td class="border border-slate-300 pl-2 pr-6"><%= flight.arrival_airport_name %></td>
-            <td class="border border-slate-300 pl-2 pr-6"><%= flight.departure_airport_name %></td>
-            <td class="border border-slate-300 pl-2 pr-6"><%= flight.departure_time.strftime('%a %dth %b %Y') %></td>
-            <td class="border border-slate-300 pl-2 pr-6"><%= flight.departure_time.strftime('%R%P') %></td>
-            <td class="border border-slate-300 pl-2 pr-6"><%= flight.arrival_time.strftime('%a %dth %b %Y') %></td>
-            <td class="border border-slate-300 pl-2 pr-6"><%= flight.arrival_time.strftime('%R%P') %></td>
-            <td class="border border-slate-300 pl-2 pr-6"><%= Time.at(flight.flight_duration_secs).utc.strftime("%Hhrs %Mmins")  %></td>
-            <td class="border border-slate-300 pl-2 pr-6">
+            <td class="border border-slate-300 pl-2 pr-6 py-2"><%= flight.arrival_airport_name %></td>
+            <td class="border border-slate-300 pl-2 pr-6 py-2"><%= flight.departure_airport_name %></td>
+            <td class="border border-slate-300 pl-2 pr-6 py-2"><%= flight.departure_time.strftime('%a %dth %b %Y') %></td>
+            <td class="border border-slate-300 pl-2 pr-6 py-2"><%= flight.departure_time.strftime('%R%P') %></td>
+            <td class="border border-slate-300 pl-2 pr-6 py-2"><%= flight.arrival_time.strftime('%a %dth %b %Y') %></td>
+            <td class="border border-slate-300 pl-2 pr-6 py-2"><%= flight.arrival_time.strftime('%R%P') %></td>
+            <td class="border border-slate-300 pl-2 pr-6 py-2"><%= Time.at(flight.flight_duration_secs).utc.strftime("%Hhrs %Mmins")  %></td>
+            <td class="border border-slate-300 pl-2 pr-6 py-2">
             <!-- wants to be a form submitting to bookings#new with an enter passenger info and payment details -->
             <!-- prepopulating the form with the flight details -->
-              <%= check_box_tag (:flight_id) %>
+              <%= form_with url: "/bookings", method: :get do |f| %>
+              <%= f.hidden_field :flight_id, value: flight.id  %>
+              <%= f.hidden_field :booking_passenger_id, value: current_user&.id  %>
+              <%= f.hidden_field :no_of_passengers, value: params[:no_of_passengers]  %>
+                  <%= f.submit "Buy Flight", class: "btn-primary-sm" %>
+              <% end %>
             </td>
           </tr>
         <% end %>  

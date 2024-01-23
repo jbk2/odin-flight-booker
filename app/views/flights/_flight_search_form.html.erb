@@ -37,12 +37,12 @@
         <% end %>
         <div class="flex items-center justify-end">
           <%= form.label :no_of_passengers, 'No of Passengers', class: "" %>
-          <%= form.number_field :no_of_passengers, value: 1, min: 1, max: 10, required: true, class: "max-w-16 ml-2 rounded" %>
+          <%= form.number_field :no_of_passengers, value: params[:no_of_passengers] || 1, min: 1, max: 10, required: true, class: "max-w-16 ml-2 rounded" %>
         </div>
       </div>
     </div>
     <div class="flex justify-center ">
-      <%= form.submit 'Search Flights', class: "m-2 h-10 w-32 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" %>
+      <%= form.submit 'Search Flights', class: "m-2 btn-primary-md" %>
     </div>
 
   </fieldset>
