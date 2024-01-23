@@ -14,6 +14,7 @@
  *= require_self
  */
 
+
 .sorted {
   background-color: #ddd;
 }
@@ -25,4 +26,18 @@ th.sorted span.asc {
 
 th:not(.sorted) span.arrow {
   visibility: hidden;
+}
+
+.bg-image {
+  background-image: url('/assets/mountains.jpg'); /* Your image path */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Cover the entire area */
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 95%;
 }

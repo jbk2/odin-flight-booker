@@ -11,6 +11,8 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        display: ['Racing Sans One', 'sans-serif'],
+        label: ['Nunito Sans', 'sans-serif']
       },
     },
   },

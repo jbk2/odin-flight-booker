@@ -1,14 +1,14 @@
 
-<%= form_with(url: flights_path, method: :get, class: "max-w-lg min-w-80 mt-4 mb-4") do |form| %>
+<%= form_with(url: flights_path, method: :get, class: "bg-cyan-50/50 rounded max-w-lg min-w-80 mt-4 mb-4") do |form| %>
   <fieldset>
-    <legend class="text-lg font-bold underline text-center">Search Flights</legend>
+    <legend class="text-5xl font-display text-teal-800 text-center">Search Flights</legend>
     <div data-controller="flight-search-form">
       <div class="m-2 grid grid-cols-2 items-center" >
-        <%= form.label :departure_country, 'Select Departure Country', class: "col-start-1 col-end-2" %>
+        <%= form.label :departure_country, 'Select Departure Country', class: "font-label font-medium col-start-1 col-end-2" %>
         <%= form.select :departure_country, @countries, { selected: params[:departure_country], prompt: 'Select Departure Country' },
           { required: true, data: { flight_search_form_target: "departure_country",
           action: "change->flight-search-form#updateAirports" },
-          class: "col-start-2 col-end-3 rounded" } %>
+          class: "font-label font-medium col-start-2 col-end-3 rounded" } %>
       </div>    
 
       <div class="m-2 grid">
@@ -18,11 +18,11 @@
       </div>
         
       <div class="m-2 grid grid-cols-2 items-center">
-        <%= form.label :arrival_country, 'Select Arrival Country', class: "col-start-1 col-end-2" %>
+        <%= form.label :arrival_country, 'Select Arrival Country', class: "font-label col-start-1 col-end-2" %>
         <%= form.select :arrival_country, @countries, { selected: params[:arrival_country], prompt: 'Select Arrival Country' },
           { required: true, data: { flight_search_form_target: "arrival_country",
           action: "change->flight-search-form#updateAirports" },
-          class: "col-start-2 col-end-3 rounded" } %>
+          class: "font-label font-medium col-start-2 col-end-3 rounded" } %>
       </div>   
 
       <div class="m-2 grid">
@@ -36,13 +36,13 @@
           <%= render 'flights/departure_dates', departure_dates: @departure_dates %>
         <% end %>
         <div class="flex items-center justify-end">
-          <%= form.label :no_of_passengers, 'No of Passengers', class: "" %>
-          <%= form.number_field :no_of_passengers, value: params[:no_of_passengers] || 1, min: 1, max: 10, required: true, class: "max-w-16 ml-2 rounded" %>
+          <%= form.label :no_of_passengers, 'No of Passengers', class: "font-label font-medium" %>
+          <%= form.number_field :no_of_passengers, value: params[:no_of_passengers] || 1, min: 1, max: 10, required: true, class: "font-label font-medium max-w-16 ml-2 rounded" %>
         </div>
       </div>
     </div>
     <div class="flex justify-center ">
-      <%= form.submit 'Search Flights', class: "m-2 btn-primary-md" %>
+      <%= form.submit 'Search Flights', class: "font-label font-medium m-2 btn-primary-md" %>
     </div>
 
   </fieldset>

@@ -1,6 +1,6 @@
 <% Rails.logger.debug "Rendering _departure_airport_options.html.erb with departure_airports: #{@departure_airports}" %>
-<%= label_tag :departure_airport_id, "Departure Airport", class: "col-start-1 col-end-2" %>
+<%= label_tag :departure_airport_id, "Departure Airport", class: "font-label font-medium col-start-1 col-end-2" %>
 <%= select_tag :departure_airport_id, options_from_collection_for_select(@departure_airports, 'id', :formatted_airport_name_label,
-  selected: params[:departure_airport_id]), prompt: 'Select Departure Airport' , required: true, class: "col-start-2 col-end-3 rounded",
+  selected: params[:departure_airport_id]), prompt: 'Select Departure Airport' , required: true, class: "font-label font-medium col-start-2 col-end-3 rounded",
   data: { "flight-search-form-target": "departure_airport",
   action: "change->flight-search-form#updateDepartureDates" } %>
