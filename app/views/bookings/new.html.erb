@@ -1,26 +1,26 @@
-  <table class="table-auto border-separate border-2 border-black rounded-md">
-  <caption class="text-xl font-bold underline">Booking form</caption>
+  <table class="bg-cyan-50/50">
+  <caption class="text-5xl font-display text-green-800 bg-cyan-50/50 rounded-t">Booking form</caption>
     <thead class="bg-slate-200">
       <tr>
-        <th class="border border-slate-300 pl-2 py-2 pr-4">Flight ID</th>
-        <th class="border border-slate-300 pl-2 py-2 pr-4">Departure Date</th>
-        <th class="border border-slate-300 pl-2 py-2 pr-4">Departure Time</th>
-        <th class="border border-slate-300 pl-2 py-2 pr-4">Departure Airport</th>
-        <th class="border border-slate-300 pl-2 py-2 pr-4">Arrival Aiport</th>
+        <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4">Flight ID</th>
+        <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4"><span class="text-3xl">🗺️</span> Route</th>
+        <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4">🛫 Departure Date & Time</th>
+        <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4">🛬 Arrival Date & Time</th>
+        <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4">⏱️ Flight Duration</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td class="border border-slate-300 pl-2 pr-6 py-2"><%= @flight.id %></td>
-        <td class="border border-slate-300 pl-2 pr-6 py-2"><%= @flight.departure_time.to_date %></td>
-        <td class="border border-slate-300 pl-2 pr-6 py-2"><%= @flight.departure_time.strftime('%H:%M%p') %></td>
-        <td class="border border-slate-300 pl-2 pr-6 py-2"><%= @flight.departure_airport_name %></td>
-        <td class="border border-slate-300 pl-2 pr-6 py-2"><%= @flight.arrival_airport_name %></td>
+        <td class="border border-slate-300 pl-2 pr-6 py-2"><%= @flight.arrival_airport_name + ' ➡️ ' + @flight.departure_airport_name %></td>
+        <td class="border border-slate-300 pl-2 pr-6 py-2"><%= @flight.departure_time.strftime('%a %dth %b %Y, %R%P') %></td>
+        <td class="border border-slate-300 pl-2 pr-6 py-2"><%= @flight.arrival_time.strftime('%a %dth %b %Y, %R%P') %></td>
+        <td class="border border-slate-300 pl-2 pr-6 py-2"><%= Time.at(@flight.flight_duration_secs).utc.strftime("%Hhrs%Mmins")  %></td>
       </tr>
     </tbody>
   </table>
     
-<%= form_with model: @booking, class: "mt-8" do |f| %>
+<%= form_with model: @booking, class: "pt-2 pb-4 px-4 rounded-b bg-cyan-50/50" do |f| %>
   <%= f.hidden_field :flight_id, value: @flight_id %>
   <%= f.hidden_field :no_of_passengers, value: @no_of_passengers %>
 
@@ -29,12 +29,13 @@
       <li class="my-2">
         <span>Passenger no.<%= p.index + 1 %> - </span>
         <%= p.label :name %>
-        <%= p.text_field :name %>
+        <%= p.text_field :name, class: "rounded  bg-slate-100" %>
         <%= p.label :email %>
-        <%= p.text_field :email %>
+        <%= p.text_field :email, class: "rounded bg-slate-100" %>
       </li>
     <% end %>
   </ol>
-
-  <%= f.submit class: "btn-primary-md" %>
+  <div class="flex justify-center">
+    <%= f.submit class: "btn-primary-md" %>
+  </div>
 <% end %>
