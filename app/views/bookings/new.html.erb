@@ -1,4 +1,4 @@
-  <table class="bg-cyan-50/50 rounded-b">
+  <table class="animate-fade-in bg-cyan-50/50 rounded-b">
   <caption class="text-5xl font-display text-green-800 bg-cyan-50/50 rounded-t pt-1 pb-2">Booking form</caption>
     <thead class="bg-slate-200">
       <tr class="">
@@ -20,7 +20,7 @@
     </tbody>
   </table>
     
-<%= form_with model: @booking, class: "pt-2 pb-3 px-4 rounded-b bg-cyan-50/50" do |f| %>
+<%= form_with model: @booking, class: "animate-fade-in pt-2 pb-3 px-4 rounded-b bg-cyan-50/50" do |f| %>
   <%= f.hidden_field :flight_id, value: @flight_id %>
   <%= f.hidden_field :no_of_passengers, value: @no_of_passengers %>
   <ol>
