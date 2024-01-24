@@ -7,6 +7,9 @@ app = "v1-odin-flight-booker"
 primary_region = "cdg"
 console_command = "/rails/bin/rails console"
 
+[deploy]
+  release_command = "bin/rails db:migrate"
+
 [build]
 
 [http_service]
