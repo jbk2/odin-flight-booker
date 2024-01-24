@@ -1,11 +1,8 @@
 Rails.application.routes.draw do
-  # get 'bookings/new'
-  # get 'bookings/create'
   devise_for :users
-  
-  # get 'flights/index'
-  # get 'airports/index'
 
+  root "flights#index"
+  
   resources :flights, only: [:index] do
     collection do
       get :update_departure_airports
@@ -16,6 +13,4 @@ Rails.application.routes.draw do
 
   resources :airports, only: [:index]
   resources :bookings, only: [:new, :create, :show]
-
-  root "flights#index"
 end
