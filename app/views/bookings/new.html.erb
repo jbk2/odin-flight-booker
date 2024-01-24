@@ -23,7 +23,6 @@
 <%= form_with model: @booking, class: "pt-2 pb-3 px-4 rounded-b bg-cyan-50/50" do |f| %>
   <%= f.hidden_field :flight_id, value: @flight_id %>
   <%= f.hidden_field :no_of_passengers, value: @no_of_passengers %>
-
   <ol>
     <%= f.fields_for :passengers do |p| %>
       <li class="my-2">
