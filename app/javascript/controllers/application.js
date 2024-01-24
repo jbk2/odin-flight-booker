@@ -1,5 +1,7 @@
 import { Application } from "@hotwired/stimulus"
-import FlightSearchFormController from "./flight_search_form_controller"
+// import FlightSearchFormController from "./flight_search_form_controller"
+import FlightSearchFormController from "controllers/flight_search_form_controller"
+
 
 const application = Application.start()
 
