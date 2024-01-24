@@ -29,8 +29,8 @@ th:not(.sorted) span.arrow {
 }
 
 .bg-image {
-  /* background-image: url(image_path('mountains.jpg')); Your image path */
-  background-image: url('/assets/mountains.jpg'); /* Your image path */
+  background-image: url(<%= asset_path('mountains.jpg') %>);
+  /* background-image: url('/assets/mountains.jpg'); Your image path */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Cover the entire area */
