@@ -1,21 +1,26 @@
 <table class="bg-cyan-50/50 rounded-b">
-  <caption class="text-5xl font-display text-green-800 bg-cyan-50/50 rounded-t pt-1 pb-2">🗺️ You're going to ✈️<br><%= @booking.flight.arrival_airport_name %></caption>
+  <caption class="text-5xl font-display text-green-800 bg-cyan-50/50 rounded-t py-4">🗺️ You're going to ✈️<br><%= @booking.flight.arrival_airport_name %></caption>
   <thead class="bg-slate-200">
     <tr>
-      <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4">Booking ID</th>
-      <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4">No of passengers</th>
-      <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4">First passenger name</th>
-      <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4">Flight No</th>
-      <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4">Flight departure date</th>
+      <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4"><span class="text-left">#️⃣&nbsp&nbsp</span> Booking & Flight IDs</th>
+      <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4">👥&nbsp&nbspNo of passengers</th>
+      <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4">📇🪪&nbsp&nbspPassenger names</th>
+      <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4"><span class="text-3xl">🗺️&nbsp&nbsp</span>Route</th>
+      <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4">🛫&nbsp&nbsp&nbsp&nbspDeparture Date & Time</th>
+      <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4">🛬&nbsp&nbsp&nbsp&nbspArrival Date & Time</th>
+      <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4">⏱️&nbsp&nbspFlight Duration</th>
+
     </tr>
   </thead>
   <tbody>
     <tr class="">
-      <td class="border-r border-slate-300 pl-2 pr-6 py-2"><%= @booking.id %></td>
+      <td class="border-r border-slate-300 pl-2 pr-6 py-2"><%= @booking.id.to_s + ', ' + @booking.flight_id.to_s %></td>
       <td class="border-r border-slate-300 pl-2 pr-6 py-2"><%= @booking.passengers.count %></td>
-      <td class="border-r border-slate-300 pl-2 pr-6 py-2"><%= @booking.passengers.first.name %></td>
-      <td class="border-r border-slate-300 pl-2 pr-6 py-2"><%= @booking.flight_id %></td>
-      <td class="pl-2 pr-6 py-2"><%= @booking.flight.departure_time %></td>
+      <td class="border-r border-slate-300 pl-2 pr-6 py-2"><%= @booking.passengers.map {|p| p.name }.join(', ') %></td>
+      <td class="border-r border-slate-300 pl-2 pr-6 py-2"><%= @booking.flight.departure_airport_name + ' ➡️ ' +  @booking.flight.arrival_airport_name %></td>
+      <td class="border-r border-slate-300 pl-2 pr-6 py-2"><%= @booking.flight.departure_time.strftime('%a %dth %b %Y, %R%P') %></td>
+      <td class="border-r border-slate-300 pl-2 pr-6 py-2"><%= @booking.flight.arrival_time.strftime('%a %dth %b %Y, %R%P') %></td>
+      <td class="pl-2 pr-6 py-2"><%= Time.at(@booking.flight.flight_duration_secs).utc.strftime("%Hhrs%Mmins")  %></td>
     </tr>
   </tbody>
 </table>
