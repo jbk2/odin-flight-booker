@@ -1,40 +1,43 @@
-  <table class="animate-fade-in bg-cyan-50/50 rounded-b">
-  <caption class="text-5xl font-display text-green-800 bg-cyan-50/50 rounded-t pt-1 pb-2">Booking form</caption>
-    <thead class="bg-slate-200">
-      <tr class="">
-        <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4"><span class="text-left">#️⃣&nbsp&nbsp</span>Flight ID</th>
-        <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4"><span class="text-3xl">🗺️&nbsp&nbsp</span>Route</th>
-        <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4">🛫&nbsp&nbsp&nbsp&nbspDeparture Date & Time</th>
-        <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4">🛬&nbsp&nbsp&nbsp&nbspArrival Date & Time</th>
-        <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4">⏱️&nbsp&nbspFlight Duration</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="border-r border-slate-300 pl-2 pr-6 py-2"><%= @flight.id %></td>
-        <td class="border-r border-slate-300 pl-2 pr-6 py-2"><%= @flight.arrival_airport_name + ' ➡️ ' + @flight.departure_airport_name %></td>
-        <td class="border-r border-slate-300 pl-2 pr-6 py-2"><%= @flight.departure_time.strftime('%a %dth %b %Y, %R%P') %></td>
-        <td class="border-r border-slate-300 pl-2 pr-6 py-2"><%= @flight.arrival_time.strftime('%a %dth %b %Y, %R%P') %></td>
-        <td class="pl-2 pr-6 py-2"><%= Time.at(@flight.flight_duration_secs).utc.strftime("%Hhrs%Mmins")  %></td>
-      </tr>
-    </tbody>
-  </table>
+<table class="animate-fade-in bg-cyan-50/50 rounded-b">
+<caption class="text-5xl font-display text-green-800 bg-cyan-50/50 rounded-t pt-1 pb-2">Booking form</caption>
+  <thead class="bg-slate-200">
+    <tr class="">
+      <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4"><span class="text-left">#️⃣&nbsp&nbsp</span>Flight ID</th>
+      <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4"><span class="text-3xl">🗺️&nbsp&nbsp</span>Route</th>
+      <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4">🛫&nbsp&nbsp&nbsp&nbspDeparture Date & Time</th>
+      <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4">🛬&nbsp&nbsp&nbsp&nbspArrival Date & Time</th>
+      <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4">⏱️&nbsp&nbspFlight Duration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="border-r border-slate-300 pl-2 pr-6 py-2"><%= @flight.id %></td>
+      <td class="border-r border-slate-300 pl-2 pr-6 py-2"><%= @flight.arrival_airport_name + ' ➡️ ' + @flight.departure_airport_name %></td>
+      <td class="border-r border-slate-300 pl-2 pr-6 py-2"><%= @flight.departure_time.strftime('%a %dth %b %Y, %R%P') %></td>
+      <td class="border-r border-slate-300 pl-2 pr-6 py-2"><%= @flight.arrival_time.strftime('%a %dth %b %Y, %R%P') %></td>
+      <td class="pl-2 pr-6 py-2"><%= Time.at(@flight.flight_duration_secs).utc.strftime("%Hhrs%Mmins")  %></td>
+    </tr>
+  </tbody>
+</table>
     
 <%= form_with model: @booking, class: "animate-fade-in pt-2 pb-3 px-4 rounded-b bg-cyan-50/50" do |f| %>
-  <%= f.hidden_field :flight_id, value: @flight_id %>
-  <%= f.hidden_field :no_of_passengers, value: @no_of_passengers %>
-  <ol>
-    <%= f.fields_for :passengers do |p| %>
-      <li class="my-2">
-        <span>Passenger no.<%= p.index + 1 %> - </span>
-        <%= p.label :name %>
-        <%= p.text_field :name, class: "rounded  bg-slate-100" %>
-        <%= p.label :email %>
-        <%= p.text_field :email, class: "rounded bg-slate-100" %>
-      </li>
-    <% end %>
-  </ol>
-  <div class="flex justify-center">
-    <%= f.submit class: "btn-primary-md" %>
+  <%= f.hidden_field :flight_id, value: @flight.id %>
+  <div data-controller="passenger">
+    <ol data-passenger-target="form" >
+      <%= f.fields_for :passengers do |p| %>
+        <li class="my-2">
+          <span>Passenger no.<%= p.index + 1 %> - </span>
+          <%= p.label :name %>
+          <%= p.text_field :name, class: "rounded  bg-slate-100" %>
+          <%= p.label :email %>
+          <%= p.text_field :email, class: "rounded bg-slate-100" %>
+        </li>
+      <% end %>
+    </ol>
+    <div class="flex justify-center">
+      <%= f.submit class: "btn-primary-md" %>
+      <button type="button" data-action="passenger#add" class="btn btn-primary-sm ml-4 w-32 px-2">Add passenger</button>
+      <button type="button" data-action="passenger#remove" class="btn btn-primary-sm ml-4 w-32 px-2">Remove passenger</button>
+    </div>
   </div>
 <% end %>

@@ -2,11 +2,10 @@
 #
 # Table name: bookings
 #
-#  id               :bigint           not null, primary key
-#  no_of_passengers :integer
-#  flight_id        :bigint           not null
-#  created_at       :datetime         not null
-#  updated_at       :datetime         not null
+#  id         :bigint           not null, primary key
+#  flight_id  :bigint           not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
 #
 require "test_helper"
 
