@@ -11,15 +11,20 @@
   </head>
 
   <body class="">
-    <div class='flash'>
-      <p class='alert'><%= alert %></p>
-      <p class='notice'><%= notice %></p>
-    </div>
     <div class="bg-image">
-      <nav class="absolute home-link text-4xl text-center align-baseline mt-4 ml-4 pt-1 h-12 w-32 text-white bg-gray-200/60 hover:bg-gray-400/60
-        focus:ring-4 focus:ring-blue-300 rounded-lg dark:bg-blue-600
-        dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 hover:cursor-pointer">
-        <%= link_to "✈️ 👀", root_path %>
+      <nav>
+        <div class="absolute home-link text-4xl text-center align-baseline mt-4 ml-4 pt-1 h-12 w-32 text-white bg-gray-200/60 hover:bg-gray-400/60
+          focus:ring-4 focus:ring-blue-300 rounded-lg dark:bg-blue-600
+          dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 hover:cursor-pointer">
+          <%= link_to "✈️ 👀", root_path %>
+        </div>
+        <div class='flash'>
+          <p class='alert'><%= alert %></p>
+          <p class='notice'><%= notice %></p>
+        </div>
+        <div class="user-links">
+
+        </div>
       </nav>
       <main class="container items-center mx-auto mt-28 px-5 flex flex-col">
         <div class="block">
