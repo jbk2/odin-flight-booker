@@ -10,5 +10,12 @@
 #  updated_at :datetime         not null
 #
 class Passenger < ApplicationRecord
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
+
+
+
   belongs_to :booking
 end
