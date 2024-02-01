@@ -23,6 +23,7 @@
 
 ### ToDos:
 
+- Build sign up modal for bookings new page. 
 - Introduce logic to calculate real distance between airport locations then calculate travel time therefore departure time (APIs; Google distance)
 - model validation
 - Advance seed logic - ensure flights do not arriva at same departure location, are no shorter than x distance, logic to balance flight seed generation between locations.
