@@ -25,19 +25,22 @@
   <div data-controller="passenger">
     <ol data-passenger-target="form" >
       <%= f.fields_for :passengers do |p| %>
-        <li class="my-2">
-          <span>Passenger no.<%= p.index + 1 %> - </span>
-          <%= p.label :name %>
-          <%= p.text_field :name, class: "rounded  bg-slate-100" %>
+        <li class="my-2 opacity-80">
+          <span class="opacity-10">Passenger no.<%= p.index + 1 %> - </span>
+          <%= p.label :name, class: "opacity-20" %>
+          <%= p.text_field :name, class: "rounded bg-slate-100  opacity-20" %>
           <%= p.label :email %>
           <%= p.text_field :email, class: "rounded bg-slate-100" %>
         </li>
       <% end %>
     </ol>
-    <div class="flex justify-center">
-      <%= f.submit class: "btn-primary-md" %>
-      <button type="button" data-action="passenger#add" class="btn btn-primary-sm ml-4 w-32 px-2">Add passenger</button>
-      <button type="button" data-action="passenger#remove" class="btn btn-primary-sm ml-4 w-32 px-2">Remove passenger</button>
+    <div class="flex justify-between">
+      <div class="flex items-center">
+        <button type="button" data-action="passenger#add" class="text-2xl mr-2">➕</button>
+        <label class="opacity-20">Passenger</label>
+        <button type="button" data-action="passenger#remove" class="text-2xl ml-2">➖</button>
+      </div>
+      <%= f.submit class: "m-auto btn-primary-md" %>
     </div>
   </div>
 <% end %>

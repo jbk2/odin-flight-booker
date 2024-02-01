@@ -22,7 +22,15 @@ export default class extends Controller {
       newPassenger.querySelector('input[name*="name"]').value = '';
       newPassenger.querySelector('input[name*="email"]').value = '';
       newPassenger.querySelector('span').textContent = `Passenger no.${this.passengerCount} - `;
+      newPassenger.classList.add('transition-opacity', 'duration-1000', 'opacity-100', 'transform', 'scale-95');
       this.formTarget.appendChild(newPassenger);
+      console.log(`this is the new passenger class list; ${newPassenger.classList}`);
+      void newPassenger.offsetHeight;
+      setTimeout(() => {
+        newPassenger.classList.remove('opacity-100', 'scale-95')
+        newPassenger.classList.add('opacity-0', 'scale-100') }
+        , 50);
+        console.log(`this is the new passenger UPDATED class list; ${newPassenger.classList}`);
       this.updateButtonVisibility();
       console.log(`passengerCount is; ${this.passengerCount}`)
     }
@@ -38,7 +46,6 @@ export default class extends Controller {
       this.updateButtonVisibility();
       console.log(`passengerCount is; ${this.passengerCount}`)
     }
-
   }
 
   updateButtonVisibility() {
