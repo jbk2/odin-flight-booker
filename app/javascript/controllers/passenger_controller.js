@@ -12,6 +12,7 @@ export default class extends Controller {
   
   connect() {
     console.log(`Form target found; ${this.hasFormTarget}`);
+    this.updateButtonVisibility();
   }
 
   add(event) {
@@ -23,7 +24,7 @@ export default class extends Controller {
       newPassenger.querySelector('input[name*="name"]').value = '';
       newPassenger.querySelector('input[name*="email"]').value = '';
       newPassenger.querySelector('span').textContent = `Passenger no.${this.passengerCount} - `;
-      newPassenger.classList.add('transition-opacity', `duration-${this.delayValue}`, 'opacity-0', 'transform', 'scale-95');
+      newPassenger.classList.add('transition-all', `duration-${this.delayValue}`, 'opacity-0', 'transform', 'scale-95');
       this.formTarget.appendChild(newPassenger);
       setTimeout(() => {
         newPassenger.classList.remove('opacity-0', 'scale-95')
@@ -42,7 +43,7 @@ export default class extends Controller {
       const lastPassenger = this.formTarget.querySelector('li:last-child')
       setTimeout(() => {
       lastPassenger.classList.remove('opacity-100', 'scale-100')
-      lastPassenger.classList.add('opacity-0') }
+      lastPassenger.classList.add('opacity-0', 'scale-90') }
       , 50);
       setTimeout(() => {
         this.formTarget.removeChild(lastPassenger) }
@@ -55,8 +56,32 @@ export default class extends Controller {
   updateButtonVisibility() {
     const addButton = this.element.querySelector('[data-action="passenger#add"]');
     const removeButton = this.element.querySelector('[data-action="passenger#remove"]');
-    addButton.style.display = this.passengerCount >= this.maxPassengers ? 'none' : 'inline-block';
-    removeButton.style.display = this.passengerCount <= this.minPassengers ? 'none' : 'inline-block';
-  }
+
+    const changeVisibility = (button, shouldBeVisible) => {
+        button.style.transition = 'opacity 0.5s';
+        button.style.opacity = shouldBeVisible ? '1' : '0';
+
+        setTimeout(() => {
+            button.style.visibility = shouldBeVisible ? 'visible' : 'hidden';
+        }, 500);
+    };
+
+    if (this.passengerCount >= this.maxPassengers) {
+        changeVisibility(addButton, false);
+    } else {
+        addButton.style.visibility = 'visible';
+        changeVisibility(addButton, true);
+    }
+
+    if (this.passengerCount <= this.minPassengers) {
+        changeVisibility(removeButton, false);
+    } else {
+        removeButton.style.visibility = 'visible';
+        changeVisibility(removeButton, true);
+    }
+}
+
+
+  
   
 }
