@@ -13,5 +13,4 @@ class Booking < ApplicationRecord
   has_many :passengers
   accepts_nested_attributes_for :passengers, allow_destroy: true
   belongs_to :booking_owner, class_name: 'Passenger', foreign_key: 'booking_owner_id'
-
 end

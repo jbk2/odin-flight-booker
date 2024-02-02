@@ -2,12 +2,16 @@
 #
 # Table name: passengers
 #
-#  id         :bigint           not null, primary key
-#  name       :string
-#  email      :string
-#  booking_id :bigint           not null
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id                     :bigint           not null, primary key
+#  name                   :string
+#  email                  :string
+#  booking_id             :bigint           not null
+#  created_at             :datetime         not null
+#  updated_at             :datetime         not null
+#  encrypted_password     :string           default(""), not null
+#  reset_password_token   :string
+#  reset_password_sent_at :datetime
+#  remember_created_at    :datetime
 #
 class Passenger < ApplicationRecord
   # Include default devise modules. Others available are:
@@ -15,9 +19,9 @@ class Passenger < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  belongs_to :booking
+  belongs_to :booking, optional: true
 
-  validates :name, :email, presence: true
+  validates :email, presence: true
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
 
   has_many :owned_bookings, class_name: 'Booking', foreign_key: 'booking_owner_id'
