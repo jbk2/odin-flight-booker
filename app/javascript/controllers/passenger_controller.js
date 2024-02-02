@@ -7,6 +7,7 @@ export default class extends Controller {
     this.minPassengers = 1;
     this.maxPassengers = 5;
     this.passengerCount = this.formTarget.querySelectorAll('li').length;
+    this.delayValue = 300;
   }
   
   connect() {
@@ -22,15 +23,12 @@ export default class extends Controller {
       newPassenger.querySelector('input[name*="name"]').value = '';
       newPassenger.querySelector('input[name*="email"]').value = '';
       newPassenger.querySelector('span').textContent = `Passenger no.${this.passengerCount} - `;
-      newPassenger.classList.add('transition-opacity', 'duration-1000', 'opacity-100', 'transform', 'scale-95');
+      newPassenger.classList.add('transition-opacity', `duration-${this.delayValue}`, 'opacity-0', 'transform', 'scale-95');
       this.formTarget.appendChild(newPassenger);
-      console.log(`this is the new passenger class list; ${newPassenger.classList}`);
-      void newPassenger.offsetHeight;
       setTimeout(() => {
-        newPassenger.classList.remove('opacity-100', 'scale-95')
-        newPassenger.classList.add('opacity-0', 'scale-100') }
+        newPassenger.classList.remove('opacity-0', 'scale-95')
+        newPassenger.classList.add('opacity-100', 'scale-100') }
         , 50);
-        console.log(`this is the new passenger UPDATED class list; ${newPassenger.classList}`);
       this.updateButtonVisibility();
       console.log(`passengerCount is; ${this.passengerCount}`)
     }
@@ -42,7 +40,13 @@ export default class extends Controller {
     if (this.passengerCount > this.minPassengers) {
       this.passengerCount--
       const lastPassenger = this.formTarget.querySelector('li:last-child')
-      this.formTarget.removeChild(lastPassenger);
+      setTimeout(() => {
+      lastPassenger.classList.remove('opacity-100', 'scale-100')
+      lastPassenger.classList.add('opacity-0') }
+      , 50);
+      setTimeout(() => {
+        this.formTarget.removeChild(lastPassenger) }
+        , this.delayValue - 80);
       this.updateButtonVisibility();
       console.log(`passengerCount is; ${this.passengerCount}`)
     }
