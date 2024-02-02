@@ -1,8 +1,12 @@
-<div class='flash'>
-  <div role='alert' class='alert alert-warning'>
-    <span><%= alert %></span>
-  </div>
-  <div role='alert' class='alert alert-info'>
-    <span><%= notice %></span>
-  </div>
-</div>
+<%= turbo_frame_tag "flash" do %>
+  <% if flash.alert %>
+    <div role='alert' data-controller="flash" class='alert alert-warning'>
+      <span><%= alert %></span>
+    </div>
+  <% elsif flash.notice %>
+    <div role='alert' data-controller="flash" class='alert alert-info'>
+      <span><%= notice %></span>
+    </div>
+  <% end %>
+<% end %>
+
