@@ -29,8 +29,20 @@
           <span class="">Passenger no.<%= p.index + 1 %> - </span>
           <%= p.label :name, class: "" %>
           <%= p.text_field :name, class: "rounded bg-slate-100" %>
+          <!-- Display validation error for :name -->
+          <% if p.object.errors[:name].present? %>
+            <div class="error-message">
+              <%= p.object.errors[:name].join(", ") %>
+            </div>
+          <% end %>
           <%= p.label :email %>
           <%= p.text_field :email, class: "rounded bg-slate-100" %>
+          <!-- Display validation error for :email -->
+          <% if p.object.errors[:email].present? %>
+            <div class="error-message">
+              <%= p.object.errors[:email].join(", ") %>
+            </div>
+          <% end %>
         </li>
       <% end %>
     </ol>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_02_02_074441) do
+ActiveRecord::Schema[7.0].define(version: 2024_02_04_103558) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -28,7 +28,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_02_02_074441) do
     t.bigint "flight_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "booking_owner_id", null: false
+    t.bigint "booking_owner_id"
     t.index ["booking_owner_id"], name: "index_bookings_on_booking_owner_id"
     t.index ["flight_id"], name: "index_bookings_on_flight_id"
   end
@@ -51,7 +51,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_02_02_074441) do
     t.bigint "booking_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "encrypted_password", default: "", null: false
+    t.string "encrypted_password", default: ""
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"

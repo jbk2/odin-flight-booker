@@ -5,7 +5,7 @@
 #  id                     :bigint           not null, primary key
 #  name                   :string
 #  email                  :string
-#  booking_id             :bigint           not null
+#  booking_id             :bigint
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #  encrypted_password     :string           default(""), not null
@@ -19,10 +19,19 @@ class Passenger < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  belongs_to :booking, optional: true
-
   validates :email, presence: true
-  validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
-
+  # validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
+         
+  belongs_to :booking, optional: true
   has_many :owned_bookings, class_name: 'Booking', foreign_key: 'booking_owner_id'
+
+  def password_required?
+    super && is_booking_owner?
+  end
+
+  def is_booking_owner?
+    # Example logic - adjust based on your actual model associations and logic
+    Booking.exists?(booking_owner_id: self.id)
+  end
+  
 end

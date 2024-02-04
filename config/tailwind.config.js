@@ -31,6 +31,10 @@ module.exports = {
         'fade-in': 'fadeIn 0.2s ease-out',
       },
     },
+    container: {
+      center: true,
+      padding: '2rem',
+    },
   },
   plugins: [
     require('@tailwindcss/forms'),
