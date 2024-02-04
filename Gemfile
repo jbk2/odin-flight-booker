@@ -84,3 +84,5 @@ gem "pry-byebug", "~> 3.10"
 gem "sass-embedded", "~> 1.70"
 
 gem "dockerfile-rails", ">= 1.6", :group => :development
+
+gem "letter_opener", "~> 1.8", :group => :development
