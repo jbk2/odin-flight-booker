@@ -24,36 +24,23 @@
   <%= f.hidden_field :flight_id, value: @flight.id %>
   <div data-controller="passenger">
     <ol data-passenger-target="form" >
-      <%= f.fields_for :passengers do |p| %>
-        <li class="my-2">
-          <span class="">Passenger no.<%= p.index + 1 %> - </span>
-          <%= p.label :name, class: "" %>
-          <%= p.text_field :name, class: "rounded bg-slate-100" %>
-          <!-- Display validation error for :name -->
-          <% if p.object.errors[:name].present? %>
-            <div class="error-message">
-              <%= p.object.errors[:name].join(", ") %>
-            </div>
-          <% end %>
-          <%= p.label :email %>
-          <%= p.text_field :email, class: "rounded bg-slate-100" %>
-          <!-- Display validation error for :email -->
-          <% if p.object.errors[:email].present? %>
-            <div class="error-message">
-              <%= p.object.errors[:email].join(", ") %>
-            </div>
-          <% end %>
+      <% @number_of_passengers.times do |index| %>
+        <li class="my-2 flex flex-row items-center mx-2">
+          <span>Passenger no.<%= index + 1 %> - </span>
+          <%= label_tag "booking[passengers][#{index}][name]", "Name", class: "mr-2" %>
+          <%= text_field_tag "booking[passengers][][name]", nil, id: "passengers_#{index}_name", class: "rounded bg-slate-100 mr-4" %>
+          <%= label_tag "booking[passengers][][email]", "Email", class: "mr-2" %>
+          <%= text_field_tag "booking[passengers][][email]", nil, id: "passengers_#{index}_email", class: "rounded bg-slate-100" %>
         </li>
       <% end %>
     </ol>
-    <div class="flex justify-between">
-      <div class="flex items-center">
-        <label class="">Passenger</label>
-        <button type="button" data-action="passenger#add" class="text-2xl ml-4">➕</button>
-        <button type="button" data-action="passenger#remove" class="text-2xl ml-4">➖</button>
-      </div>
-      <%= f.hidden_field :passenger_count, data: { passenger_target: "count" } %>
+    
+    <div class="flex justify-between items-center">
+      <label class="">+ or - passenger</label>
+      <button type="button" data-action="passenger#add" class="text-2xl ml-4">➕</button>
+      <button type="button" data-action="passenger#remove" class="text-2xl ml-4">➖</button>
       <%= f.submit class: "m-auto btn-primary-md" %>
     </div>
+    <%#= f.hidden_field :passenger_count, data: { passenger_target: "count" } %>
   </div>
 <% end %>

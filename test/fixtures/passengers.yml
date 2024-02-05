@@ -5,7 +5,6 @@
 #  id                     :bigint           not null, primary key
 #  name                   :string
 #  email                  :string
-#  booking_id             :bigint
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #  encrypted_password     :string           default("")

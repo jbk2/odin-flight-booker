@@ -59,7 +59,7 @@ export default class extends Controller {
         , 50);
 
       // Set the countTarget (submitted in hidden attr in form as :passenger_count) to passengerCount
-      this.countTarget.value = this.passengerCount;
+      // this.countTarget.value = this.passengerCount;
       // Update button visibility
       this.updateButtonVisibility();
       console.log(`passengerCount is; ${this.passengerCount}`)
@@ -79,7 +79,7 @@ export default class extends Controller {
       setTimeout(() => {
         this.formTarget.removeChild(lastPassenger) }
         , this.delayValue - 80);
-      this.countTarget.value = this.passengerCount;
+      // this.countTarget.value = this.passengerCount;
       this.updateButtonVisibility();
       console.log(`passengerCount is; ${this.passengerCount}`)
     }
@@ -111,9 +111,6 @@ export default class extends Controller {
         removeButton.style.visibility = 'visible';
         changeVisibility(removeButton, true);
     }
-}
-
-
-  
+  }
   
 }

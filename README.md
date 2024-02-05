@@ -24,6 +24,10 @@
 ### ToDos:
 
 - Build sign up modal for bookings new page. 
+- stop flight search form width changing
+- Passenger validations, front & back:
+  - duplication in single form
+  - if email present in db already link booking passenger to the record already in db.
 - Introduce logic so that flights can't be searched, or booked, with same arrival and departure airports
 - Introduce logic to calculate real distance between airport locations then calculate travel time therefore departure time (APIs; Google distance)
 - model validation

@@ -5,7 +5,6 @@
 #  id                     :bigint           not null, primary key
 #  name                   :string
 #  email                  :string
-#  booking_id             :bigint
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #  encrypted_password     :string           default("")
@@ -19,7 +18,7 @@ class Passenger < ApplicationRecord
   
   validates :email, presence: true
   # validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
-  belongs_to :booking, optional: true
+  has_and_belongs_to_many :bookings
   has_many :owned_bookings, class_name: 'Booking', foreign_key: 'booking_owner_id'
 
   def password_required?
