@@ -12,7 +12,13 @@ class BookingsController < ApplicationController
       @booking = Booking.new(booking_params.except(:passengers))
       @booking.flight = @flight
       if @booking.save
-        associate_passengers(params[:booking][:passengers])
+        passenger_errors = associate_passengers(params[:booking][:passengers])
+
+        if passenger_errors.any?
+          flash.now[:alert] = "Could not save passengers: #{passenger_errors.join(', ')}"
+          raise ActiveRecord::Rollback, "Passengers could not be associated"
+        end
+
         set_booking_owner
       else
         flash.now[:alert] = "Sorry, your booking could not be saved."
@@ -36,15 +42,19 @@ class BookingsController < ApplicationController
   end
 
   def associate_passengers(passengers_attributes)
+    errors = []
     passengers_attributes.each do |passenger_attrs|
       passenger = Passenger.find_or_initialize_by(email: passenger_attrs[:email])
 
       if passenger.new_record?
         passenger.name = passenger_attrs[:name]
-        passenger.save
+        unless passenger.save
+          errors << passenger.errors.full_messages.to_sentence
+        end
       end
       @booking.passengers << passenger unless @booking.passengers.include?(passenger)
     end
+    return errors
   end
 
   def set_booking_owner
