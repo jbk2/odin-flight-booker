@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["form"]
+  static targets = ["form", "count"]
   
   initialize() {
     this.minPassengers = 1;
@@ -21,15 +21,46 @@ export default class extends Controller {
     if (this.passengerCount < this.maxPassengers) {
       this.passengerCount++;
       const newPassenger = this.formTarget.querySelector('li').cloneNode(true);
-      newPassenger.querySelector('input[name*="name"]').value = '';
-      newPassenger.querySelector('input[name*="email"]').value = '';
+      const newIndex = this.passengerCount - 1;
+
+      // clear input fields
+      const inputs = newPassenger.querySelectorAll('input');
+      inputs.forEach(input => {
+        input.value = '';
+      // Index name attribute correctly
+        const nameAttr = input.getAttribute('name');
+        if (nameAttr) {
+          input.setAttribute('name', nameAttr.replace(/\[\d+\]/, `[${newIndex}]`));
+        }
+      // Index id attribute correctly
+        const idAttr = input.getAttribute('id');
+        if (idAttr) {
+          input.setAttribute('id', idAttr.replace(/_\d+_/, `_${newIndex}_`));
+        }
+      });
+      // Index label for attribute correctly
+      const labels = newPassenger.querySelectorAll('label');
+      labels.forEach(label => {
+        const forAttr = label.getAttribute('for');
+        if (forAttr) {
+          label.setAttribute('for', forAttr.replace(/_\d+_/, `_${newIndex}_`));
+        }
+      });
+
+      // Add new passenger span label and add fade in classes
       newPassenger.querySelector('span').textContent = `Passenger no.${this.passengerCount} - `;
       newPassenger.classList.add('transition-all', `duration-${this.delayValue}`, 'opacity-0', 'transform', 'scale-95');
+
+      // Add new passenger to the form and make visible
       this.formTarget.appendChild(newPassenger);
       setTimeout(() => {
         newPassenger.classList.remove('opacity-0', 'scale-95')
         newPassenger.classList.add('opacity-100', 'scale-100') }
         , 50);
+
+      // Set the countTarget (submitted in hidden attr in form as :passenger_count) to passengerCount
+      this.countTarget.value = this.passengerCount;
+      // Update button visibility
       this.updateButtonVisibility();
       console.log(`passengerCount is; ${this.passengerCount}`)
     }
@@ -48,6 +79,7 @@ export default class extends Controller {
       setTimeout(() => {
         this.formTarget.removeChild(lastPassenger) }
         , this.delayValue - 80);
+      this.countTarget.value = this.passengerCount;
       this.updateButtonVisibility();
       console.log(`passengerCount is; ${this.passengerCount}`)
     }

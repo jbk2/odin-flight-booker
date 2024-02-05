@@ -5,13 +5,18 @@
       dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 hover:cursor-pointer">
       <%= link_to "✈️ 👀", root_path %>
     </div>
+  
+    <div class="flex-none">
+      <% unless flash.empty? %>
+        <%= render '/layouts/flash' %>
+      <% end %>  
+    </div>
+
+    <div>
+      <%= "**** Here are your params #{params}" %>
+    </div>
   </div>
 
-  <div class="flex-none">
-    <% unless flash.empty? %>
-      <%= render '/layouts/flash' %>
-    <% end %>  
-  </div>
 
   <div class="flex-none">
     <ul class="menu menu-horizontal px-1">

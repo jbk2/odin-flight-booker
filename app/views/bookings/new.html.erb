@@ -52,6 +52,7 @@
         <button type="button" data-action="passenger#add" class="text-2xl ml-4">➕</button>
         <button type="button" data-action="passenger#remove" class="text-2xl ml-4">➖</button>
       </div>
+      <%= f.hidden_field :passenger_count, data: { passenger_target: "count" } %>
       <%= f.submit class: "m-auto btn-primary-md" %>
     </div>
   </div>
