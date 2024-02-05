@@ -8,7 +8,13 @@
 - Dynamic flight search form using Stimulus and Turbo streams to:
   - dynamically populate airport select inputs from selected country and date select input based upon available flights
   - load flight results all on Flights#index/flights_path
+- Uses custom configured Devise authentication:
+  - Devise for Passenger
+  - Password not required for non booking_owner passengers
+- Integrates booking_owner registration into the flight booking flow
 - Use of TailwindCSS for styling
+
+
 
 ---
 
