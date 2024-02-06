@@ -18,7 +18,6 @@ class BookingsController < ApplicationController
           raise ActiveRecord::Rollback, "Passengers could not be associated"
         end
         set_booking_owner
-        # trigger pop up or modal here to set password
         if passenger_signed_in?
           redirect_to booking_path(@booking), notice: "Booking was successfully created."
         else
@@ -46,7 +45,10 @@ class BookingsController < ApplicationController
       sign_in(@booking_owner, bypass: true)
       redirect_to booking_path(@booking), notice: 'Password was successfully updated.'
     else
-      raise ActiveRecord::Rollback, "Could not update #{@booking_owner.email} with password"
+      respond_to do |format|
+        format.turbo_stream { render turbo_stream: turbo_stream.replace("passwordModal", partial: "password_form", locals: { booking: @booking, booking_owner: @booking_owner }) }
+      # Handle HTML response as well, if necessary.
+      end
     end
   end
 
