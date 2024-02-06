@@ -25,4 +25,8 @@ class Passenger < ApplicationRecord
     super && self.owned_bookings.exists?
   end
 
+  def update_password(params)
+    update(params)
+  end
+
 end

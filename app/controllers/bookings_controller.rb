@@ -13,22 +13,40 @@ class BookingsController < ApplicationController
       @booking.flight = @flight
       if @booking.save
         passenger_errors = associate_passengers(params[:booking][:passengers])
-
         if passenger_errors.any?
           flash.now[:alert] = "Could not save passengers: #{passenger_errors.join(', ')}"
           raise ActiveRecord::Rollback, "Passengers could not be associated"
         end
-
         set_booking_owner
+        # trigger pop up or modal here to set password
+        if passenger_signed_in?
+          redirect_to booking_path(@booking), notice: "Booking was successfully created."
+        else
+          respond_to do |format|
+            format.turbo_stream { render turbo_stream: turbo_stream.replace("modal", partial: "password_form", locals: { booking: @booking }) }
+            format.html { set_booking_owner_password }
+          end
+        end
       else
         flash.now[:alert] = "Sorry, your booking could not be saved."
         raise ActiveRecord::Rollback, "Booking could not be saved"
       end
-      passenger_signed_in? ? (redirect_to booking_path(@booking), notice: "Booking was successfully created.") : set_booking_owner_password
+      # passenger_signed_in? ? (redirect_to booking_path(@booking), notice: "Booking was successfully created.") : set_booking_owner_password
     rescue ActiveRecord::Rollback
       Rails.logger.info(@booking.errors.full_messages.to_sentence)
       flash.now[:alert] = "Sorry, your booking could not be saved."
       render :new, status: :unprocessable_entity
+    end
+  end
+
+  def update_booking_owner_password
+    @booking = Booking.find(params[:id])
+    @booking_owner = @booking.booking_owner
+    if @booking_owner.update_password(passenger_params)
+      sign_in(@booking_owner, bypass: true)
+      redirect_to booking_path(@booking), notice: 'Password was successfully updated.'
+    else
+      raise ActiveRecord::Rollback, "Could not update #{@booking_owner.email} with password"
     end
   end
 
@@ -73,4 +91,8 @@ class BookingsController < ApplicationController
   def booking_params
     params.require(:booking).permit(:id, :flight_id, :no_of_passengers, passengers: [:id, :name, :email])
   end
+
+  def passenger_params
+    params.require(:passenger).permit(:password, :password_confirmation)
+  end 
 end

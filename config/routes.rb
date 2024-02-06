@@ -12,5 +12,7 @@ Rails.application.routes.draw do
   end
 
   resources :airports, only: [:index]
-  resources :bookings, only: [:new, :create, :show]
+  resources :bookings, only: [:new, :create, :show] do
+    patch :update_booking_owner_password, on: :member
+  end
 end
