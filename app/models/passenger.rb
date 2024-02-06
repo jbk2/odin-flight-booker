@@ -17,7 +17,7 @@ class Passenger < ApplicationRecord
   :recoverable, :rememberable, :validatable
   
   validates :email, presence: true
-  # validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
+  validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
   has_and_belongs_to_many :bookings
   has_many :owned_bookings, class_name: 'Booking', foreign_key: 'booking_owner_id'
 
