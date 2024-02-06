@@ -21,6 +21,9 @@
   <div class="flex-none">
     <ul class="menu menu-horizontal px-1">
       <% if passenger_signed_in? %>
+        <% if current_passenger.owned_bookings.present? %>
+          <li> <%= link_to "Owned bookings", bookings_path %></li>
+        <% end %>
         <li><%= link_to "Edit Profile", edit_passenger_registration_path, class: "" %></li>
         <li><%= button_to "Logout", destroy_passenger_session_path, method: :delete, class: "" %></li>
       <% else %>

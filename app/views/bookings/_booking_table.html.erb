@@ -1,0 +1,24 @@
+<table class="animate-fade-in bg-cyan-50/50 rounded-b">
+  <caption class="text-5xl font-display text-green-800 bg-cyan-50/50 rounded-t py-4">🗺️ Your bookings</caption>
+  <thead class="bg-slate-200">
+    <tr>
+      <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4"><span class="text-left">#️⃣&nbsp&nbsp</span> Booking & Flight IDs</th>
+      <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4">👥&nbsp&nbspNo of passengers</th>
+      <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4">📇🪪&nbsp&nbspPassenger names</th>
+      <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4"><span class="text-3xl">🗺️&nbsp&nbsp</span>Route</th>
+      <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4">🛫&nbsp&nbsp&nbsp&nbspDeparture Date & Time</th>
+      <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4">🛬&nbsp&nbsp&nbsp&nbspArrival Date & Time</th>
+      <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4">⏱️&nbsp&nbspFlight Duration</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <% if bookings.respond_to?(:each) %>
+      <% bookings.each do |booking| %>
+        <%= render 'booking_row', bookings: booking %>
+      <% end %>
+    <% else %>
+      <%= render 'booking_row', bookings: bookings %>
+    <% end %>
+  </tbody>
+</table>

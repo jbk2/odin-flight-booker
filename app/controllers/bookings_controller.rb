@@ -34,6 +34,10 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
   end
 
+  def index
+    @owned_bookings = current_passenger.owned_bookings
+  end
+
   private
   def handle_post_booking_flow
     if passenger_signed_in?

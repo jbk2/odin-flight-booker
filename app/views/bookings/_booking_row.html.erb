@@ -1,0 +1,9 @@
+<tr class="">
+  <td class="border-r border-slate-300 pl-2 pr-6 py-2"><%= bookings.id.to_s + ', ' + bookings.flight_id.to_s %></td>
+  <td class="border-r border-slate-300 pl-2 pr-6 py-2"><%= bookings.passengers.count %></td>
+  <td class="border-r border-slate-300 pl-2 pr-6 py-2"><%= bookings.passengers.map {|p| p.name }.join(', ') %></td>
+  <td class="border-r border-slate-300 pl-2 pr-6 py-2"><%= bookings.flight.departure_airport_name + ' ➡️ ' +  bookings.flight.arrival_airport_name %></td>
+  <td class="border-r border-slate-300 pl-2 pr-6 py-2"><%= bookings.flight.departure_time.strftime('%a %dth %b %Y, %R%P') %></td>
+  <td class="border-r border-slate-300 pl-2 pr-6 py-2"><%= bookings.flight.arrival_time.strftime('%a %dth %b %Y, %R%P') %></td>
+  <td class="pl-2 pr-6 py-2"><%= Time.at(bookings.flight.flight_duration_secs).utc.strftime("%Hhrs%Mmins")  %></td>
+</tr>
