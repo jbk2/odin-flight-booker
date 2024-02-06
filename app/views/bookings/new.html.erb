@@ -28,7 +28,7 @@
         <li class="my-2 flex flex-row items-center mx-2">
           <span>Passenger no.<%= index + 1 %> - </span>
           <%= label_tag "booking[passengers][#{index}][name]", "Name", class: "mr-2" %>
-          <%= text_field_tag "booking[passengers][][name]", nil, id: "passengers_#{index}_name", class: "rounded bg-slate-100 mr-4" %>
+          <%= text_field_tag "booking[passengers][][name]", nil, id: "passengers_#{index}_name", minlength: "2", maxlength: "50", class: "rounded bg-slate-100 mr-4" %>
           <%= label_tag "booking[passengers][][email]", "Email", class: "mr-2" %>
           <%= text_field_tag "booking[passengers][][email]", nil, id: "passengers_#{index}_email", type: "email", class: "rounded bg-slate-100" %>
         </li>

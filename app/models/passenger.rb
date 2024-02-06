@@ -16,8 +16,9 @@ class Passenger < ApplicationRecord
   devise :database_authenticatable, :registerable,
   :recoverable, :rememberable, :validatable
   
-  validates :email, presence: true
+  validates :email, :name, presence: true
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
+  validates :name, length: { minimum: 2, maximum: 50 }
   has_and_belongs_to_many :bookings
   has_many :owned_bookings, class_name: 'Booking', foreign_key: 'booking_owner_id'
 
