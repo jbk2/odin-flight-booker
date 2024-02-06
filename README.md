@@ -30,7 +30,6 @@
 ### ToDos:
 
 - Build sign up modal for bookings new page. 
-- stop flight search form width changing
 - Passenger validations, front & back:
   - duplication in single form
   - if email present in db already link booking passenger to the record already in db.
