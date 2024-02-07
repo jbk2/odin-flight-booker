@@ -1,36 +1,34 @@
 import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
 
-  static targets = ["passengerPassword", "eye", "eyeSlash", "iconDiv"]
+  static targets = ["passengerPassword", "eye", "eyeSlash", "passwordIconDiv", "passengerConfirmationPassword", "confirmationEye", "confirmationEyeSlash", "confirmationPasswordIconDiv"]
   
   connect() {
     console.log("Modal controller connected");
     console.log(`passengerPassword target found; ${this.hasPassengerPasswordTarget}`);
     console.log(`Eye target found; ${this.hasEyeTarget}`);
     console.log(`Eye-slash target found; ${this.hasEyeSlashTarget}`);
-    console.log(`Icon-Div target found; ${this.hasIconDivTarget}`);
+    console.log(`Icon-Div target found; ${this.hasPasswordIconDivTarget}`);
+    console.log(`passengerConfirmationPassword target found; ${this.hasPassengerConfirmationPasswordTarget}`);
+    console.log(`ConfirmationEye target found; ${this.hasConfirmationEyeTarget}`);
+    console.log(`ConfirmationEyeSlash target found; ${this.hasConfirmationEyeSlashTarget}`);
+    console.log(`ConfirmationIconDiv target found; ${this.hasConfirmationPasswordIconDivTarget}`);
     this.element.querySelector('dialog').showModal();
   }
 
-  toggleIcon() {
-    const passwordField = this.passengerPasswordTarget;
-    const eyeIcon = this.eyeTarget;
-    const eyeSlashIcon = this.eyeSlashTarget;
-    const iconDiv = this.iconDivTarget;
+  toggleVisibility(event) {
+    const iconDivTarget = event.target.closest('[data-modal-target="passwordIconDiv"], [data-modal-target="confirmationPasswordIconDiv"]');
+    const isPassword = iconDivTarget.dataset.modalTarget === 'passwordIconDiv';
+    const fieldTarget = isPassword ? this.passengerPasswordTarget : this.passengerConfirmationPasswordTarget;
+    const eyeIcon = fieldTarget === this.passengerPasswordTarget ? this.eyeTarget : this.confirmationEyeTarget;
+    const eyeSlashIcon = fieldTarget === this.passengerPasswordTarget ? this.eyeSlashTarget : this.confirmationEyeSlashTarget;
 
-    if (passwordField.type === "password") {
-      passwordField.type = "text";
-      eyeSlashIcon.classList.remove("invisible");
-      eyeSlashIcon.classList.add("visible");
-      eyeIcon.classList.remove("visible");
-      eyeIcon.classList.add("invisible");
-    } else {
-      passwordField.type = "password";
-      eyeIcon.classList.remove("invisible");
-      eyeIcon.classList.add("visible");
-      eyeSlashIcon.classList.remove("visible");
-      eyeSlashIcon.classList.add("invisible");
-    }
+    fieldTarget.type = fieldTarget.type === "password" ? "text" : "password";
+
+    eyeIcon.classList.toggle("invisible", fieldTarget.type === "text");
+    eyeIcon.classList.toggle("visible", fieldTarget.type === "password");
+    eyeSlashIcon.classList.toggle("invisible", fieldTarget.type === "password");
+    eyeSlashIcon.classList.toggle("visible", fieldTarget.type === "text");
   }
 
 }
