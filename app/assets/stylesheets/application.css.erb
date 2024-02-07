@@ -31,14 +31,15 @@ th:not(.sorted) span.arrow {
 .bg-image {
   background-image: url(<%= asset_path('mountains.jpg') %>);
   /* background-image: url('/assets/mountains.jpg'); Your image path */
-  background-position: center; /* Center the image */
+  background-position: center center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Cover the entire area */
+  background-attachment: fixed;
   width: 100%;
-  /* height: 100vh; */
+  min-height: 100vh;
   /* position: fixed; */
-  top: 0;
-  left: 0;
-  z-index: -1;
-  opacity: 95%;
+  /* top: 0; */
+  /* left: 0; */
+  /* z-index: -1; */
+  /* opacity: 95%; */
 }
