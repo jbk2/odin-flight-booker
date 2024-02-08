@@ -24,6 +24,7 @@ class BookingsController < ApplicationController
     
     if @booking_owner.update_password(passenger_params)
       bypass_sign_in(@booking_owner)
+      PassengerMailer.with(booking_owner: @booking_owner, booking: @booking).welcome_booking_owner.deliver_later
       redirect_to booking_path(@booking), notice: 'Password was successfully updated.'
     else
       render_password_modal_with_errors

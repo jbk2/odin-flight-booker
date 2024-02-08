@@ -21,11 +21,6 @@ Hotwire
   - ModalController;
   - FlashController;
 
-
-
-
-
-
 ---
 
 ### Learnings / Further practie on:

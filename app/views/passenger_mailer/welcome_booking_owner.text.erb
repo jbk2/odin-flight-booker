@@ -1,0 +1,15 @@
+Welcome to Flight Booker
+Your source of safe aeroplane journeys</p>
+
+<%= @greeting + ' ' + @booking_owner.name %>, Thanks for signing up and making your first booking
+
+You're now all booked to be taking off from <%= @booking.flight.departure_airport.name %> on the <%= @booking.flight.departure_time.strftime('%a %dth %b %Y, %R%P') %>
+to <%= @booking.flight.arrival_airport.name %><%= (@booking.passengers.count > 1) ? "along with #{@booking.passengers.each {|p| p.name + ', '}}." : "." %>
+
+For your reference, your booking number is: <%= @booking.id %>.
+
+Thanks for choosing to fly with us. We hope you have a great journey.
+
+Safe travels!
+
+View your booking and make any changes by logging into your account <%= link_to 'here', @url %>.

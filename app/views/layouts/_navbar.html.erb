@@ -1,7 +1,9 @@
 <div class="navbar h-24 top-0 bg-base-100/40 pl-12 pr-36">
   <div class="flex-1">
     <div class="focus:ring-4 focus:ring-blue-300 focus:outline-none hover:cursor-pointer">
-      <%= image_tag 'default-logo.svg', size: "", class: "hover:cursor-pointer md:min-w-[350px] md:min-h-[80px] min-w-[250px] min-h-[60px] max-w-[350px] max-h-[80px] -ml-12 object-cover"%>
+      <%= link_to image_tag('default-logo.svg', alt: "flight booker logo",
+        class: "hover:cursor-pointer md:min-w-[350px] md:min-h-[80px] min-w-[250px] min-h-[60px] max-w-[350px] max-h-[80px] -ml-12 object-cover"),
+        root_path %>
     </div>
   
     <div class="flex-none">
