@@ -13,6 +13,16 @@
   - Password not required for non booking_owner passengers
 - Integrates booking_owner registration into the flight booking flow
 - Use of TailwindCSS for styling
+Hotwire
+- Stimulus Controllers:
+  - FlightSearchFormController;
+  - BookingController;
+  - PassengerController;
+  - ModalController;
+  - FlashController;
+
+
+
 
 
 
@@ -37,4 +47,6 @@
 - model validation
 - Advance seed logic - ensure flights do not arriva at same departure location, are no shorter than x distance, logic to balance flight seed generation between locations.
 - Build nicer UI (flipboard UI perhaps, animated polaroid holiday picture elements in background)
-- implement flight search date picker populated with only flight available dates
+- Date picker - populated with only flight available dates
+- Flight search input field - keypress search match
+- 

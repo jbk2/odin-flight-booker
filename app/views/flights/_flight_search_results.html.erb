@@ -1,29 +1,31 @@
-<table class="animate-fade-in bg-cyan-50/50 table-auto rounded">
-  <caption class="bg-cyan-50/50 rounded-t text-5xl font-display text-green-800 mt-4 pt-1 pb-2">Flight results</caption>
-  <thead class="bg-slate-200">
-    <tr>
-      <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4"><span class="text-3xl">🗺️&nbsp&nbsp</span>Route</th>
-      <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4">🛫&nbsp&nbsp&nbsp&nbspDeparture Date & Time</th>
-      <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4">🛬&nbsp&nbsp&nbsp&nbspArrival Date & Time</th>
-      <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4">⏱️&nbsp&nbspFlight Duration</th>
-      <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4">✅&nbsp&nbspSelect</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @flight_search_results.each do |flight| %>
-      <tr class="hover:bg-gray-300/30">
-        <td class="border-r border-slate-300 pl-2 pr-6 py-2"><%= flight.arrival_airport_name + " ➡️ " + flight.departure_airport_name %></td>
-        <td class="border-r border-slate-300 pl-2 pr-6 py-2"><%= flight.departure_time.strftime('%a %dth %b %Y, %R%P') %></td>
-        <td class="border-r border-slate-300 pl-2 pr-6 py-2"><%= flight.arrival_time.strftime('%a %dth %b %Y, %R%P') %></td>
-        <td class="border-r border-slate-300 pl-2 pr-6 py-2"><%= Time.at(flight.flight_duration_secs).utc.strftime("%Hhrs%Mmins")  %></td>
-        <td class="pl-2 pr-6 py-2">
-          <%= form_with url: new_booking_path, method: :get do |f| %>
-            <%= f.hidden_field :flight_id, value: flight.id  %>
-            <%= f.hidden_field :no_of_passengers, value: params[:no_of_passengers]  %>
-            <%= f.submit "Book Flight", class: "btn-primary-sm" %>
-          <% end %>
-        </td>
+<div class="overflow-x-auto">
+  <table class="animate-fade-in bg-cyan-50/50 table-auto rounded min-w-[1176px]">
+    <caption class="bg-cyan-50/50 rounded-t text-5xl font-display text-green-800 mt-4 pt-1 pb-2">Flight results</caption>
+    <thead class="bg-slate-200">
+      <tr>
+        <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4"><span class="text-3xl">🗺️&nbsp&nbsp</span>Route</th>
+        <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4">🛫&nbsp&nbsp&nbsp&nbspDeparture Date & Time</th>
+        <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4">🛬&nbsp&nbsp&nbsp&nbspArrival Date & Time</th>
+        <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4">⏱️&nbsp&nbspFlight Duration</th>
+        <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4">✅&nbsp&nbspSelect</th>
       </tr>
-    <% end %>  
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% @flight_search_results.each do |flight| %>
+        <tr class="hover:bg-gray-300/30">
+          <td class="border-r border-slate-300 pl-2 pr-6 py-2"><%= flight.arrival_airport_name + " ➡️ " + flight.departure_airport_name %></td>
+          <td class="border-r border-slate-300 pl-2 pr-6 py-2"><%= flight.departure_time.strftime('%a %dth %b %Y, %R%P') %></td>
+          <td class="border-r border-slate-300 pl-2 pr-6 py-2"><%= flight.arrival_time.strftime('%a %dth %b %Y, %R%P') %></td>
+          <td class="border-r border-slate-300 pl-2 pr-6 py-2"><%= Time.at(flight.flight_duration_secs).utc.strftime("%Hhrs%Mmins")  %></td>
+          <td class="pl-2 pr-6 py-2">
+            <%= form_with url: new_booking_path, method: :get do |f| %>
+              <%= f.hidden_field :flight_id, value: flight.id  %>
+              <%= f.hidden_field :no_of_passengers, value: params[:no_of_passengers]  %>
+              <%= f.submit "Book Flight", class: "btn-primary-sm" %>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>  
+    </tbody>
+  </table>
+</div>

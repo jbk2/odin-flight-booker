@@ -10,9 +10,9 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="bg-image top-0">
+  <body class="bg-image top-0 flex flex-col">
     <%= render "/layouts/navbar" %>
-    <div class="container pt-36">
+    <div class="container flex-1">
       <main class="items-center mx-auto px-5 flex flex-col">
         <div class="flex flex-col items-center">
           <%= yield %>
