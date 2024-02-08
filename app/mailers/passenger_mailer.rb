@@ -9,6 +9,7 @@ class PassengerMailer < ApplicationMailer
     @greeting = "Hi"
     @booking = params[:booking]
     @booking_owner = params[:booking_owner]
+    @passengers = @booking.passengers
     @url = new_passenger_session_url
 
     mail to: @booking_owner.email,

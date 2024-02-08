@@ -2,18 +2,14 @@
 <p class="text-xs italic">Your source of safe aeroplane journeys</p>
 
 <p><%= @greeting + ' ' + @booking_owner.name %>, Thanks for signing up and making your first booking.</p>
-<p>You're now all booked to be taking off from <%= @booking.flight.departure_airport.name %> on the
-  <%= @booking.flight.departure_time.strftime('%a %dth %b %Y, %R%P') %> to</p> 
-  <%= @booking.flight.arrival_airport.name %>
-  <% if @booking.passengers.count > 1 %>
-    <p> along with; </p>
-    <% @booking.passengers.each do |p| %>
-      <%= p.name + ', ' %>
+
+<p>Your booking takes off, on an aeroplane with all of its bolts, from <%= @booking.flight.departure_airport.name %> on the
+  <%= @booking.flight.departure_time.strftime('%a %dth %b %Y, %R%P') %> to <%= @booking.flight.arrival_airport.name %>, with thse passengers:</p>
+  <ul>
+    <% @passengers.each do |p| %>
+      <li><%= p.name %></li>
     <% end %>
-    <p>.</p>
-  <% else %>
-    <p>.</p>
-  <% end %>
+  </ul>
 
 <p>For your reference, your booking number is: <%= @booking.id %></p>
 

@@ -15,5 +15,4 @@ class Booking < ApplicationRecord
   has_and_belongs_to_many :passengers
   belongs_to :booking_owner, class_name: 'Passenger', foreign_key: 'booking_owner_id', optional: true
   validates :booking_owner_id, presence: true, on: :update
-
 end
