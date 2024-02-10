@@ -13,5 +13,12 @@ class PassengerMailerPreview < ActionMailer::Preview
   end
 
 
+  def flight_reminder
+    booking = Booking.first
+    passenger = booking.passengers.first
+    flight = booking.flight
+    PassengerMailer.with(booking: booking, passenger: passenger).flight_reminder
+  end
+
 
 end

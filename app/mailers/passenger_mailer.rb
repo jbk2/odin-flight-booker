@@ -16,4 +16,14 @@ class PassengerMailer < ApplicationMailer
       subject: "Welcome to Flight Booker"
   end
 
+  def flight_reminder
+    @booking = params[:booking]
+    @passenger = params[:passenger]
+    @flight = @booking.flight
+    @url = booking_url(@booking)
+    
+    mail to: @passenger.email,
+      subject: "Flight to #{@flight.arrival_airport.name} on #{@flight.departure_time.strftime('%a %dth %b %Y, %R%P')}."
+  end
+
 end

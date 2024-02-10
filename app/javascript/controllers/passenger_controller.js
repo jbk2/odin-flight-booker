@@ -15,6 +15,7 @@ export default class extends Controller {
     this.updateButtonVisibility();
   }
 
+  // Add passenger field on booking form
   add(event) {
     console.log("add button activated #add")
     event.preventDefault();
@@ -64,6 +65,7 @@ export default class extends Controller {
     }
   }
 
+  // Remove passenger field on booking form
   remove(event) {
     console.log("remove button activated #remove")
     event.preventDefault();

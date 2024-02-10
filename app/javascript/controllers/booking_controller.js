@@ -1,6 +1,5 @@
 import { Controller } from "@hotwired/stimulus"
 
-// Connects to data-controller="booking"
 export default class extends Controller {
   static values = { url: String }
 
@@ -8,6 +7,7 @@ export default class extends Controller {
     console.log("Booking controller connected");
   }
 
+  // Called in Bookings index view to navigate to booking show
   goToUrl() {
     Turbo.visit(this.urlValue)
   }

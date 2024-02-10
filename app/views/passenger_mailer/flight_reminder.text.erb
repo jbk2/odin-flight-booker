@@ -1,0 +1,21 @@
+Flight Booker - Flight reminder
+Your source of safe aeroplane journeys
+
+Hi <%= @passenger.name %>, we're looking forward to welcoming you aboard your flight:
+
+🗺️ Your flight:
+
+Booking & Flight IDs - <%= @booking.id.to_s + ', ' + @booking.flight_id.to_s %>
+🗺️ Route                  - <%= @booking.flight.departure_airport_name + ' ➡️ ' +  @booking.flight.arrival_airport_name %>
+🛫 Departure Date & Time  - <%= @booking.flight.departure_time.strftime('%a %dth %b %Y, %R%P') %>
+🛬 Arrival Date & Time    - <%= @booking.flight.arrival_time.strftime('%a %dth %b %Y, %R%P') %>
+⏱️ Flight Duration1       - <%= Time.at(@booking.flight.flight_duration_secs).utc.strftime("%Hhrs%Mmins")  %> 
+
+
+Your flight departs in <%= distance_of_time_in_words(Booking.first.flight.departure_time, Time.now) %> days' time.
+
+Check in for your flight will be available from 1 week prior to departure, i.e. in <%= distance_of_time_in_words(Booking.first.flight.departure_time - 7.days, Time.now) %> days' time.
+
+Please visit <%= link_to 'here', @url %> here to check in online up to 5 hours before departure.
+
+Safe travels!

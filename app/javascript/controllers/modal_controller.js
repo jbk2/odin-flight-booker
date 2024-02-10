@@ -4,15 +4,6 @@ export default class extends Controller {
   static targets = ["passengerPassword", "eye", "eyeSlash", "passwordIconDiv", "passengerConfirmationPassword", "confirmationEye", "confirmationEyeSlash", "confirmationPasswordIconDiv"]
   
   connect() {
-    console.log("Modal controller connected");
-    console.log(`passengerPassword target found; ${this.hasPassengerPasswordTarget}`);
-    console.log(`Eye target found; ${this.hasEyeTarget}`);
-    console.log(`Eye-slash target found; ${this.hasEyeSlashTarget}`);
-    console.log(`Icon-Div target found; ${this.hasPasswordIconDivTarget}`);
-    console.log(`passengerConfirmationPassword target found; ${this.hasPassengerConfirmationPasswordTarget}`);
-    console.log(`ConfirmationEye target found; ${this.hasConfirmationEyeTarget}`);
-    console.log(`ConfirmationEyeSlash target found; ${this.hasConfirmationEyeSlashTarget}`);
-    console.log(`ConfirmationIconDiv target found; ${this.hasConfirmationPasswordIconDivTarget}`);
     this.element.querySelector('dialog').showModal();
   }
 

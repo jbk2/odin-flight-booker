@@ -1,0 +1,32 @@
+<h1 style="font-size: 20px; font-weight: bold;">Flight Booker - Flight reminder</h1>
+<p style="font-size: 10px; font-style: italic;">Your source of safe aeroplane journeys</p>
+
+<p>Hi <%= @passenger.name %>, we're looking forward to welcoming you aboard your flight:</p>
+
+<table style="background-color: #cffafe; border-collapse: collapse; border-radius: 0px;">
+  <caption style="font-size: 40px; font-family: sans-serif; color: #065f46; background-color: #cffafe; border-top-left-radius: 8px; border-top-right-radius: 8px; padding: 16px;">🗺️ Your flight</caption>
+  <thead style="background-color: #e2e8f0;">
+    <tr>
+      <th style="border: 1px solid #e2e8f0; font-family: sans-serif; color: #065f46; font-size: 20px; padding: 8px 16px;"><span style="text-align: left;">#️⃣&nbsp&nbsp</span> Booking & Flight IDs</th>
+      <th style="border: 1px solid #e2e8f0; font-family: sans-serif; color: #065f46; font-size: 20px; padding: 8px 16px;"><span style="font-size: 24px;">🗺️&nbsp&nbsp</span>Route</th>
+      <th style="border: 1px solid #e2e8f0; font-family: sans-serif; color: #065f46; font-size: 20px; padding: 8px 16px;">🛫&nbsp&nbsp&nbsp&nbspDeparture Date & Time</th>
+      <th style="border: 1px solid #e2e8f0; font-family: sans-serif; color: #065f46; font-size: 20px; padding: 8px 16px;">🛬&nbsp&nbsp&nbsp&nbspArrival Date & Time</th>
+      <th style="border: 1px solid #e2e8f0; font-family: sans-serif; color: #065f46; font-size: 20px; padding: 8px 16px;">⏱️&nbsp&nbspFlight Duration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border-right: 1px solid #e2e8f0; padding: 8px 24px;"><%= @booking.id.to_s + ', ' + @booking.flight_id.to_s %></td>
+      <td style="border-right: 1px solid #e2e8f0; padding: 8px 24px;"><%= @booking.flight.departure_airport_name + ' ➡️ ' +  @booking.flight.arrival_airport_name %></td>
+      <td style="border-right: 1px solid #e2e8f0; padding: 8px 24px;"><%= @booking.flight.departure_time.strftime('%a %dth %b %Y, %R%P') %></td>
+      <td style="border-right: 1px solid #e2e8f0; padding: 8px 24px;"><%= @booking.flight.arrival_time.strftime('%a %dth %b %Y, %R%P') %></td>
+      <td style="padding: 8px 24px;"><%= Time.at(@booking.flight.flight_duration_secs).utc.strftime("%Hhrs%Mmins")  %></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Your flight departs in <%= distance_of_time_in_words(Booking.first.flight.departure_time, Time.now) %> days' time.</p>
+<p>Check in for your flight will be available from 1 week prior to departure, i.e., in <%= distance_of_time_in_words(Booking.first.flight.departure_time - 7.days, Time.now) %> days' time.</p>
+<p>Please visit <a href="<%= @url %>" style="color: blue;">here</a> to check in online up to 5 hours before departure.</p>
+
+<p>Safe travels!</p>
