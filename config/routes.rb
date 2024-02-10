@@ -1,5 +1,9 @@
+require 'sidekiq/web'
+
 Rails.application.routes.draw do
   devise_for :passengers
+
+  mount Sidekiq::Web => '/sidekiq'
 
   root "flights#index"
   
