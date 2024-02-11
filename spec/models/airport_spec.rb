@@ -1,6 +1,20 @@
+# == Schema Information
+#
+# Table name: airports
+#
+#  id         :bigint           not null, primary key
+#  name       :string
+#  code       :string
+#  country_id :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  country    :string
+#  city       :string
+#
 require 'rails_helper'
 
 RSpec.describe Airport, type: :model do
+  include_context 'common setup'
 
   RSpec.shared_examples 'an airport with mandatory attributes' do |attribute|
     it "is invalid without a #{attribute}" do
@@ -21,18 +35,13 @@ RSpec.describe Airport, type: :model do
   end
 
   describe 'associations' do
-    # it { should have_many(:departing_flights).class_name('Flight').with_foreign_key('departure_airport_id') } # shoulda-matchers implementation
-    # it { should have_many(:arriving_flights).class_name('Flight').with_foreign_key('arrival_airport_id') } # shoulda-matchers implementation
-    let(:airport_1) { Airport.create(name: 'Parisian Airport', code:'0001', country_id: '01', country: 'France', city: 'Paris') }
-    let(:airport_2) { Airport.create(name: 'Spanish Airport', code:'0002', country_id: '02', country: 'Spain', city: 'Madrid') }
-    let(:flight) { Flight.create(departure_airport: airport_1, arrival_airport: airport_2, departure_time: Time.now + 1.hour , arrival_time: Time.now + 3.hours) }
+  
+    it 'has many departing flights' do
+      expect(airport_1.departing_flights).to include(flight)
+    end
 
     it 'has many arriving flights' do
       expect(airport_2.arriving_flights).to include(flight)
-    end
-    
-    it 'has many departing flights' do
-      expect(airport_1.departing_flights).to include(flight)
     end
   end
 
