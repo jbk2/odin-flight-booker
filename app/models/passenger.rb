@@ -19,6 +19,8 @@ class Passenger < ApplicationRecord
   validates :email, :name, presence: true
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
   validates :name, length: { minimum: 2, maximum: 50 }
+  # validate :must_have_at_least_one_booking, on: :update
+  
   has_and_belongs_to_many :bookings
   has_many :owned_bookings, class_name: 'Booking', foreign_key: 'booking_owner_id'
 
@@ -30,4 +32,9 @@ class Passenger < ApplicationRecord
     update(params)
   end
 
+
+  private
+  def must_have_at_least_one_booking
+    errors.add(:base, 'must have at least one booking') if self.bookings.blank?
+  end
 end
