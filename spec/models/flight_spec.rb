@@ -23,4 +23,19 @@ RSpec.describe Flight, type: :model do
     end
   end
 
+  describe 'associations' do
+    it 'belongs to a departure airport' do
+      expect(flight.departure_airport).to eq(airport_1)
+    end
+
+    it 'belongs to an arrival airport' do
+      expect(flight.arrival_airport).to eq(airport_2)
+    end
+
+    it 'has many bookings' do
+      expect(flight.bookings).to be_truthy #i.e. for the association method to be defined
+      expect(flight.bookings).to be_empty
+    end
+  end
+
 end
