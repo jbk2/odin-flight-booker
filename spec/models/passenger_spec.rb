@@ -15,5 +15,31 @@
 require 'rails_helper'
 
 RSpec.describe Passenger, type: :model do
-  # pending "add some examples to (or delete) #{__FILE__}"
+  include_context 'common setup'
+
+  describe 'validations' do
+    context 'without a name' do
+      let(:no_name_passenger) { Passenger.new(email: 'p1@test.com') }
+      it 'is invalid' do
+        expect(no_name_passenger).to be_invalid
+      end
+    end
+    context 'with a name' do
+      it 'is valid' do
+        expect(passenger_2).to be_valid
+      end
+    end
+    context 'without an email' do
+      let(:no_email_passenger) { Passenger.new(name: 'p1') }
+      it 'is invalid' do
+        expect(no_email_passenger).to be_invalid
+      end
+    end
+    context 'with an email' do
+      it 'is valid' do
+        expect(passenger_2).to be_valid
+      end
+    end
+  end
+
 end

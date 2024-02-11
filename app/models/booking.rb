@@ -23,5 +23,4 @@ class Booking < ApplicationRecord
     return if passengers.any?
     errors.add(:passengers, "must have at least one passenger")
   end
-
 end

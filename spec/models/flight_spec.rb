@@ -15,6 +15,7 @@ require 'rails_helper'
 
 RSpec.describe Flight, type: :model do
   include_context 'common setup'
+  
   RSpec.shared_examples 'a flight with mandatory attributes' do |attribute|
     it "is invalid without a #{attribute}" do
       flight = Flight.new(valid_attributes.except(attribute))
