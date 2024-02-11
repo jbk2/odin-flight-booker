@@ -85,7 +85,7 @@ class BookingsController < ApplicationController
       end
       @booking.passengers << passenger unless @booking.passengers.include?(passenger)
     end
-    PassengerFlightReminderJob.set(wait_until: @flight.created_at + 3.minutes).perform_later(@booking) #@flight.departure_date
+    PassengerFlightReminderJob.set(wait_until: @booking.created_at + 3.minutes).perform_later(@booking.id) #@flight.departure_date
     @booking.errors.empty?
   end
 
