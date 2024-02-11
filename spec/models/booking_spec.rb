@@ -56,7 +56,7 @@ RSpec.describe Booking, type: :model do
       end
     end
 
-    context 'without any passenger on update' do
+    context 'without any passenger after update' do
       let(:no_passenger_booking) { flight.bookings.build(flight_id: flight.id) }
       it 'is invalid' do
         no_passenger_booking.update(booking_owner_id: passenger_2.id)
@@ -64,7 +64,7 @@ RSpec.describe Booking, type: :model do
       end
     end
 
-    context 'with 1 passenger' do
+    context 'with 1 passenger after update' do
       let(:one_passenger_booking) {
         booking = flight.bookings.build(booking_owner: booking_owner)
         booking.passengers << booking_owner
@@ -76,12 +76,9 @@ RSpec.describe Booking, type: :model do
       end
     end
 
-    it 'with a booking_owner has a passenger' do
-      # expect(booking.passengers).to eq(booking_owner)
+    it 'belongs to a booking_owner' do
+      expect(booking.booking_owner).to eq(booking_owner)
     end
   end
-
-
-
   
 end
