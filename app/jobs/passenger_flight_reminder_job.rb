@@ -1,5 +1,6 @@
 class PassengerFlightReminderJob < ApplicationJob
   queue_as :default
+  sidekiq_options retry: 3
 
   def perform(booking_id)
     booking = Booking.find(booking_id)
