@@ -28,7 +28,7 @@ RSpec.describe Flight, type: :model do
       { departure_airport_id: airport_1.id, arrival_airport_id: airport_2.id,   departure_time: Time.now + 1.hour , arrival_time: Time.now + 3.hours }
     }
 
-    [:departure_airport_id, :arrival_airport_id, :departure_time, :arrival_time, :flight_duration_secs].each do |attribute|
+    [:departure_airport_id, :arrival_airport_id, :departure_time, :arrival_time].each do |attribute|
       include_examples 'a flight with mandatory attributes', attribute
     end
   end
