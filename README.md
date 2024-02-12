@@ -1,6 +1,6 @@
-### README
+# README
 
-# Odin – advanced forms project – Flight Booker
+## Odin – advanced forms project – Flight Booker
 
 - A flight search app featuring complex forms touching multiple models
 - Models; User, Flight, Airport, Booking, Passenger
@@ -13,13 +13,20 @@
   - Password not required for non booking_owner passengers
 - Integrates booking_owner registration into the flight booking flow
 - Use of TailwindCSS for styling
-Hotwire
+### Hotwire
 - Stimulus Controllers:
   - FlightSearchFormController;
   - BookingController;
   - PassengerController;
   - ModalController;
   - FlashController;
+
+### Rspec Tested
+- Unit tested
+  - models
+  - 
+- Integration tested
+  - 
 
 ---
 
