@@ -10,6 +10,7 @@ class FlightsController < ApplicationController
     @arrival_airports = Airport.order(:city)
     @flight_search_results = nil
 
+    # If #index called with params from flight search form, go and find params matching flights
     if search_submitted?
       @flight_search_results = Flight.where(
         departure_airport_id: params[:departure_airport_id],
