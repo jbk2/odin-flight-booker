@@ -53,6 +53,8 @@ group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
 
   gem "rspec-rails", "~> 6.1"
+
+  gem "selenium-devtools", "~> 0.121.0"
 end
 
 group :development do
