@@ -70,10 +70,10 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
+  gem "factory_bot_rails", "~> 6.4"
+  gem "rails-controller-testing", "~> 1.0"
   gem "capybara"
   gem "selenium-webdriver"
-  gem "rails-controller-testing", "~> 1.0"
-
 end
 
 gem "devise", "~> 4.9"
@@ -93,3 +93,4 @@ gem "dockerfile-rails", ">= 1.6", :group => :development
 gem "letter_opener", "~> 1.8", :group => :development
 
 gem "sidekiq", "~> 7.2"
+
