@@ -55,6 +55,7 @@ group :development, :test do
   gem "rspec-rails", "~> 6.1"
 
   gem "selenium-devtools", "~> 0.121.0"
+  gem "factory_bot_rails", "~> 6.4"
 end
 
 group :development do
@@ -70,7 +71,6 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem "factory_bot_rails", "~> 6.4"
   gem "rails-controller-testing", "~> 1.0"
   gem "capybara"
   gem "selenium-webdriver"
