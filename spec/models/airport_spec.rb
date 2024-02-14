@@ -18,8 +18,9 @@ RSpec.describe Airport, type: :model do
 
   RSpec.shared_examples 'an airport with mandatory attributes' do |attribute|
     it "is invalid without a #{attribute}" do
-      airport = Airport.new(valid_attributes.except(attribute))
+      airport = Airport.new(valid_attributes.merge(attribute => nil))
       expect(airport).to be_invalid
+      puts airport.errors.full_messages.to_sentence
       expect(airport.errors[attribute]).to include("can't be blank")
     end
   end
@@ -35,7 +36,6 @@ RSpec.describe Airport, type: :model do
   end
 
   describe 'associations' do
-  
     it 'has many departing flights' do
       expect(airport_1.departing_flights).to include(flight)
     end
@@ -47,16 +47,16 @@ RSpec.describe Airport, type: :model do
 
   describe 'formatted_airport_name_label' do
     context 'when the airport name includes the city' do
-      let(:airport_with_name_inc_city) { Airport.create(name: 'Madrid airport', code:'0002', country_id: '02', country: 'Spain', city: 'Madrid') }
+      let(:airport_with_name_inc_city) { airport_1 }
       it "returns the name unchanged" do
-        expect(airport_with_name_inc_city.formatted_airport_name_label).to eq('Madrid airport')
+        expect(airport_with_name_inc_city.formatted_airport_name_label).to eq('Parisian Airport')
       end
     end
 
     context 'when the airport name does not include the city' do
-      let(:airport_without_city_in_name) { Airport.create(name: 'Madrillian airport', code:'0002', country_id: '02', country: 'Spain', city: 'Madrid') }
+      let(:airport_without_city_in_name) { airport_2 }
       it "returns the name prefixed with with the city and a tilde" do
-        expect(airport_without_city_in_name.formatted_airport_name_label).to eq('Madrid ~-~ Madrillian airport')
+        expect(airport_without_city_in_name.formatted_airport_name_label).to eq('Madrid ~-~ Spanish Airport')
       end
     end
   end
