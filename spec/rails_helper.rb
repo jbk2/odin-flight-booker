@@ -18,6 +18,7 @@ Capybara.register_driver :selenium_chrome_headless do |app|
   # Additional browser options here
   Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
 end
+# Capybara.default_driver = :selenium_chrome_headless
 Capybara.javascript_driver = :selenium_chrome_headless
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
@@ -77,6 +78,6 @@ RSpec.configure do |config|
   # Include factory bot methods enabling use througout specs/tests
   config.include FactoryBot::Syntax::Methods
 
-  config.include Devise::Test::ControllerHelpers, type: :controller
-  config.include Devise::Test::IntegrationHelpers, type: :request
+  config.include Devise::Test::ControllerHelpers, type: [ :controller, :system ]
+  config.include Devise::Test::IntegrationHelpers, type: [ :request, :system ]
 end

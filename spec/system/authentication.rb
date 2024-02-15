@@ -1,8 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe "Authentication", type: :system do
+  include_context 'common setup'
   before do
     driven_by(:rack_test)
+    # Capybara.current_driver = :selenium_chrome
   end
 
   it 'allows a new passenger to sign up' do
@@ -15,5 +17,14 @@ RSpec.describe "Authentication", type: :system do
     expect(page).to have_content('Welcome! You have signed up successfully.')
   end
 
-  # - check that a passenger can sign up outside of the booking flow
+  it 'allows a passenger to sign in and logout' do
+    visit new_passenger_session_path
+    fill_in 'Email', with: passenger_2.email
+    fill_in 'Password', with: passenger_2.password
+    click_button 'Log in'
+    expect(page).to have_content('Signed in successfully.')
+    click_on "Logout"
+    expect(page).to have_text("Signed out successfully.")
+  end
+
 end
