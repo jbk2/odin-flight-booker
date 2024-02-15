@@ -18,9 +18,11 @@ RSpec.describe Flight, type: :model do
   
   RSpec.shared_examples 'a flight with mandatory attributes' do |attribute|
     it "is invalid without a #{attribute}" do
-      flight = Flight.new(valid_attributes.except(attribute))
+      flight_attributes = valid_attributes.merge(attribute => nil)
+      flight = build(:flight_1, flight_attributes)
       expect(flight).to be_invalid
-      expect(flight.errors[attribute]).to include("can't be blank")
+      expect(flight.errors[attribute]).to include("can't be blank"), "Expected errors to include \"can't be blank\" for #{attribute}, but got #{flight.errors.full_messages.to_sentence}"
+      puts flight.errors.full_messages.to_sentence
     end
   end
 

@@ -1,7 +1,7 @@
 RSpec.shared_context 'common setup' do
   let!(:airport_1) { create(:airport_1) }
   let!(:airport_2) { create(:airport_2) }
-  let!(:flight) { Flight.create(departure_airport: airport_1, arrival_airport: airport_2, departure_time: 1.hour.from_now , arrival_time: 3.hours.from_now) }
+  let!(:flight) { create(:flight_1, departure_airport: airport_1, arrival_airport: airport_2) }
   let!(:booking_owner) { Passenger.create(name: "joe", email: "joe@test.com", encrypted_password: "Password12!") }
   let!(:passenger_2) { Passenger.create(name: "jim", email: "jim@test.com", encrypted_password: "Password12!") }
   let(:booking) {
