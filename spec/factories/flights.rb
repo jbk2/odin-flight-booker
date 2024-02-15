@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: flights
+#
+#  id                   :bigint           not null, primary key
+#  departure_airport_id :bigint           not null
+#  arrival_airport_id   :bigint           not null
+#  departure_time       :datetime
+#  arrival_time         :datetime
+#  created_at           :datetime         not null
+#  updated_at           :datetime         not null
+#  flight_duration_secs :integer
+#
 FactoryBot.define do
   factory :flight_1, class: 'Flight' do
     departure_airport { create(:airport_1) }

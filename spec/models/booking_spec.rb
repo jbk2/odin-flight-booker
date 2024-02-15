@@ -15,7 +15,7 @@ RSpec.describe Booking, type: :model do
 
   describe 'validations' do
     context 'without a flight_id' do
-      let(:no_flight_booking) { Booking.new(flight_id: nil) }
+      let(:no_flight_booking) { build(:booking, flight: nil) }
       it 'is invalid' do
         expect(no_flight_booking).to be_invalid
       end
