@@ -22,10 +22,12 @@
   - FlashController;
 
 ### Rspec Tested
+_Utilising FactoryBot, Capybara, Selenium_
 - Unit tested
   - models
   - 
-- Integration tested
+- Request tested
+  - airport
   - 
 
 ---

@@ -13,18 +13,26 @@
 #
 FactoryBot.define do
   factory :airport_1, class: 'Airport' do
-    name        { 'Parisian Airport' }
-    code        { '0001' }
-    country_id  { '01' }
-    country     { 'France' }
-    city        { 'Paris' }
+    name        { 'Heathrow' }
+    code        { 'LHR' }
+    country_id  { '001' }
+    country     { 'United Kingdom' }
+    city        { 'London' }
   end
 
   factory :airport_2, class: 'Airport' do
-    name        { 'Spanish Airport' }
-    code        { '0002' }
-    country_id  { '02' }
-    country     { 'Spain' }
-    city        { 'Madrid' }
+    name        { 'Charles de Gaulle' }
+    code        { 'CDG' }
+    country_id  { '002' }
+    country     { 'France' }
+    city        { 'Paris' }
+  end
+  
+  factory :airport_3, class: 'Airport' do
+    name        { 'John F. Kennedy International' }
+    code        { 'JFK' }
+    country_id  { '003' }
+    country     { 'United States' }
+    city        { 'New York' }
   end
 end

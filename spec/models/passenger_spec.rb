@@ -20,7 +20,7 @@ RSpec.describe Passenger, type: :model do
 
   describe 'validations' do
     context 'without a name' do
-      let(:no_name_passenger) { booking.passengers.new(email: 'p1@test.com') }
+      let(:no_name_passenger) { booking_1.passengers.new(email: 'p1@test.com') }
       it 'is invalid' do
         expect(no_name_passenger).to be_invalid
       end
@@ -45,11 +45,11 @@ RSpec.describe Passenger, type: :model do
     end
     context 'with a name 2-50 chars' do
       correct_length_name = SecureRandom.alphanumeric(25)
-      let(:correct_length_name_passenger) { booking.passengers.build(email: 'p1234@test.com', name: correct_length_name, encrypted_password: "asdfasdff") }
+      let(:correct_length_name_passenger) { booking_1.passengers.build(email: 'p1234@test.com', name: correct_length_name, encrypted_password: "asdfasdff") }
       
       it 'is valid' do
-        booking.passengers << correct_length_name_passenger
-        booking.save
+        booking_1.passengers << correct_length_name_passenger
+        booking_1.save
         expect(correct_length_name_passenger).to be_valid
       end
     end
@@ -71,7 +71,7 @@ RSpec.describe Passenger, type: :model do
     context 'a passenger has bookings' do
       it 'is valid' do
         expect(passenger_2.bookings).to be_truthy #i.e. for the association method to be defined
-        expect(passenger_2.bookings).to include(booking)
+        expect(passenger_2.bookings).to include(booking_1)
       end
     end
 

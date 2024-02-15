@@ -47,7 +47,7 @@ RSpec.describe Flight, type: :model do
 
     it 'has many bookings' do
       expect(flight.bookings).to be_truthy #i.e. for the #bookings association method to be defined
-      expect(flight.bookings).to include(booking)
+      expect(flight.bookings).to include(booking_1)
     end
   end
 

@@ -15,7 +15,7 @@ RSpec.describe Booking, type: :model do
 
   describe 'validations' do
     context 'without a flight_id' do
-      let(:no_flight_booking) { build(:booking, flight: nil) }
+      let(:no_flight_booking) { build(:booking_1, flight: nil) }
       it 'is invalid' do
         expect(no_flight_booking).to be_invalid
       end
@@ -23,30 +23,30 @@ RSpec.describe Booking, type: :model do
 
     context 'with a flight_id' do
       it 'is valid' do
-        expect(booking).to be_valid
+        expect(booking_1).to be_valid
       end
     end
     
     context 'without a booking_owner on update' do
       it 'is invalid' do
-        booking.booking_owner_id = nil
-        booking.save
-        expect(booking).to be_invalid
+        booking_1.booking_owner_id = nil
+        booking_1.save
+        expect(booking_1).to be_invalid
       end
     end
     
     context 'with a booking_owner on update' do
       it 'is valid' do
-        booking.booking_owner_id = booking_owner.id
-        booking.save
-        expect(booking).to be_valid
+        booking_1.booking_owner_id = booking_owner.id
+        booking_1.save
+        expect(booking_1).to be_valid
       end
     end
   end
 
   describe 'associations' do
     it 'belongs to a flight' do
-      expect(booking.flight).to eq(flight)
+      expect(booking_1.flight).to eq(flight)
     end
 
     context 'without any passenger before update' do
@@ -77,7 +77,7 @@ RSpec.describe Booking, type: :model do
     end
 
     it 'belongs to a booking_owner' do
-      expect(booking.booking_owner).to eq(booking_owner)
+      expect(booking_1.booking_owner).to eq(booking_owner)
     end
   end
   

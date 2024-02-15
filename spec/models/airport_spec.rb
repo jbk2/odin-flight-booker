@@ -47,16 +47,16 @@ RSpec.describe Airport, type: :model do
 
   describe 'formatted_airport_name_label' do
     context 'when the airport name includes the city' do
-      let(:airport_with_name_inc_city) { airport_1 }
+      let(:airport_with_name_inc_city) { create(:airport_1, name: 'London Heathrow Airport') }
       it "returns the name unchanged" do
-        expect(airport_with_name_inc_city.formatted_airport_name_label).to eq('Parisian Airport')
+        expect(airport_with_name_inc_city.formatted_airport_name_label).to eq('London Heathrow Airport')
       end
     end
 
     context 'when the airport name does not include the city' do
-      let(:airport_without_city_in_name) { airport_2 }
+      let(:airport_without_city_in_name) { airport_1 }
       it "returns the name prefixed with with the city and a tilde" do
-        expect(airport_without_city_in_name.formatted_airport_name_label).to eq('Madrid ~-~ Spanish Airport')
+        expect(airport_without_city_in_name.formatted_airport_name_label).to eq('London ~-~ Heathrow')
       end
     end
   end
