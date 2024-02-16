@@ -27,8 +27,12 @@ _Utilising FactoryBot, Capybara, Selenium_
   - models
   - 
 - Request tested
-  - airport
-  - 
+  - airports, bookings, flights
+
+- System tested
+  - flights_spec; tests end to end flight search > results > booking > passenger creation > booking confirmation process
+
+- 
 
 ---
 
