@@ -16,8 +16,7 @@ A flight search app featuring
 
 
 ### Rspec Tested
-_Utilising Rspec, FactoryBot, Capybara, Selenium_
-
+_Utilising FactoryBot, Capybara, Selenium, Redis, Sidekiq_
 - Unit tested
   - All models.
   - PassengerMailer.
