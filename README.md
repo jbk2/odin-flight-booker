@@ -13,7 +13,7 @@ A flight search app featuring:
 
 
 ### Rspec Tested
-_Utilising FactoryBot, Capybara, Selenium_
+_Utilising Rspec, FactoryBot, Capybara, Selenium_
 
 - Unit tested
   - All models
