@@ -27,13 +27,13 @@ _Utilising FactoryBot, Capybara, Selenium_
 - Unit tested
   - All models
   - PassengerMailer
+  - PassengerFlightReminderJob
+
 - Request tested
   - airports, bookings, flights
 
 - System tested
   - flights_spec; tests end to end flight search > results > booking > passenger creation > booking confirmation process
-
-- 
 
 ---
 
