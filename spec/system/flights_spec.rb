@@ -2,9 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "Flights", type: :system do
   include_context 'common setup'
-  before do
-    driven_by(:selenium_chrome_headless)
-  end
+  before { driven_by(:selenium_chrome_headless) }
 
   context 'in flights#index/root page'  do
     it 'selecting departure country filters corresponding departure airports' do
@@ -41,15 +39,35 @@ RSpec.describe "Flights", type: :system do
       expect(max).to eq((Date.today).to_s)
     end
 
-  end
+    it 'on submission of completed search form returns flight results' do
+      complete_search_form
+      click_button 'Search Flights'
+      expect(page).to have_content('Flight results')
+    end
 
-  # - navigate to the flights index / root page
-  #   - select departure country and check that airports.where country
-  #   - select arrival country and check that airports.where country
-  #   - ensure that the dates with flights are selectable
-  #   - click search button and ensure that flight results appear
-  #   - select a flight and ensure that the booking page appears
+    it 'can select a flight and reach the booking form' do
+      complete_search_form
+      click_button 'Search Flights'
+      click_button 'Book Flight'
+      expect(page).to have_content('Booking form')
+    end
+    
+    it 'can select a flight, complete password, and complete a booking' do
+      complete_search_form
+      click_button 'Search Flights'
+      click_button 'Book Flight'
+      fill_in 'passengers_0_name', with: 'Joe Bloggs'
+      fill_in 'passengers_0_email', with: 'Joe@test.com'
+      click_button 'Create Booking'
+      password_input = find('input[name="passenger[password]"]', visible: :all)
+      password_confirmation_input = find('input[name="passenger[password_confirmation]"]', visible: :all)
+      password_input.set('Password12!')
+      password_confirmation_input.set('Password12!')
+      find('input[type="submit"][value="Set Password"]', visible: :all).click
+      expect(page).to have_content('Your bookings')
+      save_screenshot('booking_show.png')
+    end
+  end
   #   - ensure that you can add and remove passengers
-  #   - select book flight and ensure that password modal appears
-  #   - complete password and ensure that it goes to booking show
+  #   - ensure that front end validation works for name and email fields
 end

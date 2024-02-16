@@ -12,3 +12,12 @@ RSpec.shared_context 'common setup' do
     create(:booking_2, flight: flight, booking_owner: booking_owner, passengers: [booking_owner, passenger_2])
   }
 end
+
+def complete_search_form
+  visit root_path
+  select 'United Kingdom', from: 'departure_country'
+  select 'London ~-~ Heathrow', from: 'departure_airport_id'
+  select 'France', from: 'arrival_country'
+  select 'Charles de Gaulle', from: 'arrival_airport_id'
+  fill_in 'departure_date', with: '2024-02-16'
+end
