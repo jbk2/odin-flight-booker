@@ -23,9 +23,10 @@
 
 ### Rspec Tested
 _Utilising FactoryBot, Capybara, Selenium_
+
 - Unit tested
-  - models
-  - 
+  - All models
+  - PassengerMailer
 - Request tested
   - airports, bookings, flights
 
