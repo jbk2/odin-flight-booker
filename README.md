@@ -27,7 +27,7 @@ _Utilising Rspec, FactoryBot, Capybara, Selenium_
   - airports, bookings, flights.
 
 - System tested
-  - end to end flight search > results > booking > passenger creation > booking confirmation process.
+  - end to end flight search, booking and signup flow.
 
 ---
 
