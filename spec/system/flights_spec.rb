@@ -25,7 +25,7 @@ RSpec.describe "Flights", type: :system do
       select 'Charles de Gaulle', from: 'arrival_airport_id'
       fill_in 'departure_date', with: '2024-02-16'
       
-      max_wait_time, start_time = 200.seconds , Time.now
+      max_wait_time, start_time = 20.seconds , Time.now
       date_input = find("input[name='departure_date']")
       min, max = date_input[:min], date_input[:max]
       loop do
