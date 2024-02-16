@@ -1,7 +1,9 @@
 # README
 
 ## The Odin Project – RoR Advanced Forms Project – Flight Booker
-_significantly extended_
+_with significantly extended features_
+
+---
 
 ### Summary
 A flight search app featuring
@@ -9,8 +11,8 @@ A flight search app featuring
 - Advanced modeling & associations; m2m, polymorphic, delegation, custom validation, callbacks.
 - Custom Devise authentication - on passengers, with conditional requirements ending user type.
 - POROs - custom CSV parsing, data cleaning and merging and db seeding.
-- SPA - Turbo Frames, Streams & Stimulus serving dynamic flight search form and results
-- Styling - TailwindCSS use & customisation of..
+- SPA like - Turbo Frames, Streams & Stimulus serving dynamic flight search form and results
+- Styling - TailwindCSS use & customisation of.
 
 
 ### Rspec Tested
@@ -25,11 +27,11 @@ _Utilising Rspec, FactoryBot, Capybara, Selenium_
   - airports, bookings, flights.
 
 - System tested
-  - flights_spec; tests end to end flight search > results > booking > passenger creation > booking confirmation process.
+  - end to end flight search > results > booking > passenger creation > booking confirmation process.
 
 ---
 
-### ToDos:
+### Further ToDos:
 
 - Validations
   - duplication of airports in flight search form - front & back.
@@ -44,6 +46,7 @@ _Utilising Rspec, FactoryBot, Capybara, Selenium_
     - balance seed generation between locations, not just random.
 
 - UI
+  - Overall UI thematic imrovement.
   - flipboard like UI elements?
   - animated polaroid holiday picture elements in background.
   - nice input field rings with label over top.
