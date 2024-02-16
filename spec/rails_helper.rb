@@ -78,6 +78,6 @@ RSpec.configure do |config|
   # Include factory bot methods enabling use througout specs/tests
   config.include FactoryBot::Syntax::Methods
 
-  config.include Devise::Test::ControllerHelpers, type: [ :controller, :system ]
-  config.include Devise::Test::IntegrationHelpers, type: [ :request, :system ]
+  config.include Devise::Test::ControllerHelpers, type: :controller
+  config.include Devise::Test::IntegrationHelpers, type: :request
 end

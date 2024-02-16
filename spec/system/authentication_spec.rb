@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "Authentication", type: :system do
   include_context 'common setup'
   before do
-    driven_by(:rack_test)
+    driven_by(:selenium_chrome_headless)
     # Capybara.current_driver = :selenium_chrome
   end
 
@@ -17,7 +17,7 @@ RSpec.describe "Authentication", type: :system do
     expect(page).to have_content('Welcome! You have signed up successfully.')
   end
 
-  it 'allows a passenger to sign in and logout' do
+  it 'allows a passenger to sign in and out' do
     visit new_passenger_session_path
     fill_in 'Email', with: passenger_2.email
     fill_in 'Password', with: passenger_2.password

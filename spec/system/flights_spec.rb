@@ -1,8 +1,24 @@
 require 'rails_helper'
 
 RSpec.describe "Flights", type: :system do
+  include_context 'common setup'
   before do
-    driven_by(:rack_test)
+    driven_by(:selenium_chrome_headless)
+  end
+
+  context 'in flights#index/root page'  do
+    it 'selecting departure country filters corresponding departure airports' do
+      visit root_path
+      select 'United Kingdom', from: 'departure_country'
+      expect(page).to have_select('departure_airport_id', with_options: ['London ~-~ Heathrow'], disabled: false)
+    end
+    
+    it 'selecting arrival country filters corresponding departure airports' do
+      visit root_path
+      select 'France', from: 'arrival_country'
+      expect(page).to have_select('arrival_airport_id', with_options: ['Charles de Gaulle'], disabled: false)
+    end
+
   end
 
   # - navigate to the flights index / root page
