@@ -18,4 +18,11 @@ FactoryBot.define do
     departure_time    { 1.hour.from_now }
     arrival_time      { 3.hours.from_now }
   end
+  
+  factory :flight_2, class: 'Flight' do
+    departure_airport { create(:airport_2) }
+    arrival_airport   { create(:airport_1) }
+    departure_time    { 7.days.from_now }
+    arrival_time      { 7.days.from_now }
+  end
 end

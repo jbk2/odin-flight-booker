@@ -18,6 +18,28 @@ RSpec.describe "Flights", type: :system do
       select 'France', from: 'arrival_country'
       expect(page).to have_select('arrival_airport_id', with_options: ['Charles de Gaulle'], disabled: false)
     end
+    
+    it 'selecting countrys & airports limits date options to those with flights' do
+      visit root_path
+      select 'United Kingdom', from: 'departure_country'
+      select 'London ~-~ Heathrow', from: 'departure_airport_id'
+      select 'France', from: 'arrival_country'
+      select 'Charles de Gaulle', from: 'arrival_airport_id'
+      fill_in 'departure_date', with: '2024-02-16'
+      
+      max_wait_time, start_time = 200.seconds , Time.now
+      date_input = find("input[name='departure_date']")
+      min, max = date_input[:min], date_input[:max]
+      loop do
+        break if min == Date.today.to_s && max == Date.today.to_s
+        sleep 0.1
+        break if Time.now - start_time > max_wait_time
+      end
+      puts "min: #{min}, max: #{max}"
+      
+      expect(min).to eq((Date.today).to_s)
+      expect(max).to eq((Date.today).to_s)
+    end
 
   end
 
