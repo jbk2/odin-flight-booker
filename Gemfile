@@ -56,6 +56,9 @@ group :development, :test do
 
   gem "selenium-devtools", "~> 0.121.0"
   gem "factory_bot_rails", "~> 6.4"
+  
+  gem "guard", "~> 2.18"
+  gem "guard-rspec", "~> 4.7"
 end
 
 group :development do
@@ -67,6 +70,7 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+  
 end
 
 group :test do
@@ -93,4 +97,6 @@ gem "dockerfile-rails", ">= 1.6", :group => :development
 gem "letter_opener", "~> 1.8", :group => :development
 
 gem "sidekiq", "~> 7.2"
+
+
 
