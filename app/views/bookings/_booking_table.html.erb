@@ -1,5 +1,5 @@
 <table class="animate-fade-in bg-cyan-50/50 rounded-b">
-  <caption class="text-5xl font-display text-green-800 bg-cyan-50/50 rounded-t py-4">🗺️ Your bookings</caption>
+  <caption class="text-5xl font-display text-green-800 bg-cyan-50/50 rounded-t py-4">🗺️ Your <%= bookings.respond_to?(:each) ? "bookings" : "booking" %></caption>
   <thead class="bg-slate-200">
     <tr>
       <th class="border border-slate-300 font-display text-green-800 text-xl py-2 px-4"><span class="text-left">#️⃣&nbsp&nbsp</span> Booking & Flight IDs</th>
