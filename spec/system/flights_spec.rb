@@ -20,19 +20,16 @@ RSpec.describe "Flights", type: :system do
     it 'selecting countrys & airports limits date options to those with flights' do
       visit root_path
       select 'United Kingdom', from: 'departure_country'
+      sleep 0.1
       select 'London ~-~ Heathrow', from: 'departure_airport_id'
       select 'France', from: 'arrival_country'
+      sleep 0.1
       select 'Charles de Gaulle', from: 'arrival_airport_id'
-      fill_in 'departure_date', with: '2024-02-16'
       
-      max_wait_time, start_time = 20.seconds , Time.now
+      max_wait_time, start_time = 20.seconds, Time.now
+      sleep 0.2 # allow time for js to populate date options before capturing date_input
       date_input = find("input[name='departure_date']")
       min, max = date_input[:min], date_input[:max]
-      loop do
-        break if min == Date.today.to_s && max == Date.today.to_s
-        sleep 0.1
-        break if Time.now - start_time > max_wait_time
-      end
       puts "min: #{min}, max: #{max}"
       
       expect(min).to eq((Date.today).to_s)
@@ -64,7 +61,7 @@ RSpec.describe "Flights", type: :system do
       password_input.set('Password12!')
       password_confirmation_input.set('Password12!')
       find('input[type="submit"][value="Set Password"]', visible: :all).click
-      expect(page).to have_content('Your bookings')
+      expect(page).to have_content('Your booking')
       save_screenshot('booking_show.png')
     end
   end

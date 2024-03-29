@@ -19,5 +19,5 @@ def complete_search_form
   select 'London ~-~ Heathrow', from: 'departure_airport_id'
   select 'France', from: 'arrival_country'
   select 'Charles de Gaulle', from: 'arrival_airport_id'
-  fill_in 'departure_date', with: '2024-02-16'
+  fill_in 'departure_date', with: Date.today.strftime("%Y-%m-%d")
 end

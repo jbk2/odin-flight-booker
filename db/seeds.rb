@@ -8,6 +8,7 @@ require './lib/tasks/airport_seeder'
 #   Character.create(name: "Luke", movie: movies.first)
 
 def seed_airports(airports)
+  puts "Seeding #{airports.count} airports"
   airports.each do |airport|
     Airport.create(
       code: airport[:airport_code],
@@ -17,9 +18,11 @@ def seed_airports(airports)
       name: airport[:airport_name]
     )
   end
+  puts "Seeded #{Airport.count} airports"
 end
 
 def seed_flights
+  puts "Seeding 5000 flights"
   5000.times do
     ids = (1..Airport.count).to_a.shuffle.take(2)
     departure_time = DateTime.now + rand(7..28).days
@@ -30,6 +33,7 @@ def seed_flights
       arrival_time: departure_time + rand(7200..28800).seconds
     )
   end
+  puts "Seeded #{Flight.count} flights"
 end
 
 seed_airports(AirportSeeder.collate_european_airports)
