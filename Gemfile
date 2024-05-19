@@ -71,6 +71,8 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
   
+  gem "letter_opener", "~> 1.8"
+  gem "dockerfile-rails", ">= 1.6"
 end
 
 group :test do
@@ -91,10 +93,6 @@ gem "byebug", "~> 11.1"
 gem "pry-byebug", "~> 3.10"
 
 gem "sass-embedded", "~> 1.70"
-
-gem "dockerfile-rails", ">= 1.6", :group => :development
-
-gem "letter_opener", "~> 1.8", :group => :development
 
 gem "sidekiq", "~> 7.2"
 
