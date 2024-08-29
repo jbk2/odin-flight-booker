@@ -35,3 +35,7 @@
 
 # Ignore the Redis/Sidekiq dump file created when Foreman (called via Procfile.dev) shuts down.
 /dump.rdb
+
+/config/credentials/production.key
+
+/config/credentials/development.key

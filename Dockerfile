@@ -1,8 +1,8 @@
 # syntax = docker/dockerfile:1
 
 # Make sure RUBY_VERSION matches the Ruby version in .ruby-version and Gemfile
-ARG RUBY_VERSION=3.1.2
-FROM ruby:$RUBY_VERSION-slim as base
+ARG RUBY_VERSION=3.3.0
+FROM ruby:3.3-slim-bullseye as base
 
 LABEL fly_launch_runtime="rails"
 
@@ -18,7 +18,6 @@ ENV BUNDLE_DEPLOYMENT="1" \
 # Update gems and bundler
 RUN gem update --system --no-document && \
     gem install -N bundler
-
 
 # Throw-away build stage to reduce size of final image
 FROM base as build
@@ -38,10 +37,6 @@ COPY --link . .
 
 # Precompile bootsnap code for faster boot times
 RUN bundle exec bootsnap precompile app/ lib/
-
-# Precompiling assets for production without requiring secret RAILS_MASTER_KEY
-RUN SECRET_KEY_BASE=DUMMY ./bin/rails assets:precompile
-
 
 # Final stage for app image
 FROM base
@@ -70,4 +65,4 @@ ENTRYPOINT ["/rails/bin/docker-entrypoint"]
 
 # Start the server by default, this can be overwritten at runtime
 EXPOSE 3000
-CMD ["./bin/rails", "server"]
+CMD ["bash", "-c", "rm -f tmp/pids/server.pid && bundle exec rails s -b '0.0.0.0'"]
