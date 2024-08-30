@@ -30,8 +30,9 @@
 /tmp/storage/*
 !/tmp/storage/.keep
 
-# Ignore assets.
+# Ignore node_modules, but not the assets
 /node_modules/
-/app/assets/builds/*
-!/app/assets/builds/.keep
-/public/assets
+
+# Allow precompiled assets
+!/app/assets/builds/
+!/public/assets/

@@ -82,6 +82,6 @@ test:
 production:
   <<: *default
   host: db
-  database: odin_flight_booker_production
-  username: odin_flight_booker
-  password: <%= Rails.application.credentials.dig(:production, :ODIN_FLIGHT_BOOKER_PRODUCTION_DATABASE_PASSWORD) %>
+  database: flight_booker_production
+  username: flight-booker
+  password: <%= Rails.application.credentials.dig(:flight_booker_production_database_password) %>

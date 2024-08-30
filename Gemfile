@@ -83,18 +83,13 @@ group :test do
 end
 
 gem "devise", "~> 4.9"
-
 gem "tailwindcss-rails", "~> 2.3"
-
 gem "annotate", "~> 3.2"
-
 gem "byebug", "~> 11.1"
-
 gem "pry-byebug", "~> 3.10"
-
 gem "sass-embedded", "~> 1.70"
-
 gem "sidekiq", "~> 7.2"
+gem "postmark-rails"
 
 
 
