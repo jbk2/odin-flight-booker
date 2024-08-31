@@ -3,13 +3,23 @@
 # Table name: flights
 #
 #  id                   :bigint           not null, primary key
-#  departure_airport_id :bigint           not null
-#  arrival_airport_id   :bigint           not null
-#  departure_time       :datetime
 #  arrival_time         :datetime
+#  departure_time       :datetime
+#  flight_duration_secs :integer
 #  created_at           :datetime         not null
 #  updated_at           :datetime         not null
-#  flight_duration_secs :integer
+#  arrival_airport_id   :bigint           not null
+#  departure_airport_id :bigint           not null
+#
+# Indexes
+#
+#  index_flights_on_arrival_airport_id    (arrival_airport_id)
+#  index_flights_on_departure_airport_id  (departure_airport_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (arrival_airport_id => airports.id)
+#  fk_rails_...  (departure_airport_id => airports.id)
 #
 FactoryBot.define do
   factory :flight_1, class: 'Flight' do

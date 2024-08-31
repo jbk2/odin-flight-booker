@@ -84,7 +84,7 @@ end
 
 gem "devise", "~> 4.9"
 gem "tailwindcss-rails", "~> 2.3"
-gem "annotate", "~> 3.2"
+gem 'annotaterb', '~> 4.11'
 gem "byebug", "~> 11.1"
 gem "pry-byebug", "~> 3.10"
 gem "sass-embedded", "~> 1.70"

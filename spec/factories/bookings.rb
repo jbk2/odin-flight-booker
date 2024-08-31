@@ -3,10 +3,20 @@
 # Table name: bookings
 #
 #  id               :bigint           not null, primary key
-#  flight_id        :bigint           not null
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
 #  booking_owner_id :bigint
+#  flight_id        :bigint           not null
+#
+# Indexes
+#
+#  index_bookings_on_booking_owner_id  (booking_owner_id)
+#  index_bookings_on_flight_id         (flight_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (booking_owner_id => passengers.id)
+#  fk_rails_...  (flight_id => flights.id)
 #
 FactoryBot.define do
   factory :booking_1, class: 'Booking' do
