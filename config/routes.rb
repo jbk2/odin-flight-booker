@@ -3,7 +3,9 @@ require 'sidekiq/web'
 Rails.application.routes.draw do
   devise_for :passengers
 
-  mount Sidekiq::Web => '/sidekiq'
+  authenticate :passenger, lambda { |p| p.admin? } do
+    mount Sidekiq::Web => '/sidekiq'
+  end
 
   root "flights#index"
   
