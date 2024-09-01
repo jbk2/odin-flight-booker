@@ -1,3 +1,7 @@
+<%= turbo_frame_tag 'welcome_modal' do %>
+  <%= render partial: 'layouts/welcome_modal' %>
+<% end %>
+
 <%= render partial: 'flight_search_form' %>
 <% if search_submitted? && @flight_search_results.empty? %>
   <h1 class="text-lg font-bold italic">Sorry no flights on that route and date</h1>
