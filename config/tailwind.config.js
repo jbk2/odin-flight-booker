@@ -1,6 +1,13 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
+  mode: 'jit',
+  purge: [
+    './public/*.html',
+    './app/helpers/**/*.rb',
+    './app/javascript/**/*.js',
+    './app/views/**/*.{erb,haml,html,slim}',
+  ],
   content: [
     './public/*.html',
     './app/helpers/**/*.rb',
@@ -13,6 +20,9 @@ module.exports = {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
         display: ['Racing Sans One', 'sans-serif'],
         label: ['Nunito Sans', 'sans-serif'],
+        helvetica: ['Helvetica'],
+        ariel: ['Ariel'],
+        jost: ['Jost', 'sans-serif'],
       },
       colors: {
         transparent: 'transparent',
