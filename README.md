@@ -1,7 +1,7 @@
 # README
 
 ## The Odin Project – RoR Advanced Forms Project – Flight Booker
-_with significantly extended features_
+_with extended features_
 
 ---
 
@@ -9,7 +9,7 @@ _with significantly extended features_
 A flight search app featuring
 - Complex forms; nesting, custom actions, hotwire.
 - Advanced modeling & associations; m2m, polymorphic, delegation, custom validation, callbacks.
-- Custom Devise authentication - on passengers, with conditional requirements ending user type.
+- Custom Devise authentication - on passengers, with conditional requirements defining user type.
 - POROs - custom CSV parsing, data cleaning and merging and db seeding.
 - SPA like - Turbo Frames, Streams & Stimulus serving dynamic flight search form and results
 - Styling - TailwindCSS use & customisation of.
