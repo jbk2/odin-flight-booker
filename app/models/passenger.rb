@@ -37,7 +37,6 @@ class Passenger < ApplicationRecord
     update(params)
   end
 
-
   private
   def must_have_at_least_one_booking
     errors.add(:base, 'must have at least one booking') if self.bookings.blank?

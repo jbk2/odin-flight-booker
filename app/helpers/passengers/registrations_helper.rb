@@ -1,0 +1,2 @@
+module Passengers::RegistrationsHelper
+end

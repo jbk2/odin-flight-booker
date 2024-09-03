@@ -1,7 +1,7 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
-  devise_for :passengers
+  devise_for :passengers, controllers: { registrations: "passengers/registrations", sessions: "passengers/sessions" }
 
   authenticate :passenger, lambda { |p| p.admin? } do
     mount Sidekiq::Web => '/sidekiq'
