@@ -2,7 +2,7 @@
 
 class Passengers::RegistrationsController < Devise::RegistrationsController
 
-  rate_limit to: 1, within: 3.minutes, only: :create,
+  rate_limit to: 10, within: 3.minutes, only: :create,
     with: -> { redirect_to new_passenger_registration_path, alert: "Sign up rate limit exceeded - Try again later." }
   
     # before_action :configure_sign_up_params, only: [:create]
