@@ -1,4 +1,4 @@
-<!-- <#% if @show_welcome_modal %> -->
+<% if @show_welcome_modal %>
   <div id="welcome-modal" data-controller="welcome-modal" class="fixed inset-0 flex items-center justify-center z-40 backdrop-blur-md">
     <!-- Transparent background overlay -->
     <div class="absolute inset-0 bg-black opacity-40 z-30"></div>
@@ -9,33 +9,33 @@
         pb-4 mb-4">
         Welcome to Flight-booker
       </h1>
-      <div class="mb-4 flex flex-row justify-between items-baseline">
-        <p class="leading-7 font-helvetica font-normal text-lg text-gray-800">A simple app demonstrating rails & hotwire:</p>
+      <div class="mb-3 flex flex-row justify-between items-baseline">
+        <p class="leading-7 font-helvetica font-normal text-lg text-gray-800">A simple app, demonstrating rails & hotwire:</p>
         <p class="text-sm font-light font-helvetica">(View
           <a href="https://github.com/jbk2/odin-flight-booker/blob/main/README.md" class="link-primary">readme</a> & 
           <a href="https://github.com/jbk2/odin-flight-booker" class="link-primary">code</a> 
           for full breakdown.)
         </p>
       </div>
-      <ul class="mb-4 leading-7 font-light font-helvetica text-md text-gray-800 list-none">
+      <ul class="mb-4 leading-7 font-light font-helvetica text-md list-none">
         <li class="my-1 relative flex items-center">
-          <%= image_tag 'bullet-arrow.svg', alt: 'Bullet Arrow', class: 'w-4 h-4 mr-5' %>
+          <%= image_tag 'bullet-arrow.svg', alt: 'Bullet Arrow', class: 'size-3 mr-4' %>
           <p class="inline">SPA like flight searching, see Stimulus dynamically populate fields.</p>
         </li>
         <li class="my-1 relative flex items-center">
-          <%= image_tag 'bullet-arrow.svg', alt: 'Bullet Arrow', class: 'w-4 h-4 mr-5' %>
+          <%= image_tag 'bullet-arrow.svg', alt: 'Bullet Arrow', class: 'size-3 mr-4' %>
           <p class="inline">DB seeded by custom PORO class processing real CSV country & airport data.</p>
         </li>
         <li class="my-1 relative flex items-center">
-          <%= image_tag 'bullet-arrow.svg', alt: 'Bullet Arrow', class: 'w-4 h-4 mr-5' %>
+          <%= image_tag 'bullet-arrow.svg', alt: 'Bullet Arrow', class: 'size-3 mr-4' %>
           <p class="inline">Bookings with concept of flight owner and flight passengers & custom scoped auth.</p>
         </li>
         <li class="my-1 relative flex items-center">
-          <%= image_tag 'bullet-arrow.svg', alt: 'Bullet Arrow', class: 'w-4 h-4 mr-5' %>
+          <%= image_tag 'bullet-arrow.svg', alt: 'Bullet Arrow', class: 'size-3 mr-4' %>
           <p class="inline">ActiveJob & ActionMailer manage transacitonal emails.</p>
         </li>
         <li class="my-1 relative flex items-center">
-          <%= image_tag 'bullet-arrow.svg', alt: 'Bullet Arrow', class: 'w-4 h-4 mr-5' %>
+          <%= image_tag 'bullet-arrow.svg', alt: 'Bullet Arrow', class: 'size-3 mr-4' %>
           <p class="inline">Full unit, request & system test with Rspec, Capybara & Selenium.</p>
         </li>
       </ul>
@@ -59,4 +59,4 @@
       </div>
     </div>
   </div>
-<!-- <#% end %> -->
+<% end %>
